@@ -1,0 +1,212 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>东篱小筑</title><meta name="keywords" content="Linux CentOS Python C++ 计算机"><meta name="author" content="Hollower,bin_wizard@163.com"><meta name="copyright" content="Hollower"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="若人走情凉，就守心自暖；若聚散难免，便独享浮世清欢">
+<meta property="og:type" content="website">
+<meta property="og:title" content="东篱小筑">
+<meta property="og:url" content="https://blog.abina.cn/page/2/index.html">
+<meta property="og:site_name" content="东篱小筑">
+<meta property="og:description" content="若人走情凉，就守心自暖；若聚散难免，便独享浮世清欢">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://qiniu.cdn.abina.cn/%E5%A4%B4%E5%83%8F.jpg">
+<meta property="article:author" content="Hollower">
+<meta property="article:tag" content="Linux CentOS Python C++ 计算机">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://qiniu.cdn.abina.cn/%E5%A4%B4%E5%83%8F.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://blog.abina.cn/page/2/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?5671f4d16fa7e7304bd4ed3aa7a84361";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#121212","position":"bottom-left"},
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}
+
+// https://stackoverflow.com/questions/16839698/jquery-getscript-alternative-in-native-javascript
+const getScript = url => new Promise((resolve, reject) => {
+  const script = document.createElement('script')
+  script.src = url
+  script.async = true
+  script.onerror = reject
+  script.onload = script.onreadystatechange = function() {
+    const loadState = this.readyState
+    if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+    script.onload = script.onreadystatechange = null
+    resolve()
+  }
+  document.head.appendChild(script)
+})</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2021-10-25 18:08:14'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}})()</script><link rel="stylesheet" href="/wizCss/wizSelf.css"><meta name="generator" content="Hexo 5.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="https://qiniu.cdn.abina.cn/%E5%A4%B4%E5%83%8F.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">18</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">16</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">13</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(https://qiniu.cdn.abina.cn/%E5%8F%A4%E5%9F%8E%E4%B8%8E%E6%B5%B7.png)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">东篱小筑</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">东篱小筑</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/xxxxx" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:xxxxxx@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/posts/CentOS7%E5%AE%89%E8%A3%85Typecho/" title="CentOS7安装Typecho">     <img class="post_bg" src="https://qiniu.cdn.abina.cn/niclas-illg-wzVQp_NRIHg.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="CentOS7安装Typecho"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/CentOS7%E5%AE%89%E8%A3%85Typecho/" title="CentOS7安装Typecho">CentOS7安装Typecho</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-04-10T04:36:38.000Z" title="发表于 2020-04-10 12:36:38">2020-04-10</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B/Typecho/">Typecho</a></span></div><div class="content">一、环境配置先确保系统正确安装LNMP或LAMP环境，以下以Nginx服务器为例。
+参考：CentOS7安装LNMP环境
+二、安装typecho12345678910[root@wizard ~]# wget https://github.com/typecho/typecho/releases/download/v1.1-17.10.30-release/1.1.17.10.30.-release.tar.gz -O /opt/Typecho-1.1.17.10.30.tar.gz[root@wizard ~]# tar xvzf /opt/Typecho-1.1.17.10.30.tar.gz -C /opt/[root@wizard ~]# cp -r /opt/build/* /usr/share/nginx/html/[root@wizard ~]# mysql -umysql -p&gt; create database typecho;              #新建数据库#下面xxx处填你的密码&gt; grant all privileges on typecho. ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/posts/CentOS7%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85mariadb-10.4.12/" title="CentOS7编译安装mariadb-10.4.12">     <img class="post_bg" src="https://qiniu.cdn.abina.cn/markus-spiske-Skf7HxARcoc.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="CentOS7编译安装mariadb-10.4.12"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/CentOS7%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85mariadb-10.4.12/" title="CentOS7编译安装mariadb-10.4.12">CentOS7编译安装mariadb-10.4.12</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-04-09T15:03:36.000Z" title="发表于 2020-04-09 23:03:36">2020-04-09</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B/LNMP/">LNMP</a></span></div><div class="content">编译安装mariadb一、安装相关包1234yum -y install readline-develyum -y install zlib-develyum -y install openssl-develyum -y install libaio-devel
+安装3.10以上版本的cmake,这里安装最新的3.17版本
+123456[root@wizard ~]# wget https://github.com/Kitware/CMake/releases/download/v3.17.0/cmake-3.17.0.tar.gz -O /opt/cmake-3.17.0.tar.gz[root@wizard ~]# tar xvzf /opt/cmake-3.17.0.tar.gz -C /opt/[root@wizard ~]# cd /opt/cmake-3.17.0[root@wizard ~]# ./configure [root@wizard ~]# gmake &amp;&amp; gmake install[root@wizard ~]# cmake --versio ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/posts/Linux%E7%B3%BB%E7%BB%9F%E6%B7%BB%E5%8A%A0swap%E4%BA%A4%E6%8D%A2%E7%A9%BA%E9%97%B4/" title="Linux系统添加swap交换空间">     <img class="post_bg" src="https://qiniu.cdn.abina.cn/markus-spiske-Skf7HxARcoc.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Linux系统添加swap交换空间"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/Linux%E7%B3%BB%E7%BB%9F%E6%B7%BB%E5%8A%A0swap%E4%BA%A4%E6%8D%A2%E7%A9%BA%E9%97%B4/" title="Linux系统添加swap交换空间">Linux系统添加swap交换空间</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-04-09T12:35:46.000Z" title="发表于 2020-04-09 20:35:46">2020-04-09</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B/Linux/">Linux</a></span></div><div class="content">最近入手华为云的服务器，配置比较低。导致我在编译安装mariadb的时候，出现了由于内存较小导致的“cc: internal compiler error: 已杀死 (program cc1)”错误，于是尝试给系统添加swap交换分区解决内存不足导致的问题。
+注意：以下内容几乎都取自CSDN博主flx_bj的在CentOS 7上添加Swap交换空间文章，建议跳转到参考原文。原文逻辑条理，语言清晰。（若有侵权，联系博主删除）
+一、检查系统的Swap信息首先我们需要检查系统的存储，看看是否已经配置过swap。一个系统可以设置多个swap文件或分区，不过一般来说一个就够了。
+1swapon -s
+如果该命令没有返回出结果，则代表该系统尚未配置过swap。
+或者，我们也可以使用free命令来查看系统的整体内存使用情况，这里可以看到内存和swap的使用状态（显示单位为MB）
+1234567free -m               total       used       free     shared    buffers     cachedMem:          3953      ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/posts/CentOS7%E5%AE%89%E8%A3%85LNMP%E7%8E%AF%E5%A2%83/" title="CentOS7安装LNMP环境">     <img class="post_bg" src="https://qiniu.cdn.abina.cn/shuttergames-8FWmjJIEXEw.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="CentOS7安装LNMP环境"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/CentOS7%E5%AE%89%E8%A3%85LNMP%E7%8E%AF%E5%A2%83/" title="CentOS7安装LNMP环境">CentOS7安装LNMP环境</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-04-09T06:04:46.000Z" title="发表于 2020-04-09 14:04:46">2020-04-09</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B/LNMP/">LNMP</a></span></div><div class="content">L：关于CentOS系统的配置和设置，例如源、网络、主机名、IP等就不在此阐述了，直接跳到NMP的安装。
+一、编译安装nginx参考： CentOS 7编译安装nginx-1.16.1
+二、编译安装mariadb参考： CentOS 7编译安装mariadb-10.4.12
+三、安装PHP12345[root@wizard ~]# yum install php php-devel php-fpm php-gd php-mbstring php-mysql[root@wizard ~]# systemctl start php-fpm[root@wizard ~]# systemctl enable php-fpm[root@wizard ~]# netstat -tln|grep 9000       #php-fpm默认使用9000端口，查看端口使用情况：[root@wizard ~]# yum install net-tools      #如果没有netstat命令则需要安装net-tools工具包
+
+安装说明：
+Nginx：提供nginx主程序
+Mariadb：提供MySQL ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/posts/CentOS7%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85nginx-1.16.1/" title="CentOS7编译安装nginx-1.16.1">     <img class="post_bg" src="https://qiniu.cdn.abina.cn/markus-spiske-Skf7HxARcoc.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="CentOS7编译安装nginx-1.16.1"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/CentOS7%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85nginx-1.16.1/" title="CentOS7编译安装nginx-1.16.1">CentOS7编译安装nginx-1.16.1</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-04-09T04:12:20.000Z" title="发表于 2020-04-09 12:12:20">2020-04-09</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B/LNMP/">LNMP</a></span></div><div class="content">一、安装依赖包1yum install -y gcc gcc-c++ pcre pcre-devel zlib zlib-devel openssl openssl-devel
+　　依赖包说明：
+1、编译依赖 gcc 环境，所以需要：gcc gcc-c++;
+2、PCRE(Perl Compatible Regular Expressions) 是一个Perl库，包括 perl 兼容的正则表达式库。nginx 的 http 模块使用 pcre 来解析正则表达式，所以需要在 linux 上安装 pcre 库，pcre-devel 是使用 pcre 开发的一个二次开发库，所以需要：pcre pcre-devel ;
+3、zlib 库提供了很多种压缩和解压缩的方式， nginx 使用 zlib 对 http 包的内容进行 gzip ，所以需要在 Centos 上安装 zlib 库，所以需要：zlib zlib-devel ；
+4、OpenSSL 是一个强大的安全套接字层密码库，囊括主要的密码算法、常用的密钥和证书封装管理功能及 SSL 协议，并提供丰富的应用程序供测试或其它目的使用。ngin ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/posts/CentOS7%E4%BF%AE%E6%94%B9%E4%B8%BB%E6%9C%BA%E5%90%8D/" title="CentOS7修改主机名">     <img class="post_bg" src="https://qiniu.cdn.abina.cn/cookie-the-pom.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="CentOS7修改主机名"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/CentOS7%E4%BF%AE%E6%94%B9%E4%B8%BB%E6%9C%BA%E5%90%8D/" title="CentOS7修改主机名">CentOS7修改主机名</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-04-09T03:08:17.000Z" title="发表于 2020-04-09 11:08:17">2020-04-09</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B/Linux/">Linux</a></span></div><div class="content">一、主机名的定义在CentOS7中，有三种定义的主机名:
+
+静态的（Static hostname）
+“静态”主机名也称为内核主机名，是系统在启动时从/etc/hostname自动初始化的主机名。
+
+
+
+瞬态的（Tansient hostname）
+“瞬态”主机名是在系统运行时临时分配的主机名，例如，通过DHCP或mDNS服务器分配。
+
+
+
+灵活的（Pretty hostname）
+“灵活”主机名也有人叫做“别名”主机名。“灵活”主机名则允许使用自由形式（包括特殊/空白字符）的主机名，以展示给终端用户（如xh01@f5）。“静态”主机名和“瞬态”主机名都遵从作为互联网域名同样的字符限制规则。
+
+
+二、hostname工具在CentOS 7中，有个叫hostnamectl的命令行工具，它允许你查看或修改与主机名相关的配置。
+
+查看主机名
+
+1234567891011121314151617/查看一下当前主机名的情况，查看全部三种主机名hostnamectl//或者，查看全部三种主机名hostnamectl status //只查看静态、瞬态或灵活主机名，分别使用--static，--tr ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/posts/CentOS7%E4%BF%AE%E6%94%B9%E6%BA%90/" title="CentOS7修改源">     <img class="post_bg" src="https://qiniu.cdn.abina.cn/philipp-katzenberger-iIJrUoeRoCQ.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="CentOS7修改源"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/CentOS7%E4%BF%AE%E6%94%B9%E6%BA%90/" title="CentOS7修改源">CentOS7修改源</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-04-09T02:09:26.000Z" title="发表于 2020-04-09 10:09:26">2020-04-09</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B/Linux/">Linux</a></span></div><div class="content">CentOS官方源的服务器是在国外，连接速度慢，可能不稳定，且去掉了一些与版权有关的软件,因此想要安装这些软件或者手动下载安装,或者使用其他源。一般都建议使用国内服务器的一些源。
+一、确定系统架构及版本确定系统架构及版本，便于查询更改相对应的源。
+123456[root@ecs-x ~]# cat /etc/redhat-releaseCentOS Linux release 7.7.1908 (Core)[root@ecs-x ~]# uname -r3.10.0-1062.1.1.el7.x86_64[root@ecs-x ~]# uname -aLinux ecs-x-medium-2-linux-20200318093011 3.10.0-1062.1.1.el7.x86_64 #1 SMP Fri Sep 13 22:55:44 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux
+可以看出，系统版本是CentOS 7.7.1908，架构是x86_64
+二、查看当前CentOS上的源1234567891011[root@ecs-x ~]# yum r ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/hello-world/" title="Hello World">Hello World</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-04-01T06:26:00.000Z" title="发表于 2020-04-01 14:26:00">2020-04-01</time></span></div><div class="content">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;
+More info: Writing
+Run server1$ hexo server
+More info: Server
+Generate static files1$ hexo generate
+More info: Generating
+Deploy to remote sites1$ hexo deploy
+More info: Deployment
+</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="https://qiniu.cdn.abina.cn/%E5%A4%B4%E5%83%8F.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Hollower</div><div class="author-info__description">若人走情凉，就守心自暖；若聚散难免，便独享浮世清欢</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">18</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">16</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">13</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/xxxxx" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:xxxxxx@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/Certbot/" style="font-size: 1.1em; color: #999">Certbot</a> <a href="/tags/Docker/" style="font-size: 1.1em; color: #999">Docker</a> <a href="/tags/LNMP/" style="font-size: 1.26em; color: #999fa8">LNMP</a> <a href="/tags/Linux/" style="font-size: 1.42em; color: #99a6b7">Linux</a> <a href="/tags/Maven/" style="font-size: 1.1em; color: #999">Maven</a> <a href="/tags/Python/" style="font-size: 1.1em; color: #999">Python</a> <a href="/tags/Seafile/" style="font-size: 1.1em; color: #999">Seafile</a> <a href="/tags/Typecho/" style="font-size: 1.18em; color: #999ca1">Typecho</a> <a href="/tags/Typora/" style="font-size: 1.1em; color: #999">Typora</a> <a href="/tags/Windows/" style="font-size: 1.34em; color: #99a3b0">Windows</a> <a href="/tags/acme-sh/" style="font-size: 1.1em; color: #999">acme.sh</a> <a href="/tags/python/" style="font-size: 1.18em; color: #999ca1">python</a> <a href="/tags/%E4%B8%83%E7%89%9B%E4%BA%91/" style="font-size: 1.1em; color: #999">七牛云</a> <a href="/tags/%E4%BB%A3%E7%A0%81/" style="font-size: 1.1em; color: #999">代码</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 1.5em; color: #99a9bf">教程</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 1.1em; color: #999">笔记</a></div></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">18</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2020-04-10T06:26:00.000Z"></div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2021-10-25T10:08:14.285Z"></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 <i style="color:#FF6A6A;animation: announ_animation 0.8s linear infinite;" class="fa fa-heartbeat"></i> Hollower</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/"><img class="icp-icon" src="https://qiniu.cdn.abina.cn/icp_logo.png"><span>备案号：鲁ICP备2021001694号-1</span></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function subtitleType () {
+  getScript('https://yijuzhan.com/api/word.php?m=js').then(() => {
+    var con = str[0]
+    if (true) {
+      var from = '出自 ' + str[1]
+      var sub = "东篱把酒黄昏后，有暗香盈袖。".length == 0 ? new Array() : "东篱把酒黄昏后，有暗香盈袖。".split(',')
+      var both = sub.unshift(con, from)
+      var typed = new Typed('#subtitle', {
+        strings: sub,
+        startDelay: 300,
+        typeSpeed: 150,
+        loop: false,
+        backSpeed: 50,
+      })
+    } else {
+      document.getElementById('subtitle').innerHTML = con
+    }
+  })
+}
+
+if (true) {
+  if (typeof Typed === 'function') {
+    subtitleType()
+  } else {
+    getScript('https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js').then(subtitleType)
+  }
+} else {
+  subtitleType()
+}
+</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></div></body></html>

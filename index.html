@@ -1,0 +1,257 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>东篱小筑</title><meta name="keywords" content="Linux CentOS Python C++ 计算机"><meta name="author" content="Hollower,bin_wizard@163.com"><meta name="copyright" content="Hollower"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="若人走情凉，就守心自暖；若聚散难免，便独享浮世清欢">
+<meta property="og:type" content="website">
+<meta property="og:title" content="东篱小筑">
+<meta property="og:url" content="https://blog.abina.cn/index.html">
+<meta property="og:site_name" content="东篱小筑">
+<meta property="og:description" content="若人走情凉，就守心自暖；若聚散难免，便独享浮世清欢">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://qiniu.cdn.abina.cn/%E5%A4%B4%E5%83%8F.jpg">
+<meta property="article:author" content="Hollower">
+<meta property="article:tag" content="Linux CentOS Python C++ 计算机">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://qiniu.cdn.abina.cn/%E5%A4%B4%E5%83%8F.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://blog.abina.cn/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?5671f4d16fa7e7304bd4ed3aa7a84361";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#121212","position":"bottom-left"},
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}
+
+// https://stackoverflow.com/questions/16839698/jquery-getscript-alternative-in-native-javascript
+const getScript = url => new Promise((resolve, reject) => {
+  const script = document.createElement('script')
+  script.src = url
+  script.async = true
+  script.onerror = reject
+  script.onload = script.onreadystatechange = function() {
+    const loadState = this.readyState
+    if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+    script.onload = script.onreadystatechange = null
+    resolve()
+  }
+  document.head.appendChild(script)
+})</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2021-10-25 18:08:14'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}})()</script><link rel="stylesheet" href="/wizCss/wizSelf.css"><meta name="generator" content="Hexo 5.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="https://qiniu.cdn.abina.cn/%E5%A4%B4%E5%83%8F.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">18</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">16</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">13</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(https://qiniu.cdn.abina.cn/%E5%8F%A4%E5%9F%8E%E4%B8%8E%E6%B5%B7.png)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">东篱小筑</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">东篱小筑</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/xxxxx" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:xxxxxx@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/posts/%E4%BD%BF%E7%94%A8acme.sh%E7%94%B3%E8%AF%B7%E5%B9%B6%E7%BB%B4%E6%8A%A4Let's%20Encrypt%E8%AF%81%E4%B9%A6/" title="使用acme.sh申请并维护Let's Encrypt证书">     <img class="post_bg" src="https://qiniu.cdn.abina.cn/niclas-illg-wzVQp_NRIHg.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="使用acme.sh申请并维护Let's Encrypt证书"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/%E4%BD%BF%E7%94%A8acme.sh%E7%94%B3%E8%AF%B7%E5%B9%B6%E7%BB%B4%E6%8A%A4Let's%20Encrypt%E8%AF%81%E4%B9%A6/" title="使用acme.sh申请并维护Let's Encrypt证书">使用acme.sh申请并维护Let's Encrypt证书</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-10-21T08:55:15.000Z" title="发表于 2021-10-21 16:55:15">2021-10-21</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B/acme-sh/">acme.sh</a></span></div><div class="content">acme.sh是一个知名的用于申请Let’s Encrypt证书的开源项目，项目地址：https://github.com/acmesh-official/acme.sh，属于脚本类型，有比较详细的文档，支持自动化更新和自动化部署。唯一缺点，如果有更新后自动部署至多个节点的需求的话，acme.sh无法满足。（描述转自：免费申请HTTPS证书六大方法 侵删）
+一、安装 acme.sh安装很简单, 一个命令:
+1curl  https://get.acme.sh | sh -s email=my@example.com
+这时acme.sh会安装到你的用户目录下(~/.acme.sh/)
+据说，还会创建一个alias，以方便使用：alias acme.sh=~/.acme.sh/acme.sh但是我的服务器并没有成功创建这个alias。可以执行上述命令手动创建一下。（临时创建，重启后失效）或者将alias命令加入 /etc/.bashrc或者 ~/.bashrc文件，以永久性生效。/etc/.bashrc针对所有用户生效，~/.bashrc是针对当前用户生效。
+二、生成证书acme.sh 实 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/posts/Windows10%E4%B8%8B%E5%90%8C%E6%97%B6%E5%AE%89%E8%A3%85python2%E5%92%8Cpython3/" title="Windows10下同时安装python2和python3">     <img class="post_bg" src="https://qiniu.cdn.abina.cn/markus-spiske-Skf7HxARcoc.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Windows10下同时安装python2和python3"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/Windows10%E4%B8%8B%E5%90%8C%E6%97%B6%E5%AE%89%E8%A3%85python2%E5%92%8Cpython3/" title="Windows10下同时安装python2和python3">Windows10下同时安装python2和python3</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-04-11T04:33:23.000Z" title="发表于 2021-04-11 12:33:23">2021-04-11</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B/python/">python</a></span></div><div class="content">参考文章（侵删）：Win10下python3和python2同时安装并解决pip共存问题
+环境说明：
+①系统为windows10_64位
+②安装目录为
+​    python2：E:\python\python27
+​    python3：E:\python\python39
+一、python3的下载安装1、python3的下载点击下载链接下载python3.9.4的安装包
+如果你需要其他版本，可以进入官网，选择Downloads-&gt;Windows，查找所需要的python版本并下载。
+2、python3安装运行下载下来的python3安装包，勾选“Add Python3.9.4 to PATH”选项（可以直接将python3添加到系统环境变量），然后在Customize installation中自定义安装路径，安装路径为E:\Python\python39，完成安装。（下图是网上找的3.5.2的示例图片，版本不同，但选项基本相同）
+
+二、python2的下载安装1、python2下载点击下载链接下载python2.7.18的安装包
+如果你需要其他版本，可以进入官网，选择Do ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/posts/Docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="Docker学习笔记">     <img class="post_bg" src="https://qiniu.cdn.abina.cn/pankaj-patel-jmEwNM588-E.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Docker学习笔记"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/Docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="Docker学习笔记">Docker学习笔记</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-03-14T15:12:30.000Z" title="发表于 2021-03-14 23:12:30">2021-03-14</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/%E7%AC%94%E8%AE%B0/Docker/">Docker</a></span></div><div class="content">学习资料声明(侵删)：bilibili视频-【狂神说Java】Docker最新超详细版教程通俗易懂
+一、Docker安装可参考官方文档
+1、卸载旧版本及相关依赖
+12345678sudo yum remove docker \                  docker-client \                  docker-client-latest \                  docker-common \                  docker-latest \                  docker-latest-logrotate \                  docker-logrotate \                  docker-engine
+2、安装依赖
+1sudo yum install -y yum-utils
+3、添加远程仓库
+12345678#默认国外源（不推荐）sudo yum-config-manager \    --add-repo \    https://download.docker.co ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/posts/pip%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90/" title="pip更换国内源">     <img class="post_bg" src="https://qiniu.cdn.abina.cn/philipp-katzenberger-iIJrUoeRoCQ.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="pip更换国内源"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/pip%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90/" title="pip更换国内源">pip更换国内源</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-02-17T01:45:00.000Z" title="发表于 2021-02-17 09:45:00">2021-02-17</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B/python/">python</a></span></div><div class="content">一、永久修改首先在当前用户目录下建立 .pip 文件夹，然后在文件夹中创建 pip.conf 文件，再将源地址加进去即可。
+12mkdir ~/.pipvim ~/.pip/pip.conf
+添加如下内容
+12[global]index-url = https://mirrors.aliyun.com/pypi/simple
+国内其他pip源，清华的５分钟同步一次官网，建议使用
+12345清华：https://pypi.tuna.tsinghua.edu.cn/simple中国科技大学 https://pypi.mirrors.ustc.edu.cn/simple/华中理工大学：http://pypi.hustunique.com/山东理工大学：http://pypi.sdutlinux.org/豆瓣：http://pypi.douban.com/simple/
+注意：不管你用的是pip3还是pip，方法都是一样的，都是创建pip文件夹。
+二、临时换源1sudo pip3 install 包名 -i 镜像源url
+
+
+参考资料：
+[1]pip、pip3更换国内源
+</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/posts/Windows%E4%B8%8B%E5%AE%89%E8%A3%85%E5%B9%B6%E9%85%8D%E7%BD%AEMaven%E5%88%B0IDEA/" title="Windows下安装并配置Maven到IDEA">     <img class="post_bg" src="https://qiniu.cdn.abina.cn/christian.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Windows下安装并配置Maven到IDEA"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/Windows%E4%B8%8B%E5%AE%89%E8%A3%85%E5%B9%B6%E9%85%8D%E7%BD%AEMaven%E5%88%B0IDEA/" title="Windows下安装并配置Maven到IDEA">Windows下安装并配置Maven到IDEA</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-05-20T11:57:20.000Z" title="发表于 2020-05-20 19:57:20">2020-05-20</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B/Maven/">Maven</a></span></div><div class="content">一、下载并解压
+前往官网下载最新压缩包
+
+
+
+解压到自定义目录（这里以E:\maven为例）
+
+
+二、配置环境变量新建环境变量MAVEN_HOME，赋值E:\maven\apache-maven-3.6.3
+
+编辑环境变量Path，追加%MAVEN_HOME%\bin
+
+三、检查maven是否安装成功打开命令行输入mvn -v或者mvn --version
+
+四、配置本地maven仓库路径（选做）这一步的目的是将maven本地仓库从c盘移到其他磁盘，减少c盘占用。
+
+在E:\maven\apache-maven-3.6.3下新建maven-repository文件夹
+打开E:\maven\apache-maven-3.6.3\conf\settings.xml
+找到&lt;localRepository&gt;/path/to/local/repo&lt;/localRepository&gt;（此版本约在53行左右），这里是被注释掉的配置
+将此行复制到注释外，里面换成你刚才新建的maven-repository文件夹地址
+
+
+
+保存即可。
+删除 c盘 -&gt; 用户 -&gt; 你 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/posts/CentOS7%E5%AE%89%E8%A3%85Seafile%E7%A7%81%E6%9C%89%E4%BA%91/" title="CentOS7安装Seafile私有云">     <img class="post_bg" src="https://qiniu.cdn.abina.cn/freestocks.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="CentOS7安装Seafile私有云"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/CentOS7%E5%AE%89%E8%A3%85Seafile%E7%A7%81%E6%9C%89%E4%BA%91/" title="CentOS7安装Seafile私有云">CentOS7安装Seafile私有云</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-04-30T08:47:32.000Z" title="发表于 2020-04-30 16:47:32">2020-04-30</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B/Seafile/">Seafile</a></span></div><div class="content">一、环境说明
+centos7python3python-setuptoolsmysql
+
+二、下载seafile7.1.31234[root@izonbuak7pfxffz ~]# mkdir /opt/seafile[root@izonbuak7pfxffz ~]# wget http://seafile-downloads.oss-cn-shanghai.aliyuncs.com/seafile-server_7.1.3_x86-64.tar.gz -O /opt/seafile/seafile-server_7.1.3_x86-64.tar.gz[root@izonbuak7pfxffz ~]# cd /opt/seafile[root@izonbuak7pfxffz seafile]# tar -xzf seafile-server_7.1.3_x86-64.tar.gz
+三、安装mysql
+下载mysql的repo源
+
+12345678910111213141516[root@izonbuak7pfxffz ~]# wget http://repo.mysql.com/mys ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/posts/CentOS7%E5%AE%89%E8%A3%85python3%E5%92%8Cpip3/" title="CentOS7安装python3和pip3">     <img class="post_bg" src="https://qiniu.cdn.abina.cn/shuttergames-8FWmjJIEXEw.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="CentOS7安装python3和pip3"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/CentOS7%E5%AE%89%E8%A3%85python3%E5%92%8Cpip3/" title="CentOS7安装python3和pip3">CentOS7安装python3和pip3</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-04-30T08:17:36.000Z" title="发表于 2020-04-30 16:17:36">2020-04-30</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B/python/">python</a></span></div><div class="content">1、下载python3.6.5安装包wget https://www.python.org/ftp/python/3.6.5/Python-3.6.5.tgz -O /opt/Python-3.6.5.tgz
+2、安装zlib-devel包(后面安装pip需要用到,这里先下载，后面就不用重复编译)(这步不理解，原博客：https://www.cnblogs.com/eriwang/p/10161182.html)
+yum install zlib-devel
+3、编译安装python3.6.5123456789101112[root@izonbuak7pfxffz ~]# cd /opt[root@izonbuak7pfxffz opt]# tar -xvf Python-3.6.5.tgz将解压文件移动到 usr/local目录下[root@izonbuak7pfxffz opt]# mv Python-3.6.5 /usr/local在local目录下创建python3目录[root@izonbuak7pfxffz opt]# mkdir /usr/local/python3转到解 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/posts/Typora%E7%B2%98%E8%B4%B4%E5%9B%BE%E7%89%87%E8%87%AA%E5%8A%A8%E4%B8%8A%E4%BC%A0%E5%88%B0%E4%B8%83%E7%89%9B%E4%BA%91/" title="Typora粘贴图片自动上传到七牛云">     <img class="post_bg" src="https://qiniu.cdn.abina.cn/pankaj-patel-jmEwNM588-E.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Typora粘贴图片自动上传到七牛云"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/Typora%E7%B2%98%E8%B4%B4%E5%9B%BE%E7%89%87%E8%87%AA%E5%8A%A8%E4%B8%8A%E4%BC%A0%E5%88%B0%E4%B8%83%E7%89%9B%E4%BA%91/" title="Typora粘贴图片自动上传到七牛云">Typora粘贴图片自动上传到七牛云</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-04-20T03:58:50.000Z" title="发表于 2020-04-20 11:58:50">2020-04-20</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E4%BB%A3%E7%A0%81/">代码</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/%E4%BB%A3%E7%A0%81/Typora%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0/">Typora图片上传</a></span></div><div class="content">前言：
+最近养成了使用Typora写笔记和博客的习惯，不得不说Typora确实是一个好用的Markdown编辑工具。写完的文章可以直接放到Typecho解析。
+现在遇到这么一个问题，Typora编辑器的图片只提供 “复制图片到当前文件夹” 、”复制图片到.assets文件夹“、”复制图片到指定文件夹“几种选项，这就会导致我每次把Typora编写好的文章放到博客时，需要手动上传文章内的图片，然后引用，十分麻烦。
+好在，Typora提供了自定义上传图片的功能，配合七牛云存储可以实现所有图片在放到编辑器时自动上传并引用云端链接，无需再手动上传到博客或做其他更改，十分省心。
+以下操作仅以windows系统为例。
+一、在七牛云创建对象存储空间创建过程不在此展开，请自行上网查询。
+创建完成后在七牛云的 个人中心 -&gt; 秘钥管理，记录下你账号的 AccessKey和SecretKey 稍后会用到
+二、使用七牛云开发者工具qshell
+下载对应版本的七牛云开发者命令行工具(qshell)
+例如博主下载windows64位
+
+
+为了使用方便，将下载下来的 qshell v2.4.1.exe 重命名 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/posts/%E8%A7%A3%E5%86%B3Typecho%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E5%A4%B1%E8%B4%A5%E7%9A%84%E9%97%AE%E9%A2%98/" title="解决Typecho上传文件失败的问题">     <img class="post_bg" src="https://qiniu.cdn.abina.cn/freestocks.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="解决Typecho上传文件失败的问题"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/%E8%A7%A3%E5%86%B3Typecho%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E5%A4%B1%E8%B4%A5%E7%9A%84%E9%97%AE%E9%A2%98/" title="解决Typecho上传文件失败的问题">解决Typecho上传文件失败的问题</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-04-11T02:53:30.000Z" title="发表于 2020-04-11 10:53:30">2020-04-11</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B/Typecho/">Typecho</a></span></div><div class="content">新安装的typecho上传文件的时候提示：上传失败！，怀疑是没有权限的问题。
+检测typecho网站目录中的/usr/uploads文件夹的权限和所有者，发现没有可写权限，且是root权限管理。但是我设置的访问typecho的用户为nginx用户。
+故做如下修改：(根据你的具体目录进行修改)
+12chmod 777 /usr/share/nginx/html/usr/uploadschown nginx.nginx /usr/share/nginx/html/usr/uploads
+重新上传，测试成功。
+</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/posts/%E4%BD%BF%E7%94%A8Certbot%E4%BD%BF%E7%BD%91%E7%AB%99%E5%85%8D%E8%B4%B9%E5%90%AF%E7%94%A8Https/" title="使用Certbot使网站免费启用Https">     <img class="post_bg" src="https://qiniu.cdn.abina.cn/freestocks.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="使用Certbot使网站免费启用Https"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/%E4%BD%BF%E7%94%A8Certbot%E4%BD%BF%E7%BD%91%E7%AB%99%E5%85%8D%E8%B4%B9%E5%90%AF%E7%94%A8Https/" title="使用Certbot使网站免费启用Https">使用Certbot使网站免费启用Https</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-04-10T13:50:03.000Z" title="发表于 2020-04-10 21:50:03">2020-04-10</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B/Certbot/">Certbot</a></span></div><div class="content">2021年10月21日更新：
+提示：以下部分教程可能不再有效，且certbot安装变成了一件比较麻烦的事情。最近学习了新的申请维护证书的方法，请点击跳转：使用acme.sh申请并维护Let’s Encrypt证书
+如果你仍要坚持使用certbot，并在安装和使用的过程中遇到问题，这篇文章有可能可以帮助到你：Let’s Encrypt 使用 certbot 命令生成通配免费证书？
+Let’s Encrypt这个免费的解决方案。Let’s Encrypt 是一个于2015年推出的数字证书认证机构，将通过旨在消除当前手动创建和安装证书的复杂过程的自动化流程，为安全网站提供免费的SSL/TLS证书。
+为你的网站来安装一个证书十分简单，只需要使用电子子前哨基金会EFF的 Certbot，就可以完成。
+一、环境配置及安装certbot
+打开 https://certbot.eff.org ，在下图位置选择你的web服务器和操作系统
+
+
+
+
+然后就会跳转到一个安装教程网页，跟着命令做就可以。
+
+二、使用certbot
+这里有个天坑！！当执行到sudo  certbot --nginx这句命令，发现出 ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="https://qiniu.cdn.abina.cn/%E5%A4%B4%E5%83%8F.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Hollower</div><div class="author-info__description">若人走情凉，就守心自暖；若聚散难免，便独享浮世清欢</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">18</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">16</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">13</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/xxxxx" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:xxxxxx@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/Certbot/" style="font-size: 1.1em; color: #999">Certbot</a> <a href="/tags/Docker/" style="font-size: 1.1em; color: #999">Docker</a> <a href="/tags/LNMP/" style="font-size: 1.26em; color: #999fa8">LNMP</a> <a href="/tags/Linux/" style="font-size: 1.42em; color: #99a6b7">Linux</a> <a href="/tags/Maven/" style="font-size: 1.1em; color: #999">Maven</a> <a href="/tags/Python/" style="font-size: 1.1em; color: #999">Python</a> <a href="/tags/Seafile/" style="font-size: 1.1em; color: #999">Seafile</a> <a href="/tags/Typecho/" style="font-size: 1.18em; color: #999ca1">Typecho</a> <a href="/tags/Typora/" style="font-size: 1.1em; color: #999">Typora</a> <a href="/tags/Windows/" style="font-size: 1.34em; color: #99a3b0">Windows</a> <a href="/tags/acme-sh/" style="font-size: 1.1em; color: #999">acme.sh</a> <a href="/tags/python/" style="font-size: 1.18em; color: #999ca1">python</a> <a href="/tags/%E4%B8%83%E7%89%9B%E4%BA%91/" style="font-size: 1.1em; color: #999">七牛云</a> <a href="/tags/%E4%BB%A3%E7%A0%81/" style="font-size: 1.1em; color: #999">代码</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 1.5em; color: #99a9bf">教程</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 1.1em; color: #999">笔记</a></div></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">18</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2020-04-10T06:26:00.000Z"></div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2021-10-25T10:08:14.278Z"></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 <i style="color:#FF6A6A;animation: announ_animation 0.8s linear infinite;" class="fa fa-heartbeat"></i> Hollower</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/"><img class="icp-icon" src="https://qiniu.cdn.abina.cn/icp_logo.png"><span>备案号：鲁ICP备2021001694号-1</span></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function subtitleType () {
+  getScript('https://yijuzhan.com/api/word.php?m=js').then(() => {
+    var con = str[0]
+    if (true) {
+      var from = '出自 ' + str[1]
+      var sub = "东篱把酒黄昏后，有暗香盈袖。".length == 0 ? new Array() : "东篱把酒黄昏后，有暗香盈袖。".split(',')
+      var both = sub.unshift(con, from)
+      var typed = new Typed('#subtitle', {
+        strings: sub,
+        startDelay: 300,
+        typeSpeed: 150,
+        loop: false,
+        backSpeed: 50,
+      })
+    } else {
+      document.getElementById('subtitle').innerHTML = con
+    }
+  })
+}
+
+if (true) {
+  if (typeof Typed === 'function') {
+    subtitleType()
+  } else {
+    getScript('https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js').then(subtitleType)
+  }
+} else {
+  subtitleType()
+}
+</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></div></body></html>
