@@ -99,19 +99,19 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl -sL https://rpm.nodesource.com/setup_10.x | bash -</span><br><span class="line">yum install -y nodejs</span><br></pre></td></tr></table></figure>
 <h2 id="2、Windows系统安装Node-js"><a href="#2、Windows系统安装Node-js" class="headerlink" title="2、Windows系统安装Node.js"></a>2、Windows系统安装Node.js</h2><h3 id="2-1-下载Node-js"><a href="#2-1-下载Node-js" class="headerlink" title="2.1 下载Node.js"></a>2.1 下载Node.js</h3><p><a target="_blank" rel="noopener" href="https://www.nodejs.com.cn/">Node.js中文网</a><br>或<a target="_blank" rel="noopener" href="https://nodejs.org/en">Node.js官网</a></p>
 <h3 id="2-2-安装"><a href="#2-2-安装" class="headerlink" title="2.2 安装"></a>2.2 安装</h3><p>下载完成之后，打开下载文件，双击安装包，点击下一步、然后看到更改路径的地方。<br>点击change按钮，更换到自己的指定安装位置（以E盘为例），无需修改一直点击下一步，直到安装完成。</p>
-<h3 id="2-3-修改全局安装路径、缓存路径"><a href="#2-3-修改全局安装路径、缓存路径" class="headerlink" title="2.3 修改全局安装路径、缓存路径"></a>2.3 修改全局安装路径、缓存路径</h3><p> <code>node_global</code> 目录存储全局安装的 Node.js 模块，<code>node_cache</code> 目录存储 Node.js 模块的缓存文件。<br>在nodejs安装目录创建node_global和node_cache文件夹<br><img src="/./IMAGES/Hexo%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/img-20240217181946.png" alt="Img"><br>打开cmd命令，依次输入：</p>
+<h3 id="2-3-修改全局安装路径、缓存路径"><a href="#2-3-修改全局安装路径、缓存路径" class="headerlink" title="2.3 修改全局安装路径、缓存路径"></a>2.3 修改全局安装路径、缓存路径</h3><p> <code>node_global</code> 目录存储全局安装的 Node.js 模块，<code>node_cache</code> 目录存储 Node.js 模块的缓存文件。<br>在nodejs安装目录创建node_global和node_cache文件夹<br><img src="/../images/Hexo%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/img-20240217181946.png" alt="Img"><br>打开cmd命令，依次输入：</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> prefix &quot;E:\NodeJS\node_global&quot;</span><br><span class="line">npm config <span class="built_in">set</span> cache &quot;E:\NodeJS\node_cache&quot;</span><br></pre></td></tr></table></figure>
-<h3 id="2-4-修改系统环境变量"><a href="#2-4-修改系统环境变量" class="headerlink" title="2.4 修改系统环境变量"></a>2.4 修改系统环境变量</h3><p>在<strong>系统变量</strong>下直接新建变量名为<code>NODE_PATH</code> 的变量，其值指向刚才创建的<strong>node_global目录下的node_modules目录</strong>：E:\NodeJS\node_global\node_modules<br><img src="/./IMAGES/Hexo%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/img-20240217182002.png" alt="Img"><br><img src="/./IMAGES/Hexo%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/img-20240217182007.png" alt="Img"><br><img src="/./IMAGES/Hexo%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/img-20240217182047.png" alt="Img"><br>编辑系统变量<strong>Path</strong>，向其中追加2条路径：<code>E:\\NodeJS\\node_global</code>和<code>%NODE_PATH%</code><br><img src="/./IMAGES/Hexo%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/img-20240217182056.png" alt="Img"></p>
+<h3 id="2-4-修改系统环境变量"><a href="#2-4-修改系统环境变量" class="headerlink" title="2.4 修改系统环境变量"></a>2.4 修改系统环境变量</h3><p>在<strong>系统变量</strong>下直接新建变量名为<code>NODE_PATH</code> 的变量，其值指向刚才创建的<strong>node_global目录下的node_modules目录</strong>：E:\NodeJS\node_global\node_modules<br><img src="/../images/Hexo%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/img-20240217182002.png" alt="Img"><br><img src="/../images/Hexo%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/img-20240217182007.png" alt="Img"><br><img src="/../images/Hexo%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/img-20240217182047.png" alt="Img"><br>编辑系统变量<strong>Path</strong>，向其中追加2条路径：<code>E:\\NodeJS\\node_global</code>和<code>%NODE_PATH%</code><br><img src="/../images/Hexo%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/img-20240217182056.png" alt="Img"></p>
 <h2 id="3、验证和测试"><a href="#3、验证和测试" class="headerlink" title="3、验证和测试"></a>3、验证和测试</h2><p>安装完成后执行 node -v 和 npm -v 如果打印版本号则安装成功</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">C:\<span class="title">Users</span>\<span class="title">Administrator</span>&gt;<span class="title">node</span> -<span class="title">v</span></span></span><br><span class="line"><span class="function"><span class="title">v18</span>.19.0</span></span><br><span class="line"><span class="function"><span class="title">C</span>:\<span class="title">Users</span>\<span class="title">Administrator</span>&gt;<span class="title">npm</span> -<span class="title">v</span></span></span><br><span class="line"><span class="function">10.4.0</span></span><br></pre></td></tr></table></figure>
-<p>使用npm install express -g全局安装 Express 模块<br><img src="/./IMAGES/Hexo%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/img-20240217182103.png" alt="Img"><br>如果报错，一般是Nodejs安装目录权限问题导致的。<br><strong>解决方案1</strong>：右键NodeJS文件夹-&gt;属性-&gt;安全-&gt;编辑，在”组或用户名“中先单击选择“Authenticated Users”（可以理解为全部用户），然后在下方”Authenticated Users 的权限“中的”完全控制“右边对应的”允许“一栏进行勾选。<br>若解决方案1出现错误，执行<strong>解决方案2</strong>：右键NodeJS文件夹-&gt;属性-&gt;安全-&gt;高级，点击”所有者“右边的”更改“-&gt;高级-&gt;立即查找，在下方搜索结果中选择您当前的用户并点击确定。然后再次执行<strong>解决方案1</strong>即可。</p>
+<p>使用npm install express -g全局安装 Express 模块<br><img src="/../images/Hexo%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/img-20240217182103.png" alt="Img"><br>如果报错，一般是Nodejs安装目录权限问题导致的。<br><strong>解决方案1</strong>：右键NodeJS文件夹-&gt;属性-&gt;安全-&gt;编辑，在”组或用户名“中先单击选择“Authenticated Users”（可以理解为全部用户），然后在下方”Authenticated Users 的权限“中的”完全控制“右边对应的”允许“一栏进行勾选。<br>若解决方案1出现错误，执行<strong>解决方案2</strong>：右键NodeJS文件夹-&gt;属性-&gt;安全-&gt;高级，点击”所有者“右边的”更改“-&gt;高级-&gt;立即查找，在下方搜索结果中选择您当前的用户并点击确定。然后再次执行<strong>解决方案1</strong>即可。</p>
 <h2 id="4、换源"><a href="#4、换源" class="headerlink" title="4、换源"></a>4、换源</h2><p>输入下面的命令，将npm源地址换成淘宝的服务器：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 1. 切换新源</span><br><span class="line">npm config set registry https://registry.npmmirror.com</span><br><span class="line">// 2. 查看源是否设置成功</span><br><span class="line">npm config get registry</span><br><span class="line">// 3. 安装cnpm备用</span><br><span class="line">npm install -g cnpm</span><br></pre></td></tr></table></figure>
 <h1 id="二、安装Git（重要）"><a href="#二、安装Git（重要）" class="headerlink" title="二、安装Git（重要）"></a>二、安装Git（重要）</h1><p>按照《Git学习笔记》的内容安装Git，<strong>并连接Github。</strong></p>
 <h1 id="三、安装部署Hexo"><a href="#三、安装部署Hexo" class="headerlink" title="三、安装部署Hexo"></a>三、安装部署Hexo</h1><h2 id="1、安装所需的本体和插件"><a href="#1、安装所需的本体和插件" class="headerlink" title="1、安装所需的本体和插件"></a>1、安装所需的本体和插件</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// hexo命令行工具，其依赖hexo本体，执行此命令会顺带安装hexo本体</span><br><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
 <h2 id="2、初始化"><a href="#2、初始化" class="headerlink" title="2、初始化"></a>2、初始化</h2><p>新建一个目录用来初始化博客程序，例如<code>/blog</code></p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /blog</span><br><span class="line">hexo init</span><br></pre></td></tr></table></figure>
-<p>若出现以下错误，则可能是windows系统默认禁止PowerShell脚本运行，执行解决方案3即可。<br><img src="/./IMAGES/Hexo%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/img-20240217182110.png" alt="Img"><br><strong>解决方案3</strong>：<br>设置-&gt;系统-&gt;开发者选项-&gt;PowerShell-&gt;”更改执行策略，以允许本地PowerShell脚本在未签名的情况下运行“-&gt;开<br>就成功的将博客映射到本地默认端口上了。</p>
+<p>若出现以下错误，则可能是windows系统默认禁止PowerShell脚本运行，执行解决方案3即可。<br><img src="/../images/Hexo%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/img-20240217182110.png" alt="Img"><br><strong>解决方案3</strong>：<br>设置-&gt;系统-&gt;开发者选项-&gt;PowerShell-&gt;”更改执行策略，以允许本地PowerShell脚本在未签名的情况下运行“-&gt;开<br>就成功的将博客映射到本地默认端口上了。</p>
 <h2 id="3、安装插件"><a href="#3、安装插件" class="headerlink" title="3、安装插件"></a>3、安装插件</h2><p><strong>注意：以下命令必须在&#x2F;blog目录内执行！！！</strong></p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// hexo部署工具，可调用git连接github等远程仓库</span><br><span class="line">// npm --save是npm命令的一个选项,用于将安装的包添加到项目package.json文件的dependencies字段中</span><br><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">// hexo服务器</span><br><span class="line">npm install -g hexo-server</span><br></pre></td></tr></table></figure>
 <h2 id="3、编写文章"><a href="#3、编写文章" class="headerlink" title="3、编写文章"></a>3、编写文章</h2><p>在source&#x2F;_post文件夹中新建md文档<br>md文档的开头需要添加以下内容：</p>
@@ -135,7 +135,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/02/17/Hexo%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/" data-id="clsq0ud1n000j2gu80zc9bc5m" data-title="Hexo博客引擎的安装与使用" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2024/02/17/Hexo%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/" data-id="clsq120yp000o6wu8fpc2hmmt" data-title="Hexo博客引擎的安装与使用" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -231,7 +231,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/10/21/%E4%BD%BF%E7%94%A8acme.sh%E7%94%B3%E8%AF%B7%E5%B9%B6%E7%BB%B4%E6%8A%A4Let's%20Encrypt%E8%AF%81%E4%B9%A6/" data-id="clsq0ud1u00172gu87h7s58ym" data-title="使用acme.sh申请并维护Let&#39;s Encrypt证书" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2021/10/21/%E4%BD%BF%E7%94%A8acme.sh%E7%94%B3%E8%AF%B7%E5%B9%B6%E7%BB%B4%E6%8A%A4Let's%20Encrypt%E8%AF%81%E4%B9%A6/" data-id="clsq120yv00176wu85xww728s" data-title="使用acme.sh申请并维护Let&#39;s Encrypt证书" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -303,7 +303,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/04/11/Windows10%E4%B8%8B%E5%90%8C%E6%97%B6%E5%AE%89%E8%A3%85python2%E5%92%8Cpython3/" data-id="clsq0ud1p000p2gu85i6n2fe0" data-title="Windows10下同时安装python2和python3" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2021/04/11/Windows10%E4%B8%8B%E5%90%8C%E6%97%B6%E5%AE%89%E8%A3%85python2%E5%92%8Cpython3/" data-id="clsq120ys000y6wu85or47oyn" data-title="Windows10下同时安装python2和python3" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -433,7 +433,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/03/14/Docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" data-id="clsq0ud1l000f2gu86b77dda9" data-title="Docker学习笔记" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2021/03/14/Docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" data-id="clsq120ym000f6wu8ctzp3jvs" data-title="Docker学习笔记" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -493,7 +493,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/02/17/pip%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90/" data-id="clsq0ud1s00122gu8ax04hoyc" data-title="pip更换国内源" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2021/02/17/pip%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90/" data-id="clsq120yt00126wu87au3gkj9" data-title="pip更换国内源" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -571,7 +571,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/05/20/Windows%E4%B8%8B%E5%AE%89%E8%A3%85%E5%B9%B6%E9%85%8D%E7%BD%AEMaven%E5%88%B0IDEA/" data-id="clsq0ud1q000u2gu8hvlvghxw" data-title="Windows下安装并配置Maven到IDEA" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2020/05/20/Windows%E4%B8%8B%E5%AE%89%E8%A3%85%E5%B9%B6%E9%85%8D%E7%BD%AEMaven%E5%88%B0IDEA/" data-id="clsq120yq000q6wu82k712g45" data-title="Windows下安装并配置Maven到IDEA" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -670,7 +670,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/04/30/CentOS7%E5%AE%89%E8%A3%85Seafile%E7%A7%81%E6%9C%89%E4%BA%91/" data-id="clsq0ud1g00052gu8gth97j2s" data-title="CentOS7安装Seafile私有云" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2020/04/30/CentOS7%E5%AE%89%E8%A3%85Seafile%E7%A7%81%E6%9C%89%E4%BA%91/" data-id="clsq120yh00066wu8bt9te0je" data-title="CentOS7安装Seafile私有云" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -759,7 +759,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/04/30/CentOS7%E5%AE%89%E8%A3%85python3%E5%92%8Cpip3/" data-id="clsq0ud1j000a2gu8ex4w9bfz" data-title="CentOS7安装python3和pip3" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2020/04/30/CentOS7%E5%AE%89%E8%A3%85python3%E5%92%8Cpip3/" data-id="clsq120yj00096wu814bkaxdc" data-title="CentOS7安装python3和pip3" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -854,7 +854,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/04/20/Typora%E7%B2%98%E8%B4%B4%E5%9B%BE%E7%89%87%E8%87%AA%E5%8A%A8%E4%B8%8A%E4%BC%A0%E5%88%B0%E4%B8%83%E7%89%9B%E4%BA%91/" data-id="clsq0ud1o000n2gu8cuz8auwk" data-title="Typora粘贴图片自动上传到七牛云" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2020/04/20/Typora%E7%B2%98%E8%B4%B4%E5%9B%BE%E7%89%87%E8%87%AA%E5%8A%A8%E4%B8%8A%E4%BC%A0%E5%88%B0%E4%B8%83%E7%89%9B%E4%BA%91/" data-id="clsq120yo000k6wu84scg9qb2" data-title="Typora粘贴图片自动上传到七牛云" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -904,7 +904,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/04/11/%E8%A7%A3%E5%86%B3Typecho%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E5%A4%B1%E8%B4%A5%E7%9A%84%E9%97%AE%E9%A2%98/" data-id="clsq0ud1u001b2gu8bdum76ad" data-title="解决Typecho上传文件失败的问题" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2020/04/11/%E8%A7%A3%E5%86%B3Typecho%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E5%A4%B1%E8%B4%A5%E7%9A%84%E9%97%AE%E9%A2%98/" data-id="clsq120yw001b6wu86ccgf8q4" data-title="解决Typecho上传文件失败的问题" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
