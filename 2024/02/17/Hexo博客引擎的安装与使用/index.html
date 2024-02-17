@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo博客引擎的安装与使用 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="一、安装Node.js1、Linux系统安装Node.js安装nodejs有很多种方式，下面是其中一种 12curl -sL https:&#x2F;&#x2F;rpm.nodesource.com&#x2F;setup_10.x | bash -yum install -y nodejs 2、Windows系统安装Node.js2.1 下载Node.jsNode.js中文网或Node.js官网 2.2 安装下载完成之后，打开">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo博客引擎的安装与使用">
+<meta property="og:url" content="http://example.com/2024/02/17/Hexo%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="一、安装Node.js1、Linux系统安装Node.js安装nodejs有很多种方式，下面是其中一种 12curl -sL https:&#x2F;&#x2F;rpm.nodesource.com&#x2F;setup_10.x | bash -yum install -y nodejs 2、Windows系统安装Node.js2.1 下载Node.jsNode.js中文网或Node.js官网 2.2 安装下载完成之后，打开">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/IMAGES/Hexo%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/img-20240217181946.png">
+<meta property="og:image" content="http://example.com/IMAGES/Hexo%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/img-20240217182002.png">
+<meta property="og:image" content="http://example.com/IMAGES/Hexo%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/img-20240217182007.png">
+<meta property="og:image" content="http://example.com/IMAGES/Hexo%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/img-20240217182047.png">
+<meta property="og:image" content="http://example.com/IMAGES/Hexo%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/img-20240217182056.png">
+<meta property="og:image" content="http://example.com/IMAGES/Hexo%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/img-20240217182103.png">
+<meta property="og:image" content="http://example.com/IMAGES/Hexo%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/img-20240217182110.png">
+<meta property="article:published_time" content="2024-02-17T10:22:00.000Z">
+<meta property="article:modified_time" content="2024-02-17T10:22:00.000Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="教程">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="Node.js">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/IMAGES/Hexo%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/img-20240217181946.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Hexo博客引擎的安装与使用" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/02/17/Hexo%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/" class="article-date">
+  <time class="dt-published" datetime="2024-02-17T10:22:00.000Z" itemprop="datePublished">2024-02-17</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a>►<a class="article-category-link" href="/categories/%E6%95%99%E7%A8%8B/Hexo/">Hexo</a>►<a class="article-category-link" href="/categories/%E6%95%99%E7%A8%8B/Hexo/Node-js/">Node.js</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Hexo博客引擎的安装与使用
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="一、安装Node-js"><a href="#一、安装Node-js" class="headerlink" title="一、安装Node.js"></a>一、安装Node.js</h1><h2 id="1、Linux系统安装Node-js"><a href="#1、Linux系统安装Node-js" class="headerlink" title="1、Linux系统安装Node.js"></a>1、Linux系统安装Node.js</h2><p>安装nodejs有很多种方式，下面是其中一种</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl -sL https://rpm.nodesource.com/setup_10.x | bash -</span><br><span class="line">yum install -y nodejs</span><br></pre></td></tr></table></figure>
+<h2 id="2、Windows系统安装Node-js"><a href="#2、Windows系统安装Node-js" class="headerlink" title="2、Windows系统安装Node.js"></a>2、Windows系统安装Node.js</h2><h3 id="2-1-下载Node-js"><a href="#2-1-下载Node-js" class="headerlink" title="2.1 下载Node.js"></a>2.1 下载Node.js</h3><p><a target="_blank" rel="noopener" href="https://www.nodejs.com.cn/">Node.js中文网</a><br>或<a target="_blank" rel="noopener" href="https://nodejs.org/en">Node.js官网</a></p>
+<h3 id="2-2-安装"><a href="#2-2-安装" class="headerlink" title="2.2 安装"></a>2.2 安装</h3><p>下载完成之后，打开下载文件，双击安装包，点击下一步、然后看到更改路径的地方。<br>点击change按钮，更换到自己的指定安装位置（以E盘为例），无需修改一直点击下一步，直到安装完成。</p>
+<h3 id="2-3-修改全局安装路径、缓存路径"><a href="#2-3-修改全局安装路径、缓存路径" class="headerlink" title="2.3 修改全局安装路径、缓存路径"></a>2.3 修改全局安装路径、缓存路径</h3><p> <code>node_global</code> 目录存储全局安装的 Node.js 模块，<code>node_cache</code> 目录存储 Node.js 模块的缓存文件。<br>在nodejs安装目录创建node_global和node_cache文件夹<br><img src="/./IMAGES/Hexo%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/img-20240217181946.png" alt="Img"><br>打开cmd命令，依次输入：</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> prefix &quot;E:\NodeJS\node_global&quot;</span><br><span class="line">npm config <span class="built_in">set</span> cache &quot;E:\NodeJS\node_cache&quot;</span><br></pre></td></tr></table></figure>
+<h3 id="2-4-修改系统环境变量"><a href="#2-4-修改系统环境变量" class="headerlink" title="2.4 修改系统环境变量"></a>2.4 修改系统环境变量</h3><p>在<strong>系统变量</strong>下直接新建变量名为<code>NODE_PATH</code> 的变量，其值指向刚才创建的<strong>node_global目录下的node_modules目录</strong>：E:\NodeJS\node_global\node_modules<br><img src="/./IMAGES/Hexo%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/img-20240217182002.png" alt="Img"><br><img src="/./IMAGES/Hexo%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/img-20240217182007.png" alt="Img"><br><img src="/./IMAGES/Hexo%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/img-20240217182047.png" alt="Img"><br>编辑系统变量<strong>Path</strong>，向其中追加2条路径：<code>E:\\NodeJS\\node_global</code>和<code>%NODE_PATH%</code><br><img src="/./IMAGES/Hexo%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/img-20240217182056.png" alt="Img"></p>
+<h2 id="3、验证和测试"><a href="#3、验证和测试" class="headerlink" title="3、验证和测试"></a>3、验证和测试</h2><p>安装完成后执行 node -v 和 npm -v 如果打印版本号则安装成功</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">C:\<span class="title">Users</span>\<span class="title">Administrator</span>&gt;<span class="title">node</span> -<span class="title">v</span></span></span><br><span class="line"><span class="function"><span class="title">v18</span>.19.0</span></span><br><span class="line"><span class="function"><span class="title">C</span>:\<span class="title">Users</span>\<span class="title">Administrator</span>&gt;<span class="title">npm</span> -<span class="title">v</span></span></span><br><span class="line"><span class="function">10.4.0</span></span><br></pre></td></tr></table></figure>
+<p>使用npm install express -g全局安装 Express 模块<br><img src="/./IMAGES/Hexo%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/img-20240217182103.png" alt="Img"><br>如果报错，一般是Nodejs安装目录权限问题导致的。<br><strong>解决方案1</strong>：右键NodeJS文件夹-&gt;属性-&gt;安全-&gt;编辑，在”组或用户名“中先单击选择“Authenticated Users”（可以理解为全部用户），然后在下方”Authenticated Users 的权限“中的”完全控制“右边对应的”允许“一栏进行勾选。<br>若解决方案1出现错误，执行<strong>解决方案2</strong>：右键NodeJS文件夹-&gt;属性-&gt;安全-&gt;高级，点击”所有者“右边的”更改“-&gt;高级-&gt;立即查找，在下方搜索结果中选择您当前的用户并点击确定。然后再次执行<strong>解决方案1</strong>即可。</p>
+<h2 id="4、换源"><a href="#4、换源" class="headerlink" title="4、换源"></a>4、换源</h2><p>输入下面的命令，将npm源地址换成淘宝的服务器：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 1. 切换新源</span><br><span class="line">npm config set registry https://registry.npmmirror.com</span><br><span class="line">// 2. 查看源是否设置成功</span><br><span class="line">npm config get registry</span><br><span class="line">// 3. 安装cnpm备用</span><br><span class="line">npm install -g cnpm</span><br></pre></td></tr></table></figure>
+<h1 id="二、安装Git（重要）"><a href="#二、安装Git（重要）" class="headerlink" title="二、安装Git（重要）"></a>二、安装Git（重要）</h1><p>按照《Git学习笔记》的内容安装Git，<strong>并连接Github。</strong></p>
+<h1 id="三、安装部署Hexo"><a href="#三、安装部署Hexo" class="headerlink" title="三、安装部署Hexo"></a>三、安装部署Hexo</h1><h2 id="1、安装所需的本体和插件"><a href="#1、安装所需的本体和插件" class="headerlink" title="1、安装所需的本体和插件"></a>1、安装所需的本体和插件</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// hexo命令行工具，其依赖hexo本体，执行此命令会顺带安装hexo本体</span><br><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<h2 id="2、初始化"><a href="#2、初始化" class="headerlink" title="2、初始化"></a>2、初始化</h2><p>新建一个目录用来初始化博客程序，例如<code>/blog</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /blog</span><br><span class="line">hexo init</span><br></pre></td></tr></table></figure>
+<p>若出现以下错误，则可能是windows系统默认禁止PowerShell脚本运行，执行解决方案3即可。<br><img src="/./IMAGES/Hexo%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/img-20240217182110.png" alt="Img"><br><strong>解决方案3</strong>：<br>设置-&gt;系统-&gt;开发者选项-&gt;PowerShell-&gt;”更改执行策略，以允许本地PowerShell脚本在未签名的情况下运行“-&gt;开<br>就成功的将博客映射到本地默认端口上了。</p>
+<h2 id="3、安装插件"><a href="#3、安装插件" class="headerlink" title="3、安装插件"></a>3、安装插件</h2><p><strong>注意：以下命令必须在&#x2F;blog目录内执行！！！</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// hexo部署工具，可调用git连接github等远程仓库</span><br><span class="line">// npm --save是npm命令的一个选项,用于将安装的包添加到项目package.json文件的dependencies字段中</span><br><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">// hexo服务器</span><br><span class="line">npm install -g hexo-server</span><br></pre></td></tr></table></figure>
+<h2 id="3、编写文章"><a href="#3、编写文章" class="headerlink" title="3、编写文章"></a>3、编写文章</h2><p>在source&#x2F;_post文件夹中新建md文档<br>md文档的开头需要添加以下内容：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 标题</span><br><span class="line">tags: [标签1,标签2]</span><br><span class="line">categories: [分类]</span><br><span class="line">index_img: 主页封面图的相对路径</span><br><span class="line">date: 2023-8-25 18:03:07</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<h2 id="3、生成文件并开启服务"><a href="#3、生成文件并开启服务" class="headerlink" title="3、生成文件并开启服务"></a>3、生成文件并开启服务</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 重新生成（generate）网页静态文件</span><br><span class="line">hexo g</span><br><span class="line">// 开启服务（server）hexo会监视文件变动并自动更新，无须重启服务器</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+<p>使用nginx&#x2F;apache可将服务映射到80或443等常规端口。也可打开hexo默认端口，以在外网访问。</p>
+<h1 id="四、发布到GitHub-Pages（可选）"><a href="#四、发布到GitHub-Pages（可选）" class="headerlink" title="四、发布到GitHub Pages（可选）"></a>四、发布到GitHub Pages（可选）</h1><h2 id="1、创建GitHub仓库"><a href="#1、创建GitHub仓库" class="headerlink" title="1、创建GitHub仓库"></a>1、创建GitHub仓库</h2><p>点击右上角加号，选择new repository。<br>仓库名称按照 <code>github用户名.github.io</code> 的格式填写并选择public。</p>
+<h2 id="2、配置-config-yml文档"><a href="#2、配置-config-yml文档" class="headerlink" title="2、配置_config.yml文档"></a>2、配置_config.yml文档</h2><p>打开hexo站点的根目录，找到_config.yml文件，文档的最后将</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/one-command-deployment</span><br><span class="line">deploy:</span><br><span class="line">  type: &#x27;&#x27;</span><br></pre></td></tr></table></figure>
+<p>修改为</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: One-Command Deployment</span><br><span class="line">deploy: </span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:用户名/用户名.github.io.git</span><br><span class="line">  branch: gh-pages</span><br></pre></td></tr></table></figure>
+<ul>
+<li>其中的repository可在github仓库页面“Quick setup”的SSH选项中复制（若为新仓库）。</li>
+<li>branch好像可以自定义？根据<a href="(https://hexo.io/zh-cn/docs/one-command-deployment">官网</a>推荐这里设置为gh-pages表示GitHub默认分支</li>
+</ul>
+<h2 id="3、生成站点文件并推送至远程库"><a href="#3、生成站点文件并推送至远程库" class="headerlink" title="3、生成站点文件并推送至远程库"></a>3、生成站点文件并推送至远程库</h2><p> <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// hexo clean将public文件夹删除</span><br><span class="line">hexo clean</span><br><span class="line">// 重新生成文件并推送至远程库</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure></p>
+<h1 id="五、附Hexo常用命令"><a href="#五、附Hexo常用命令" class="headerlink" title="五、附Hexo常用命令"></a>五、附Hexo常用命令</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo -g #安装Hexo</span><br><span class="line">npm update hexo -g #升级</span><br><span class="line">hexo init #初始化博客</span><br><span class="line">​</span><br><span class="line">hexo n &quot;我的博客&quot; == hexo new &quot;我的博客&quot; #新建文章</span><br><span class="line">hexo g == hexo generate #生成</span><br><span class="line">hexo s == hexo server #启动服务预览</span><br><span class="line">hexo d == hexo deploy #部署</span><br><span class="line">​</span><br><span class="line">hexo server #Hexo会监视文件变动并自动更新，无须重启服务器</span><br><span class="line">hexo server -s #静态模式</span><br><span class="line">hexo server -p 5000 #更改端口</span><br><span class="line">hexo server -i 192.168.1.1 #自定义 IP</span><br><span class="line">hexo clean #清除缓存，若是网页正常情况下可以忽略这条命令</span><br></pre></td></tr></table></figure>
+
+<p>参考资料（侵删）:<br>[1] <a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_42064877/article/details/131610918">Nodejs基于Windows安装教程</a><br>[2] <a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_52992693/article/details/135784406">npm 淘宝镜像到期了，尽快切换(npm使用淘宝镜像安装时报错)</a><br>[3] <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_42951560/article/details/123678786">解决运行Hexo报错hexo : 无法加载文件hexo.ps1，因为在此系统上禁止运行脚本</a><br>[4] <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/655349835">手把手教你使用Hexo+GitHub搭建个人博客并发布文章（附常见问题解决方法）</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/02/17/Hexo%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/" data-id="clsq0ud1n000j2gu80zc9bc5m" data-title="Hexo博客引擎的安装与使用" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node-js/" rel="tag">Node.js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2021/10/21/%E4%BD%BF%E7%94%A8acme.sh%E7%94%B3%E8%AF%B7%E5%B9%B6%E7%BB%B4%E6%8A%A4Let's%20Encrypt%E8%AF%81%E4%B9%A6/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">使用acme.sh申请并维护Let&#39;s Encrypt证书</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%BB%A3%E7%A0%81/">代码</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%BB%A3%E7%A0%81/Typora%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0/">Typora图片上传</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Certbot/">Certbot</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Hexo/">Hexo</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Hexo/Node-js/">Node.js</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/LNMP/">LNMP</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Maven/">Maven</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Seafile/">Seafile</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Typecho/">Typecho</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/acme-sh/">acme.sh</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/python/">python</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AC%94%E8%AE%B0/Docker/">Docker</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Certbot/" rel="tag">Certbot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Docker/" rel="tag">Docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LNMP/" rel="tag">LNMP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Maven/" rel="tag">Maven</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/" rel="tag">Node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Seafile/" rel="tag">Seafile</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Typecho/" rel="tag">Typecho</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Typora/" rel="tag">Typora</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Windows/" rel="tag">Windows</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/acme-sh/" rel="tag">acme.sh</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%83%E7%89%9B%E4%BA%91/" rel="tag">七牛云</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BB%A3%E7%A0%81/" rel="tag">代码</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag">笔记</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Certbot/" style="font-size: 10px;">Certbot</a> <a href="/tags/Docker/" style="font-size: 10px;">Docker</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/LNMP/" style="font-size: 14px;">LNMP</a> <a href="/tags/Linux/" style="font-size: 18px;">Linux</a> <a href="/tags/Maven/" style="font-size: 10px;">Maven</a> <a href="/tags/Node-js/" style="font-size: 10px;">Node.js</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Seafile/" style="font-size: 10px;">Seafile</a> <a href="/tags/Typecho/" style="font-size: 12px;">Typecho</a> <a href="/tags/Typora/" style="font-size: 10px;">Typora</a> <a href="/tags/Windows/" style="font-size: 16px;">Windows</a> <a href="/tags/acme-sh/" style="font-size: 10px;">acme.sh</a> <a href="/tags/python/" style="font-size: 12px;">python</a> <a href="/tags/%E4%B8%83%E7%89%9B%E4%BA%91/" style="font-size: 10px;">七牛云</a> <a href="/tags/%E4%BB%A3%E7%A0%81/" style="font-size: 10px;">代码</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 20px;">教程</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 10px;">笔记</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">February 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">October 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/02/17/Hexo%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/">Hexo博客引擎的安装与使用</a>
+          </li>
+        
+          <li>
+            <a href="/2021/10/21/%E4%BD%BF%E7%94%A8acme.sh%E7%94%B3%E8%AF%B7%E5%B9%B6%E7%BB%B4%E6%8A%A4Let's%20Encrypt%E8%AF%81%E4%B9%A6/">使用acme.sh申请并维护Let&#39;s Encrypt证书</a>
+          </li>
+        
+          <li>
+            <a href="/2021/04/11/Windows10%E4%B8%8B%E5%90%8C%E6%97%B6%E5%AE%89%E8%A3%85python2%E5%92%8Cpython3/">Windows10下同时安装python2和python3</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/14/Docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Docker学习笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2021/02/17/pip%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90/">pip更换国内源</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

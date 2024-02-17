@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-Hexo博客引擎的安装与使用" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/02/17/Hexo%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/" class="article-date">
+  <time class="dt-published" datetime="2024-02-17T10:22:00.000Z" itemprop="datePublished">2024-02-17</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a>►<a class="article-category-link" href="/categories/%E6%95%99%E7%A8%8B/Hexo/">Hexo</a>►<a class="article-category-link" href="/categories/%E6%95%99%E7%A8%8B/Hexo/Node-js/">Node.js</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2024/02/17/Hexo%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/">Hexo博客引擎的安装与使用</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="一、安装Node-js"><a href="#一、安装Node-js" class="headerlink" title="一、安装Node.js"></a>一、安装Node.js</h1><h2 id="1、Linux系统安装Node-js"><a href="#1、Linux系统安装Node-js" class="headerlink" title="1、Linux系统安装Node.js"></a>1、Linux系统安装Node.js</h2><p>安装nodejs有很多种方式，下面是其中一种</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl -sL https://rpm.nodesource.com/setup_10.x | bash -</span><br><span class="line">yum install -y nodejs</span><br></pre></td></tr></table></figure>
+<h2 id="2、Windows系统安装Node-js"><a href="#2、Windows系统安装Node-js" class="headerlink" title="2、Windows系统安装Node.js"></a>2、Windows系统安装Node.js</h2><h3 id="2-1-下载Node-js"><a href="#2-1-下载Node-js" class="headerlink" title="2.1 下载Node.js"></a>2.1 下载Node.js</h3><p><a target="_blank" rel="noopener" href="https://www.nodejs.com.cn/">Node.js中文网</a><br>或<a target="_blank" rel="noopener" href="https://nodejs.org/en">Node.js官网</a></p>
+<h3 id="2-2-安装"><a href="#2-2-安装" class="headerlink" title="2.2 安装"></a>2.2 安装</h3><p>下载完成之后，打开下载文件，双击安装包，点击下一步、然后看到更改路径的地方。<br>点击change按钮，更换到自己的指定安装位置（以E盘为例），无需修改一直点击下一步，直到安装完成。</p>
+<h3 id="2-3-修改全局安装路径、缓存路径"><a href="#2-3-修改全局安装路径、缓存路径" class="headerlink" title="2.3 修改全局安装路径、缓存路径"></a>2.3 修改全局安装路径、缓存路径</h3><p> <code>node_global</code> 目录存储全局安装的 Node.js 模块，<code>node_cache</code> 目录存储 Node.js 模块的缓存文件。<br>在nodejs安装目录创建node_global和node_cache文件夹<br><img src="/./IMAGES/Hexo%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/img-20240217181946.png" alt="Img"><br>打开cmd命令，依次输入：</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> prefix &quot;E:\NodeJS\node_global&quot;</span><br><span class="line">npm config <span class="built_in">set</span> cache &quot;E:\NodeJS\node_cache&quot;</span><br></pre></td></tr></table></figure>
+<h3 id="2-4-修改系统环境变量"><a href="#2-4-修改系统环境变量" class="headerlink" title="2.4 修改系统环境变量"></a>2.4 修改系统环境变量</h3><p>在<strong>系统变量</strong>下直接新建变量名为<code>NODE_PATH</code> 的变量，其值指向刚才创建的<strong>node_global目录下的node_modules目录</strong>：E:\NodeJS\node_global\node_modules<br><img src="/./IMAGES/Hexo%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/img-20240217182002.png" alt="Img"><br><img src="/./IMAGES/Hexo%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/img-20240217182007.png" alt="Img"><br><img src="/./IMAGES/Hexo%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/img-20240217182047.png" alt="Img"><br>编辑系统变量<strong>Path</strong>，向其中追加2条路径：<code>E:\\NodeJS\\node_global</code>和<code>%NODE_PATH%</code><br><img src="/./IMAGES/Hexo%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/img-20240217182056.png" alt="Img"></p>
+<h2 id="3、验证和测试"><a href="#3、验证和测试" class="headerlink" title="3、验证和测试"></a>3、验证和测试</h2><p>安装完成后执行 node -v 和 npm -v 如果打印版本号则安装成功</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">C:\<span class="title">Users</span>\<span class="title">Administrator</span>&gt;<span class="title">node</span> -<span class="title">v</span></span></span><br><span class="line"><span class="function"><span class="title">v18</span>.19.0</span></span><br><span class="line"><span class="function"><span class="title">C</span>:\<span class="title">Users</span>\<span class="title">Administrator</span>&gt;<span class="title">npm</span> -<span class="title">v</span></span></span><br><span class="line"><span class="function">10.4.0</span></span><br></pre></td></tr></table></figure>
+<p>使用npm install express -g全局安装 Express 模块<br><img src="/./IMAGES/Hexo%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/img-20240217182103.png" alt="Img"><br>如果报错，一般是Nodejs安装目录权限问题导致的。<br><strong>解决方案1</strong>：右键NodeJS文件夹-&gt;属性-&gt;安全-&gt;编辑，在”组或用户名“中先单击选择“Authenticated Users”（可以理解为全部用户），然后在下方”Authenticated Users 的权限“中的”完全控制“右边对应的”允许“一栏进行勾选。<br>若解决方案1出现错误，执行<strong>解决方案2</strong>：右键NodeJS文件夹-&gt;属性-&gt;安全-&gt;高级，点击”所有者“右边的”更改“-&gt;高级-&gt;立即查找，在下方搜索结果中选择您当前的用户并点击确定。然后再次执行<strong>解决方案1</strong>即可。</p>
+<h2 id="4、换源"><a href="#4、换源" class="headerlink" title="4、换源"></a>4、换源</h2><p>输入下面的命令，将npm源地址换成淘宝的服务器：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 1. 切换新源</span><br><span class="line">npm config set registry https://registry.npmmirror.com</span><br><span class="line">// 2. 查看源是否设置成功</span><br><span class="line">npm config get registry</span><br><span class="line">// 3. 安装cnpm备用</span><br><span class="line">npm install -g cnpm</span><br></pre></td></tr></table></figure>
+<h1 id="二、安装Git（重要）"><a href="#二、安装Git（重要）" class="headerlink" title="二、安装Git（重要）"></a>二、安装Git（重要）</h1><p>按照《Git学习笔记》的内容安装Git，<strong>并连接Github。</strong></p>
+<h1 id="三、安装部署Hexo"><a href="#三、安装部署Hexo" class="headerlink" title="三、安装部署Hexo"></a>三、安装部署Hexo</h1><h2 id="1、安装所需的本体和插件"><a href="#1、安装所需的本体和插件" class="headerlink" title="1、安装所需的本体和插件"></a>1、安装所需的本体和插件</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// hexo命令行工具，其依赖hexo本体，执行此命令会顺带安装hexo本体</span><br><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<h2 id="2、初始化"><a href="#2、初始化" class="headerlink" title="2、初始化"></a>2、初始化</h2><p>新建一个目录用来初始化博客程序，例如<code>/blog</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /blog</span><br><span class="line">hexo init</span><br></pre></td></tr></table></figure>
+<p>若出现以下错误，则可能是windows系统默认禁止PowerShell脚本运行，执行解决方案3即可。<br><img src="/./IMAGES/Hexo%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/img-20240217182110.png" alt="Img"><br><strong>解决方案3</strong>：<br>设置-&gt;系统-&gt;开发者选项-&gt;PowerShell-&gt;”更改执行策略，以允许本地PowerShell脚本在未签名的情况下运行“-&gt;开<br>就成功的将博客映射到本地默认端口上了。</p>
+<h2 id="3、安装插件"><a href="#3、安装插件" class="headerlink" title="3、安装插件"></a>3、安装插件</h2><p><strong>注意：以下命令必须在&#x2F;blog目录内执行！！！</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// hexo部署工具，可调用git连接github等远程仓库</span><br><span class="line">// npm --save是npm命令的一个选项,用于将安装的包添加到项目package.json文件的dependencies字段中</span><br><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">// hexo服务器</span><br><span class="line">npm install -g hexo-server</span><br></pre></td></tr></table></figure>
+<h2 id="3、编写文章"><a href="#3、编写文章" class="headerlink" title="3、编写文章"></a>3、编写文章</h2><p>在source&#x2F;_post文件夹中新建md文档<br>md文档的开头需要添加以下内容：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 标题</span><br><span class="line">tags: [标签1,标签2]</span><br><span class="line">categories: [分类]</span><br><span class="line">index_img: 主页封面图的相对路径</span><br><span class="line">date: 2023-8-25 18:03:07</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<h2 id="3、生成文件并开启服务"><a href="#3、生成文件并开启服务" class="headerlink" title="3、生成文件并开启服务"></a>3、生成文件并开启服务</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 重新生成（generate）网页静态文件</span><br><span class="line">hexo g</span><br><span class="line">// 开启服务（server）hexo会监视文件变动并自动更新，无须重启服务器</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+<p>使用nginx&#x2F;apache可将服务映射到80或443等常规端口。也可打开hexo默认端口，以在外网访问。</p>
+<h1 id="四、发布到GitHub-Pages（可选）"><a href="#四、发布到GitHub-Pages（可选）" class="headerlink" title="四、发布到GitHub Pages（可选）"></a>四、发布到GitHub Pages（可选）</h1><h2 id="1、创建GitHub仓库"><a href="#1、创建GitHub仓库" class="headerlink" title="1、创建GitHub仓库"></a>1、创建GitHub仓库</h2><p>点击右上角加号，选择new repository。<br>仓库名称按照 <code>github用户名.github.io</code> 的格式填写并选择public。</p>
+<h2 id="2、配置-config-yml文档"><a href="#2、配置-config-yml文档" class="headerlink" title="2、配置_config.yml文档"></a>2、配置_config.yml文档</h2><p>打开hexo站点的根目录，找到_config.yml文件，文档的最后将</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/one-command-deployment</span><br><span class="line">deploy:</span><br><span class="line">  type: &#x27;&#x27;</span><br></pre></td></tr></table></figure>
+<p>修改为</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: One-Command Deployment</span><br><span class="line">deploy: </span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:用户名/用户名.github.io.git</span><br><span class="line">  branch: gh-pages</span><br></pre></td></tr></table></figure>
+<ul>
+<li>其中的repository可在github仓库页面“Quick setup”的SSH选项中复制（若为新仓库）。</li>
+<li>branch好像可以自定义？根据<a href="(https://hexo.io/zh-cn/docs/one-command-deployment">官网</a>推荐这里设置为gh-pages表示GitHub默认分支</li>
+</ul>
+<h2 id="3、生成站点文件并推送至远程库"><a href="#3、生成站点文件并推送至远程库" class="headerlink" title="3、生成站点文件并推送至远程库"></a>3、生成站点文件并推送至远程库</h2><p> <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// hexo clean将public文件夹删除</span><br><span class="line">hexo clean</span><br><span class="line">// 重新生成文件并推送至远程库</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure></p>
+<h1 id="五、附Hexo常用命令"><a href="#五、附Hexo常用命令" class="headerlink" title="五、附Hexo常用命令"></a>五、附Hexo常用命令</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo -g #安装Hexo</span><br><span class="line">npm update hexo -g #升级</span><br><span class="line">hexo init #初始化博客</span><br><span class="line">​</span><br><span class="line">hexo n &quot;我的博客&quot; == hexo new &quot;我的博客&quot; #新建文章</span><br><span class="line">hexo g == hexo generate #生成</span><br><span class="line">hexo s == hexo server #启动服务预览</span><br><span class="line">hexo d == hexo deploy #部署</span><br><span class="line">​</span><br><span class="line">hexo server #Hexo会监视文件变动并自动更新，无须重启服务器</span><br><span class="line">hexo server -s #静态模式</span><br><span class="line">hexo server -p 5000 #更改端口</span><br><span class="line">hexo server -i 192.168.1.1 #自定义 IP</span><br><span class="line">hexo clean #清除缓存，若是网页正常情况下可以忽略这条命令</span><br></pre></td></tr></table></figure>
+
+<p>参考资料（侵删）:<br>[1] <a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_42064877/article/details/131610918">Nodejs基于Windows安装教程</a><br>[2] <a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_52992693/article/details/135784406">npm 淘宝镜像到期了，尽快切换(npm使用淘宝镜像安装时报错)</a><br>[3] <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_42951560/article/details/123678786">解决运行Hexo报错hexo : 无法加载文件hexo.ps1，因为在此系统上禁止运行脚本</a><br>[4] <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/655349835">手把手教你使用Hexo+GitHub搭建个人博客并发布文章（附常见问题解决方法）</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/02/17/Hexo%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/" data-id="clsq0ud1n000j2gu80zc9bc5m" data-title="Hexo博客引擎的安装与使用" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node-js/" rel="tag">Node.js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-使用acme.sh申请并维护Let&#39;s Encrypt证书" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/10/21/%E4%BD%BF%E7%94%A8acme.sh%E7%94%B3%E8%AF%B7%E5%B9%B6%E7%BB%B4%E6%8A%A4Let's%20Encrypt%E8%AF%81%E4%B9%A6/" class="article-date">
+  <time class="dt-published" datetime="2021-10-21T08:55:15.000Z" itemprop="datePublished">2021-10-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a>►<a class="article-category-link" href="/categories/%E6%95%99%E7%A8%8B/acme-sh/">acme.sh</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/10/21/%E4%BD%BF%E7%94%A8acme.sh%E7%94%B3%E8%AF%B7%E5%B9%B6%E7%BB%B4%E6%8A%A4Let's%20Encrypt%E8%AF%81%E4%B9%A6/">使用acme.sh申请并维护Let&#39;s Encrypt证书</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>acme.sh是一个知名的用于申请Let’s Encrypt证书的开源项目，项目地址：<a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://github.com/acmesh-official/acme.sh">https://github.com/acmesh-official/acme.sh</a>，属于脚本类型，有比较详细的文档，支持自动化更新和自动化部署。唯一缺点，如果有更新后自动部署至多个节点的需求的话，acme.sh无法满足。（描述转自：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/4f36bf75bc96">免费申请HTTPS证书六大方法</a> 侵删）</p>
+<h3 id="一、安装-acme-sh"><a href="#一、安装-acme-sh" class="headerlink" title="一、安装 acme.sh"></a>一、安装 acme.sh</h3><p>安装很简单, 一个命令:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl  https://get.acme.sh | sh -s email=my@example.com</span><br></pre></td></tr></table></figure>
+
+<p>这时acme.sh会安装到你的用户目录下(<code>~/.acme.sh/</code>)</p>
+<p>据说，还会创建一个alias，以方便使用：<code>alias acme.sh=~/.acme.sh/acme.sh</code>但是我的服务器并没有成功创建这个alias。可以执行上述命令手动创建一下。（临时创建，重启后失效）或者将alias命令加入<code> /etc/.bashrc</code>或者<code> ~/.bashrc</code>文件，以永久性生效。<code>/etc/.bashrc</code>针对所有用户生效，<code>~/.bashrc</code>是针对当前用户生效。</p>
+<h3 id="二、生成证书"><a href="#二、生成证书" class="headerlink" title="二、生成证书"></a>二、生成证书</h3><p><strong>acme.sh</strong> 实现了 <strong>acme</strong> 协议支持的所有验证协议. 一般有两种方式验证: http 和 dns 验证。</p>
+<p>遗憾的是，我试用http方式时报错，提示我要用dns方式验证。不知道是我自己的原因还是acme.sh的原因。</p>
+<p>以下是华为云dns方式验证获取证书的方法，<strong>其他域名解析商的方法请查看这个网站</strong>：<a target="_blank" rel="noopener" href="https://github.com/acmesh-official/acme.sh/wiki/dnsapi">https://github.com/acmesh-official/acme.sh/wiki/dnsapi</a></p>
+<h4 id="1、设置环境变量"><a href="#1、设置环境变量" class="headerlink" title="1、设置环境变量"></a>1、设置环境变量</h4><p>因为我使用的华为云，故调用华为云提供的API自动添加 txt 记录完成验证：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export HUAWEICLOUD_Username=&lt;Your Username&gt;</span><br><span class="line">export HUAWEICLOUD_Password=&lt;Your Password&gt;</span><br><span class="line">export HUAWEICLOUD_ProjectID=&lt;A Project ID&gt;</span><br></pre></td></tr></table></figure>
+
+<p>&lt;Your Username&gt;为华为账户登陆名</p>
+<p>&lt;Your Password&gt;为华为账户登陆密码</p>
+<p>&lt;A Project ID&gt; 为服务器所属区域的项目ID（登录华为云官网，进入“控制台”，鼠标移动到自己的用户名处，在下拉列表选择“我的凭证”，在打开的项目列表处可以查看到。）</p>
+<h4 id="2、申请证书"><a href="#2、申请证书" class="headerlink" title="2、申请证书"></a>2、申请证书</h4><p>申请单个域名证书：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./acme.sh --issue --dns dns_huaweicloud -d www.example.com</span><br></pre></td></tr></table></figure>
+
+<p>申请通配域名证书：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./acme.sh --issue --dns dns_huaweicloud -d *.example.com</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="三、安装证书"><a href="#三、安装证书" class="headerlink" title="三、安装证书"></a>三、安装证书</h3><p>不要直接使用acme.sh申请下来的证书，而是调用命令将证书重新整理到相应的目录再使用。</p>
+<p>原文档描述为：<em>注意, 默认生成的证书都放在安装目录下: <code>~/.acme.sh/</code>, 请不要直接使用此目录下的文件, 例如: 不要直接让 nginx&#x2F;apache 的配置文件使用这下面的文件. 这里面的文件都是内部使用, 而且目录结构可能会变化。正确的使用方法是使用 <code>--install-cert</code> 命令,并指定目标位置, 然后证书文件会被copy到相应的位置</em></p>
+<h4 id="·Apache-example"><a href="#·Apache-example" class="headerlink" title="·Apache example:"></a>·Apache example:</h4><p>–cert-file为自定义证书要存放的目录</p>
+<p>–key-file 为自定义私钥要存放的目录</p>
+<p>–fullchain-file为自定义证书链要存放的目录</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">acme.sh --install-cert -d example.com \</span><br><span class="line">--cert-file      /path/to/certfile/in/apache/cert.pem  \</span><br><span class="line">--key-file       /path/to/keyfile/in/apache/key.pem  \</span><br><span class="line">--fullchain-file /path/to/fullchain/certfile/apache/fullchain.pem \</span><br><span class="line">--reloadcmd     &quot;service apache2 force-reload&quot;</span><br></pre></td></tr></table></figure>
+
+<h4 id="·Nginx-example"><a href="#·Nginx-example" class="headerlink" title="·Nginx example:"></a>·Nginx example:</h4><p>–key-file 为自定义私钥要存放的目录</p>
+<p>–fullchain-file为自定义证书链要存放的目录</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">acme.sh --install-cert -d example.com \</span><br><span class="line">--key-file       /path/to/keyfile/in/nginx/key.pem  \</span><br><span class="line">--fullchain-file /path/to/fullchain/nginx/cert.pem \</span><br><span class="line">--reloadcmd     &quot;service nginx force-reload&quot;</span><br></pre></td></tr></table></figure>
+
+<p>(一个小提醒, 这里用的是 <code>service nginx force-reload</code>, 不是 <code>service nginx reload</code>, 据测试, <code>reload</code> 并不会重新加载证书, 所以用的 <code>force-reload</code>)</p>
+<h3 id="四、更新证书"><a href="#四、更新证书" class="headerlink" title="四、更新证书"></a>四、更新证书</h3><p>目前证书在 60 天以后会自动更新, 你无需任何操作. 今后有可能会缩短这个时间, 不过都是自动的, 你不用关心.</p>
+<h3 id="五、更新-acme-sh"><a href="#五、更新-acme-sh" class="headerlink" title="五、更新 acme.sh"></a>五、更新 acme.sh</h3><p>目前由于 acme 协议和 letsencrypt CA 都在频繁的更新, 因此 acme.sh 也经常更新以保持同步.</p>
+<p>升级 acme.sh 到最新版 :</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">acme.sh --upgrade</span><br></pre></td></tr></table></figure>
+
+<p>如果你不想手动升级, 可以开启自动升级:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">acme.sh  --upgrade  --auto-upgrade</span><br></pre></td></tr></table></figure>
+
+<p>之后, acme.sh 就会自动保持更新了.</p>
+<p>你也可以随时关闭自动更新:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">acme.sh --upgrade  --auto-upgrade  0</span><br></pre></td></tr></table></figure>
+
+<h3 id="六、其他免费申请HTTPS证书的方法"><a href="#六、其他免费申请HTTPS证书的方法" class="headerlink" title="六、其他免费申请HTTPS证书的方法"></a>六、其他免费申请HTTPS证书的方法</h3><p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/4f36bf75bc96%EF%BC%88%E4%BE%B5%E5%88%A0%EF%BC%89">https://www.jianshu.com/p/4f36bf75bc96（侵删）</a></p>
+<p>参考资料（侵删）：</p>
+<p>[1]<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/4f36bf75bc96">免费申请HTTPS证书六大方法</a></p>
+<p>[2]<a target="_blank" rel="noopener" href="https://github.com/acmesh-official/acme.sh/wiki/%E8%AF%B4%E6%98%8E">acme.sh开源项目说明文档</a></p>
+<p>[3]<a target="_blank" rel="noopener" href="https://bugxia.com/33.html">使用acme.sh脚本申请Let’s Encrypt免费泛域名证书</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/10/21/%E4%BD%BF%E7%94%A8acme.sh%E7%94%B3%E8%AF%B7%E5%B9%B6%E7%BB%B4%E6%8A%A4Let's%20Encrypt%E8%AF%81%E4%B9%A6/" data-id="clsq0ud1u00172gu87h7s58ym" data-title="使用acme.sh申请并维护Let&#39;s Encrypt证书" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/acme-sh/" rel="tag">acme.sh</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Windows10下同时安装python2和python3" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/04/11/Windows10%E4%B8%8B%E5%90%8C%E6%97%B6%E5%AE%89%E8%A3%85python2%E5%92%8Cpython3/" class="article-date">
+  <time class="dt-published" datetime="2021-04-11T04:33:23.000Z" itemprop="datePublished">2021-04-11</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a>►<a class="article-category-link" href="/categories/%E6%95%99%E7%A8%8B/python/">python</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/04/11/Windows10%E4%B8%8B%E5%90%8C%E6%97%B6%E5%AE%89%E8%A3%85python2%E5%92%8Cpython3/">Windows10下同时安装python2和python3</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>参考文章（侵删）：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/lxmzq/articles/12696453.html">Win10下python3和python2同时安装并解决pip共存问题</a></p>
+<p>环境说明：</p>
+<p>①系统为windows10_64位</p>
+<p>②安装目录为</p>
+<p>​	python2：E:\python\python27</p>
+<p>​	python3：E:\python\python39</p>
+<h3 id="一、python3的下载安装"><a href="#一、python3的下载安装" class="headerlink" title="一、python3的下载安装"></a>一、python3的下载安装</h3><h4 id="1、python3的下载"><a href="#1、python3的下载" class="headerlink" title="1、python3的下载"></a>1、python3的下载</h4><p>点击<a target="_blank" rel="noopener" href="https://www.python.org/ftp/python/3.9.4/python-3.9.4-amd64.exe">下载链接</a>下载python3.9.4的安装包</p>
+<p>如果你需要其他版本，可以进入<a target="_blank" rel="noopener" href="https://www.python.org/">官网</a>，选择Downloads-&gt;Windows，查找所需要的python版本并下载。</p>
+<h4 id="2、python3安装"><a href="#2、python3安装" class="headerlink" title="2、python3安装"></a>2、python3安装</h4><p>运行下载下来的python3安装包，<strong>勾选“Add Python3.9.4 to PATH”</strong>选项（可以直接将python3添加到系统环境变量），然后在<strong>Customize installation</strong>中自定义安装路径，安装路径为E:\Python\python39，完成安装。（下图是网上找的3.5.2的示例图片，版本不同，但选项基本相同）</p>
+<p><img src="https://qiniu.cdn.abina.cn/2021_04_11_12_00_34_1.jpg" alt="python3安装"></p>
+<h3 id="二、python2的下载安装"><a href="#二、python2的下载安装" class="headerlink" title="二、python2的下载安装"></a>二、python2的下载安装</h3><h4 id="1、python2下载"><a href="#1、python2下载" class="headerlink" title="1、python2下载"></a>1、python2下载</h4><p>点击<a target="_blank" rel="noopener" href="https://www.python.org/ftp/python/2.7.18/python-2.7.18.amd64.msi">下载链接</a>下载python2.7.18的安装包</p>
+<p>如果你需要其他版本，可以进入<a target="_blank" rel="noopener" href="https://www.python.org/">官网</a>，选择Downloads-&gt;Windows，查找所需要的python版本并下载。</p>
+<h4 id="2、python2安装"><a href="#2、python2安装" class="headerlink" title="2、python2安装"></a>2、python2安装</h4><p>运行下载下来的python2安装包，选择安装目录，本文安装路径为E:\Python\python27，一路next，点击finish完成安装。</p>
+<h4 id="3、添加环境变量"><a href="#3、添加环境变量" class="headerlink" title="3、添加环境变量"></a>3、添加环境变量</h4><p>打开控制面板-&gt;系统，选择“高级系统设置”-&gt;环境变量，选择系统变量中的Path，点击编辑，新建，分别添加E:\Python\python27和E:\Python\python27\Scripts</p>
+<p>如下图前两行</p>
+<img src="https://qiniu.cdn.abina.cn/2021_04_11_12_00_18_1.png" alt="image-20210411040015193" style="zoom: 80%;" />
+
+<p><strong>如果你对python的环境调用不是很熟悉，一定要保证python2的目录环境在python3的目录上方（就像上图这样，建议你按照我的设置去做，否则下面的pip使用可能会出错）</strong></p>
+<p>至此python2安装完毕。</p>
+<h3 id="三、修改python3的python命令"><a href="#三、修改python3的python命令" class="headerlink" title="三、修改python3的python命令"></a>三、修改python3的python命令</h3><p>通过上两个章节，python2和python3都已经安装到系统中。但是两个版本默认的命令都是python，会导致冲突，通过下列操作，实现：“使用python命令时默认调用python2执行，使用python3命令时，调用python3执行”</p>
+<p>①进入python3的安装目录 E:\python\python39</p>
+<p>②找到python.exe和pythonw.exe</p>
+<p>③分别修改为python3.exe和pythonw3.exe</p>
+<p>④修改完毕</p>
+<h3 id="四、pip和pip3设置"><a href="#四、pip和pip3设置" class="headerlink" title="四、pip和pip3设置"></a>四、pip和pip3设置</h3><p>Python安装包需要用到包管理工具pip，但是当同时安装python2和python3的时候，pip只是其中一个版本，以下将提供一个修改方式，即重新安装两个版本的pip，使得两个python版本的pip能够共存。</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python -m pip install --upgrade pip --force-reinstall</span><br><span class="line">python3 -m pip install --upgrade pip --force-reinstall</span><br></pre></td></tr></table></figure>
+
+<p>至此，windows10安装python2和python3完成。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/04/11/Windows10%E4%B8%8B%E5%90%8C%E6%97%B6%E5%AE%89%E8%A3%85python2%E5%92%8Cpython3/" data-id="clsq0ud1p000p2gu85i6n2fe0" data-title="Windows10下同时安装python2和python3" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Windows/" rel="tag">Windows</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Docker学习笔记" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/03/14/Docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="article-date">
+  <time class="dt-published" datetime="2021-03-14T15:12:30.000Z" itemprop="datePublished">2021-03-14</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a>►<a class="article-category-link" href="/categories/%E7%AC%94%E8%AE%B0/Docker/">Docker</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/03/14/Docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Docker学习笔记</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>学习资料声明(侵删)：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1og4y1q7M4?p=8">bilibili视频-【狂神说Java】Docker最新超详细版教程通俗易懂</a></p>
+<h3 id="一、Docker安装"><a href="#一、Docker安装" class="headerlink" title="一、Docker安装"></a>一、Docker安装</h3><p>可参考<a target="_blank" rel="noopener" href="https://docs.docker.com/engine/install/centos/">官方文档</a></p>
+<p>1、卸载旧版本及相关依赖</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">sudo yum remove docker \</span><br><span class="line">                  docker-client \</span><br><span class="line">                  docker-client-latest \</span><br><span class="line">                  docker-common \</span><br><span class="line">                  docker-latest \</span><br><span class="line">                  docker-latest-logrotate \</span><br><span class="line">                  docker-logrotate \</span><br><span class="line">                  docker-engine</span><br></pre></td></tr></table></figure>
+
+<p>2、安装依赖</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install -y yum-utils</span><br></pre></td></tr></table></figure>
+
+<p>3、添加远程仓库</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">默认国外源（不推荐）</span></span><br><span class="line">sudo yum-config-manager \</span><br><span class="line">    --add-repo \</span><br><span class="line">    https://download.docker.com/linux/centos/docker-ce.repo</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">推荐阿里云</span></span><br><span class="line">sudo yum-config-manager \</span><br><span class="line">    --add-repo \</span><br><span class="line">    http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</span><br></pre></td></tr></table></figure>
+
+<p>4、更新yum软件包索引</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">Centos7</span></span><br><span class="line">yum makecache fast</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">Centos8</span></span><br><span class="line">yum makecache</span><br></pre></td></tr></table></figure>
+
+<p>4、安装docker    docker-ce  社区版&#x2F;docker-ee  企业版</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install docker-ce docker-ce-cli containerd.io</span><br></pre></td></tr></table></figure>
+
+<p>5、启动docker</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl start docker</span><br></pre></td></tr></table></figure>
+
+<p>6、（若有需要）卸载docker</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">卸载依赖</span></span><br><span class="line">sudo yum remove docker-ce docker-ce-cli containerd.io</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">删除资源</span></span><br><span class="line">sudo rm -rf /var/lib/docker</span><br><span class="line">sudo rm -rf /var/lib/containerd</span><br></pre></td></tr></table></figure>
+
+<h3 id="二、Docker常用命令"><a href="#二、Docker常用命令" class="headerlink" title="二、Docker常用命令"></a>二、Docker常用命令</h3><h4 id="1、版本及帮助命令"><a href="#1、版本及帮助命令" class="headerlink" title="1、版本及帮助命令"></a>1、版本及帮助命令</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker version  #显示docker版本信息</span><br><span class="line">docker info    #显示docker系统信息，包括镜像和容器数量</span><br><span class="line">docker 命令 --help  #帮助命令</span><br></pre></td></tr></table></figure>
+
+<h4 id="2、镜像命令"><a href="#2、镜像命令" class="headerlink" title="2、镜像命令"></a>2、镜像命令</h4><p>搜索镜像，同<a target="_blank" rel="noopener" href="https://hub.docker.com/">官网</a>手动搜索</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker search mysql</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">可选项，过滤</span></span><br><span class="line">--filter=STARS=3000  #搜索STARS大于3000的镜像</span><br></pre></td></tr></table></figure>
+
+<p>下载镜像</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull xxx[:tag]</span><br></pre></td></tr></table></figure>
+
+<p>删除镜像</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker rmi -f 镜像名或镜像id</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">删除全部镜像</span></span><br><span class="line">docker rmi -f $(docker images -aq)</span><br></pre></td></tr></table></figure>
+
+<h4 id="3、启动命令"><a href="#3、启动命令" class="headerlink" title="3、启动命令"></a>3、启动命令</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">docker run [可选参数]</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">参数说明</span></span><br><span class="line">--name=&quot;Name&quot;   容器名字，用来区分容器</span><br><span class="line">-d              后台方式运行</span><br><span class="line">-it             使用交互方式运行，进入容器查看内容</span><br><span class="line">-p              指定容器的端口</span><br><span class="line">-p 主机端口:容器端口   主机端口映射到容器端口</span><br><span class="line">-p ip:主机端口:容器端口</span><br><span class="line">-p 容器端口       打开容器端口，但不映射</span><br><span class="line">-P              （大写P）随机指定端口</span><br><span class="line"></span><br><span class="line">例如：启动并进入容器</span><br><span class="line">docker run -it xxx /bin/bash</span><br></pre></td></tr></table></figure>
+
+<h4 id="4、查看运行中的容器"><a href="#4、查看运行中的容器" class="headerlink" title="4、查看运行中的容器"></a>4、查看运行中的容器</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">查看当前运行的</span></span><br><span class="line">docker ps</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">查看当前运行的+已经停止的</span></span><br><span class="line">docker ps -a</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">显示最近创建的?个容器（？填数字）</span></span><br><span class="line">docker ps -n=?</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">只显示容器编号</span></span><br><span class="line">docker ps -q</span><br></pre></td></tr></table></figure>
+
+<h4 id="5、容器命令"><a href="#5、容器命令" class="headerlink" title="5、容器命令"></a>5、容器命令</h4><p>退出容器</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">如果用-it进入交互，则<span class="built_in">exit</span>停止容器并退出</span></span><br><span class="line">exit</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">容器不停止退出</span></span><br><span class="line">ctrl+P+Q</span><br></pre></td></tr></table></figure>
+
+<p>删除容器</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">docker rm -f 容器id</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">删除全部容器</span></span><br><span class="line">docker rm -f $(docker ps -aq)</span><br><span class="line">docker ps -a -q|xargs docker rm</span><br></pre></td></tr></table></figure>
+
+<p>启动和停止容器</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">docker start 容器id</span><br><span class="line">docker restart 容器id</span><br><span class="line">docker stop 容器id</span><br><span class="line">docker pause 容器id</span><br><span class="line">docker unpause 容器id</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">强制停止</span></span><br><span class="line">docker kill 容器id</span><br></pre></td></tr></table></figure>
+
+<h4 id="6、常用其他命令"><a href="#6、常用其他命令" class="headerlink" title="6、常用其他命令"></a>6、常用其他命令</h4><p>后台启动容器</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">命令 docker run -d 镜像名</span></span><br><span class="line">docker run -d centos</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">问题：docker ps，发现centos停止了</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">常见的坑，docker容器使用后台运行，就必须要有一个前台进程，docker发现没有应用，就会自动停止</span></span><br></pre></td></tr></table></figure>
+
+<p>查看日志</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">查看xxx容器最近10条日志</span></span><br><span class="line">docker logs -f -t [--tail 10] 容器id</span><br></pre></td></tr></table></figure>
+
+<p>查看容器进程信息</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker top 容器id</span><br></pre></td></tr></table></figure>
+
+<p>查看容器的元数据</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker inspect 容器id</span><br></pre></td></tr></table></figure>
+
+<p>进入当前正在运行的容器</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">我们通常容器都是后台方式运行的，需要进入容器，修改一些配置</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">进入容器并开启新的终端</span></span><br><span class="line">docker exec -it 容器id bashShell</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">进入容器正在执行的终端</span></span><br><span class="line">docker attach 容器id bashShell</span><br></pre></td></tr></table></figure>
+
+<p>从容器中拷贝文件到主机上</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker cp 容器id:容器内路径 主机路径</span><br></pre></td></tr></table></figure>
+
+<h4 id="7、打包镜像"><a href="#7、打包镜像" class="headerlink" title="7、打包镜像"></a>7、打包镜像</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker commit 提交容器成为一个新副本</span><br><span class="line">docker commit -m=&quot;提交的描述信息&quot; -a=&quot;作者&quot; 容器id 目标镜像名:[TAG]</span><br></pre></td></tr></table></figure>
+
+<h3 id="三、容器数据卷"><a href="#三、容器数据卷" class="headerlink" title="三、容器数据卷"></a>三、容器数据卷</h3><p>直接使用命令挂载</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -it -v 主机目录:容器内目录</span><br></pre></td></tr></table></figure>
+
+<p>具名和匿名挂载</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">匿名挂载 -v 容器内路径</span></span><br><span class="line">docker run -d -P --name nginx01 -v /etc/nginx nginx</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">具名挂载 -v 卷名:容器内路径</span></span><br><span class="line">docker run -d -P --name nginx02 -v juming-nginx:/etc/nginx nginx</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">查看所有的卷的情况</span></span><br><span class="line">docker volume ls</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">查看具体容器数据卷信息</span></span><br><span class="line">docker volume inspect 具体卷名</span><br><span class="line"></span><br><span class="line">所有的docker容器的卷，没有指定目录的情况下都是在&#x27;/var/lib/docker/volumes/具体卷名/_data&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>拓展：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-v 主机目录:容器内目录:ro    #只读</span><br><span class="line">-v 主机目录:容器内目录:rw    #可读可写</span><br></pre></td></tr></table></figure>
+
+<h3 id="四、DockerFile"><a href="#四、DockerFile" class="headerlink" title="四、DockerFile"></a>四、DockerFile</h3><p>1、每个保留的关键字（指令）都必须是大写字母</p>
+<p>2、执行从上到下</p>
+<p>3、#表示注释</p>
+<p>4、每个指令都会创建提交一个新的镜像层，并提交。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">FROM          #基础镜像，一切从这里开始构建</span><br><span class="line"><span class="meta prompt_">99%</span><span class="language-bash">镜像从FROM SCR</span></span><br><span class="line">MAINTAINER    #镜像作者，姓名&lt;邮箱&gt;</span><br><span class="line">RUN           #镜像构建时需要运行的命令</span><br><span class="line">ADD           #步骤</span><br><span class="line">WORDKDIR      #镜像的工作目录</span><br><span class="line">VIOLUME       #挂载的目录</span><br><span class="line">EXPOST        #暴露端口</span><br><span class="line">CMD           #指定此容器启动时需要运行的命令，只有最后一个会生效，可被替代</span><br><span class="line">ENTRYPOINT    #指定此容器启动时需要运行的命令，可以追加命令</span><br><span class="line">ONBUILD       #当构建一个被继承DockerFile这个时候就会运行ONBUILD的指令。它是一个触发指令</span><br><span class="line">COPY          #类似ADD，将我们文件拷贝到镜像中</span><br><span class="line">ENV           #设置环境变量</span><br></pre></td></tr></table></figure>
+
+<p>5、构建命令</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker build -f dockerfile文件名 -t 镜像名:TAG .</span><br></pre></td></tr></table></figure>
+
+<p>6、docker history 镜像id   ，查看构建过程</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/03/14/Docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" data-id="clsq0ud1l000f2gu86b77dda9" data-title="Docker学习笔记" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Docker/" rel="tag">Docker</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag">笔记</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-pip更换国内源" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/02/17/pip%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90/" class="article-date">
+  <time class="dt-published" datetime="2021-02-17T01:45:00.000Z" itemprop="datePublished">2021-02-17</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a>►<a class="article-category-link" href="/categories/%E6%95%99%E7%A8%8B/python/">python</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/02/17/pip%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90/">pip更换国内源</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h3 id="一、永久修改"><a href="#一、永久修改" class="headerlink" title="一、永久修改"></a>一、永久修改</h3><p>首先在当前用户目录下建立 <code>.pip</code> 文件夹，然后在文件夹中创建 <code>pip.conf</code> 文件，再将源地址加进去即可。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir ~/.pip</span><br><span class="line">vim ~/.pip/pip.conf</span><br></pre></td></tr></table></figure>
+
+<p>添加如下内容</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[global]</span><br><span class="line">index-url = https://mirrors.aliyun.com/pypi/simple</span><br></pre></td></tr></table></figure>
+
+<p>国内其他pip源，清华的５分钟同步一次官网，建议使用</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">清华：https://pypi.tuna.tsinghua.edu.cn/simple</span><br><span class="line">中国科技大学 https://pypi.mirrors.ustc.edu.cn/simple/</span><br><span class="line">华中理工大学：http://pypi.hustunique.com/</span><br><span class="line">山东理工大学：http://pypi.sdutlinux.org/</span><br><span class="line">豆瓣：http://pypi.douban.com/simple/</span><br></pre></td></tr></table></figure>
+
+<p>注意：不管你用的是pip3还是pip，方法都是一样的，都是创建pip文件夹。</p>
+<h3 id="二、临时换源"><a href="#二、临时换源" class="headerlink" title="二、临时换源"></a>二、临时换源</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pip3 install 包名 -i 镜像源url</span><br></pre></td></tr></table></figure>
+
+
+
+<p>参考资料：</p>
+<p>[1]<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_36470475/article/details/107194079">pip、pip3更换国内源</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/02/17/pip%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90/" data-id="clsq0ud1s00122gu8ax04hoyc" data-title="pip更换国内源" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Windows/" rel="tag">Windows</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Windows下安装并配置Maven到IDEA" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2020/05/20/Windows%E4%B8%8B%E5%AE%89%E8%A3%85%E5%B9%B6%E9%85%8D%E7%BD%AEMaven%E5%88%B0IDEA/" class="article-date">
+  <time class="dt-published" datetime="2020-05-20T11:57:20.000Z" itemprop="datePublished">2020-05-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a>►<a class="article-category-link" href="/categories/%E6%95%99%E7%A8%8B/Maven/">Maven</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2020/05/20/Windows%E4%B8%8B%E5%AE%89%E8%A3%85%E5%B9%B6%E9%85%8D%E7%BD%AEMaven%E5%88%B0IDEA/">Windows下安装并配置Maven到IDEA</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h3 id="一、下载并解压"><a href="#一、下载并解压" class="headerlink" title="一、下载并解压"></a>一、下载并解压</h3><ul>
+<li>前往<a target="_blank" rel="noopener" href="https://maven.apache.org/download.cgi">官网</a>下载最新压缩包</li>
+</ul>
+<p><img src="https://qiniu.cdn.abina.cn/2021_01_26_13_25_36_1.png" alt="image-20210126132533914"></p>
+<ul>
+<li>解压到自定义目录（这里以E:\maven为例）</li>
+</ul>
+<p><img src="https://qiniu.cdn.abina.cn/2021_01_26_13_25_59_1.png" alt="image-20210126132558259"></p>
+<h3 id="二、配置环境变量"><a href="#二、配置环境变量" class="headerlink" title="二、配置环境变量"></a>二、配置环境变量</h3><p>新建环境变量MAVEN_HOME，赋值E:\maven\apache-maven-3.6.3</p>
+<p><img src="https://qiniu.cdn.abina.cn/2021_01_26_13_26_19_1.png" alt="image-20210126132618531"></p>
+<p>编辑环境变量Path，追加%MAVEN_HOME%\bin</p>
+<p><img src="https://qiniu.cdn.abina.cn/2021_01_26_13_26_37_1.png" alt="image-20210126132636098"></p>
+<h3 id="三、检查maven是否安装成功"><a href="#三、检查maven是否安装成功" class="headerlink" title="三、检查maven是否安装成功"></a>三、检查maven是否安装成功</h3><p>打开命令行输入<code>mvn -v</code>或者<code>mvn --version</code></p>
+<p><img src="https://qiniu.cdn.abina.cn/2021_01_26_13_27_00_1.png" alt="image-20210126132658842"></p>
+<h3 id="四、配置本地maven仓库路径（选做）"><a href="#四、配置本地maven仓库路径（选做）" class="headerlink" title="四、配置本地maven仓库路径（选做）"></a>四、配置本地maven仓库路径（选做）</h3><p>这一步的目的是将maven本地仓库从c盘移到其他磁盘，减少c盘占用。</p>
+<ul>
+<li>在E:\maven\apache-maven-3.6.3下新建maven-repository文件夹</li>
+<li>打开E:\maven\apache-maven-3.6.3\conf\settings.xml</li>
+<li>找到<code>&lt;localRepository&gt;/path/to/local/repo&lt;/localRepository&gt;</code>（此版本约在53行左右），这里是被注释掉的配置</li>
+<li>将此行复制到注释外，里面换成你刚才新建的maven-repository文件夹地址</li>
+</ul>
+<p><img src="https://qiniu.cdn.abina.cn/2021_01_26_13_27_21_1.png" alt="image-20210126132720691"></p>
+<ul>
+<li>保存即可。</li>
+<li>删除 c盘 -&gt; 用户 -&gt; 你正在使用的用户目录 -&gt; .m2文件夹</li>
+</ul>
+<h3 id="五、IDEA配置Maven"><a href="#五、IDEA配置Maven" class="headerlink" title="五、IDEA配置Maven"></a>五、IDEA配置Maven</h3><p>打开IDEA，依次选择 File -&gt; Settings -&gt; Build,Execution,Deployment -&gt; Build Tools -&gt; Maven</p>
+<p>在右侧 Maven home directory选择maven文件夹地址</p>
+<p>User settings file选择配置文件地址</p>
+<p><img src="https://qiniu.cdn.abina.cn/2021_01_26_13_27_39_1.png" alt="image-20210126132737692"></p>
+<p>配置完成</p>
+<p>参考资料：</p>
+<p>[1]<a target="_blank" rel="noopener" href="https://www.cnblogs.com/telwanggs/p/10820701.html">使用IntelliJ IDEA 配置Maven（入门）</a></p>
+<p>[2]<a target="_blank" rel="noopener" href="https://blog.csdn.net/github_37759996/article/details/90748461">Maven安装与配置</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/05/20/Windows%E4%B8%8B%E5%AE%89%E8%A3%85%E5%B9%B6%E9%85%8D%E7%BD%AEMaven%E5%88%B0IDEA/" data-id="clsq0ud1q000u2gu8hvlvghxw" data-title="Windows下安装并配置Maven到IDEA" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Maven/" rel="tag">Maven</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Windows/" rel="tag">Windows</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-CentOS7安装Seafile私有云" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2020/04/30/CentOS7%E5%AE%89%E8%A3%85Seafile%E7%A7%81%E6%9C%89%E4%BA%91/" class="article-date">
+  <time class="dt-published" datetime="2020-04-30T08:47:32.000Z" itemprop="datePublished">2020-04-30</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a>►<a class="article-category-link" href="/categories/%E6%95%99%E7%A8%8B/Seafile/">Seafile</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2020/04/30/CentOS7%E5%AE%89%E8%A3%85Seafile%E7%A7%81%E6%9C%89%E4%BA%91/">CentOS7安装Seafile私有云</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h3 id="一、环境说明"><a href="#一、环境说明" class="headerlink" title="一、环境说明"></a>一、环境说明</h3><blockquote>
+<p>centos7<br>python3<br>python-setuptools<br>mysql</p>
+</blockquote>
+<h3 id="二、下载seafile7-1-3"><a href="#二、下载seafile7-1-3" class="headerlink" title="二、下载seafile7.1.3"></a>二、下载seafile7.1.3</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@izonbuak7pfxffz ~]# mkdir /opt/seafile</span><br><span class="line">[root@izonbuak7pfxffz ~]# wget http://seafile-downloads.oss-cn-shanghai.aliyuncs.com/seafile-server_7.1.3_x86-64.tar.gz -O /opt/seafile/seafile-server_7.1.3_x86-64.tar.gz</span><br><span class="line">[root@izonbuak7pfxffz ~]# cd /opt/seafile</span><br><span class="line">[root@izonbuak7pfxffz seafile]# tar -xzf seafile-server_7.1.3_x86-64.tar.gz</span><br></pre></td></tr></table></figure>
+
+<h3 id="三、安装mysql"><a href="#三、安装mysql" class="headerlink" title="三、安装mysql"></a>三、安装mysql</h3><ul>
+<li>下载mysql的repo源</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">[root@izonbuak7pfxffz ~]# wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm</span><br><span class="line">安装mysql-community-release-el7-5.noarch.rpm包</span><br><span class="line">[root@izonbuak7pfxffz ~]# rpm -ivh mysql-community-release-el7-5.noarch.rpm</span><br><span class="line">安装mysql</span><br><span class="line">[root@izonbuak7pfxffz ~]# yum install mysql-server</span><br><span class="line">mysql初始化数据库</span><br><span class="line">[root@izonbuak7pfxffz ~]# mysql_install_db --datadir=/var/lib/mysql</span><br><span class="line">.更改mysql数据库目录的所属用户及其所属组，然后启动mysql数据库</span><br><span class="line">[root@izonbuak7pfxffz ~]# chown mysql:mysql /var/lib/mysql -R</span><br><span class="line">[root@izonbuak7pfxffz ~]# service mysqld restart</span><br><span class="line">[root@izonbuak7pfxffz ~]# mysql -u root</span><br><span class="line"><span class="meta prompt_">mysql&gt; </span><span class="language-bash">use mysql;</span></span><br><span class="line"><span class="meta prompt_">mysql&gt; </span><span class="language-bash">update user <span class="built_in">set</span> password=password(<span class="string">&#x27;你要设置的新密码&#x27;</span>) <span class="built_in">where</span> user=<span class="string">&#x27;root&#x27;</span>;</span></span><br><span class="line"><span class="meta prompt_">mysql&gt; </span><span class="language-bash">update user <span class="built_in">set</span> plugin=<span class="string">&quot;mysql_native_password&quot;</span>;</span></span><br><span class="line"><span class="meta prompt_">mysql&gt; </span><span class="language-bash">flush privileges;</span></span><br><span class="line"><span class="meta prompt_">mysql&gt; </span><span class="language-bash"><span class="built_in">exit</span>;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="四、安装seafile"><a href="#四、安装seafile" class="headerlink" title="四、安装seafile"></a>四、安装seafile</h3><p><strong>请先安装python3，若未安装可以参考我的文章（）进行安装。</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@izonbuak7pfxffz ~]# cd /opt/seafile/seafile-server-7.1.3</span><br><span class="line">[root@izonbuak7pfxffz seafile-server-7.1.3]# ./setup-seafile-mysql.sh</span><br></pre></td></tr></table></figure>
+
+<p>如果你的系统中没有安装上面的某个软件，那么 Seafile初始化脚本会提醒你安装相应的软件包。 该脚本会依次询问你一些问题，从而一步步引导你配置 Seafile 的各项参数:</p>
+<p><img src="https://qiniu.cdn.abina.cn/2021_01_26_13_13_15_1.jpg" alt="img"></p>
+<p><img src="https://qiniu.cdn.abina.cn/2021_01_26_13_13_25_1.jpg" alt="img"></p>
+<p>配置数据库这里，我选1，然后根据提示进行相应配置即可。当然也可以选2，前提是你会手动配置且已经配置过数据库了。</p>
+<h3 id="五、启动seafile"><a href="#五、启动seafile" class="headerlink" title="五、启动seafile"></a>五、启动seafile</h3><p>第一次要手动启动seafile以作一些配置</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@izonbuak7pfxffz ~]# /opt/seafile/seafile-server-latest/seafile.sh start</span><br><span class="line">[root@izonbuak7pfxffz ~]# /opt/seafile/seafile-server-latest/seahub.sh start</span><br></pre></td></tr></table></figure>
+
+<p>这里可能出现缺少python模块的问题，少什么装什么 <code>pip3 install xxx</code> 就行。</p>
+<p>根据提示进行相应配置，这里就不作展开了。</p>
+<p>所配置的邮箱和账号密码将作为seafile的管理员账号进行使用。</p>
+<h3 id="六、配置seafile服务"><a href="#六、配置seafile服务" class="headerlink" title="六、配置seafile服务"></a>六、配置seafile服务</h3><ul>
+<li>新建seafile.service文件</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">[root@izonbuak7pfxffz ~]# vim /etc/systemd/system/seafile.service</span><br><span class="line">输入以下内容</span><br><span class="line"></span><br><span class="line">[Unit]</span><br><span class="line">Description=Seafile Server</span><br><span class="line">After=network.target mysql.service</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">Type=oneshot</span><br><span class="line">ExecStart=/usr/seafile/seafile-server-latest/seafile.sh start</span><br><span class="line">ExecStart=/usr/seafile/seafile-server-latest/seahub.sh start</span><br><span class="line">ExecStop=/usr/seafile/seafile-server-latest/seafile.sh stop</span><br><span class="line">ExecStop=/usr/seafile/seafile-server-latest/seahub.sh stop</span><br><span class="line">RemainAfterExit=yes</span><br><span class="line">User=root</span><br><span class="line">Group=root</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意：请检测上面这个文件的空行处都不能有空格，否则会报错。</strong>本小白在这里踩了个坑（故作本条注意事项以作纪念）</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@izonbuak7pfxffz ~]# systemctl daemon-reload</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">设置seafile随系统启动</span></span><br><span class="line">[root@izonbuak7pfxffz ~]# systemctl enable seafile.service</span><br></pre></td></tr></table></figure>
+
+<h3 id="七、配置nginx反向代理"><a href="#七、配置nginx反向代理" class="headerlink" title="七、配置nginx反向代理"></a>七、配置nginx反向代理</h3><p>默认的seafile服务只监听127.0.0.1:8000，这意味着只能本地访问seafile。这里有很多解决方法。可以配置nginx作反向代理。也可以修改seafile的配置。</p>
+<p>后一种方法没有研究过，请自行研究。这里贴上nginx反向代理解决这个问题。</p>
+<p>注：若未安装过nginx可以参考我的文章进行安装，然后进行下面的操作。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@izonbuak7pfxffz ~]# vim /etc/nginx/nginx.conf</span><br></pre></td></tr></table></figure>
+
+<p>在其中的 <strong>http</strong> 字段中填写：</p>
+<p><img src="https://qiniu.cdn.abina.cn/2021_01_26_13_14_15_1.png" alt="image-20210126131406557"></p>
+<p>保存。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">[root@izonbuak7pfxffz ~]# mkdir /etc/nginx/conf</span><br><span class="line">[root@izonbuak7pfxffz ~]# vim  /etc/nginx/conf/seafile.conf</span><br><span class="line">输入文件如下（注意根据实际情况做修改）</span><br><span class="line"></span><br><span class="line">server &#123;</span><br><span class="line">    listen 80;</span><br><span class="line"></span><br><span class="line">    server_name 这里换成你的主机ip地址或域名;</span><br><span class="line"></span><br><span class="line">    access_log  logs/seafile.access.log;</span><br><span class="line"></span><br><span class="line">    error_log  logs/seafile.error.log;</span><br><span class="line"></span><br><span class="line">    location / &#123;</span><br><span class="line">        proxy_pass  http://127.0.0.1:8000;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>至此，配置完毕。</p>
+<h3 id="八、遇到的一些问题"><a href="#八、遇到的一些问题" class="headerlink" title="八、遇到的一些问题"></a>八、遇到的一些问题</h3><ul>
+<li>访问 ip:端口 ，出现 “Internal Server Error” 的字样。查看nginx配置，发现并没有报错。然后查看seafile日志(seafile&#x2F;logs&#x2F;seahub.log)，发现问题。</li>
+</ul>
+<p><img src="https://qiniu.cdn.abina.cn/2021_01_26_13_14_53_1.png" alt="image-20210126131451003"></p>
+<p>发现是python3缺少相应模块导致，这个模块要这样安装：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 install django-simple-captcha</span><br></pre></td></tr></table></figure>
+
+<p>成功解决。</p>
+<p>参考资料：</p>
+<p>[1]<a target="_blank" rel="noopener" href="https://www.cnblogs.com/youpeng/p/11905051.html">解决MySQL不需要密码就能登录问题</a></p>
+<p>[2]<a target="_blank" rel="noopener" href="https://blog.csdn.net/robot_learner/article/details/103392230">No module named ‘captcha.fields’ , django 报错</a></p>
+<p>[3]<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41781322/article/details/80178044">Centos7中安装Seafile6.2.5</a></p>
+<p>[4]<a target="_blank" rel="noopener" href="https://www.cnblogs.com/sxshaolong/p/11706223.html">Nginx反向代理配置实例</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/04/30/CentOS7%E5%AE%89%E8%A3%85Seafile%E7%A7%81%E6%9C%89%E4%BA%91/" data-id="clsq0ud1g00052gu8gth97j2s" data-title="CentOS7安装Seafile私有云" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Seafile/" rel="tag">Seafile</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-CentOS7安装python3和pip3" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2020/04/30/CentOS7%E5%AE%89%E8%A3%85python3%E5%92%8Cpip3/" class="article-date">
+  <time class="dt-published" datetime="2020-04-30T08:17:36.000Z" itemprop="datePublished">2020-04-30</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a>►<a class="article-category-link" href="/categories/%E6%95%99%E7%A8%8B/python/">python</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2020/04/30/CentOS7%E5%AE%89%E8%A3%85python3%E5%92%8Cpip3/">CentOS7安装python3和pip3</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h4 id="1、下载python3-6-5安装包"><a href="#1、下载python3-6-5安装包" class="headerlink" title="1、下载python3.6.5安装包"></a>1、下载python3.6.5安装包</h4><p><code>wget https://www.python.org/ftp/python/3.6.5/Python-3.6.5.tgz -O /opt/Python-3.6.5.tgz</code></p>
+<h4 id="2、安装zlib-devel包-后面安装pip需要用到-这里先下载，后面就不用重复编译"><a href="#2、安装zlib-devel包-后面安装pip需要用到-这里先下载，后面就不用重复编译" class="headerlink" title="2、安装zlib-devel包(后面安装pip需要用到,这里先下载，后面就不用重复编译)"></a>2、安装zlib-devel包(后面安装pip需要用到,这里先下载，后面就不用重复编译)</h4><p>(这步不理解，原博客：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/eriwang/p/10161182.html">https://www.cnblogs.com/eriwang/p/10161182.html</a>)</p>
+<p><code>yum install zlib-devel</code></p>
+<h4 id="3、编译安装python3-6-5"><a href="#3、编译安装python3-6-5" class="headerlink" title="3、编译安装python3.6.5"></a>3、编译安装python3.6.5</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[root@izonbuak7pfxffz ~]# cd /opt</span><br><span class="line">[root@izonbuak7pfxffz opt]# tar -xvf Python-3.6.5.tgz</span><br><span class="line">将解压文件移动到 usr/local目录下</span><br><span class="line">[root@izonbuak7pfxffz opt]# mv Python-3.6.5 /usr/local</span><br><span class="line">在local目录下创建python3目录</span><br><span class="line">[root@izonbuak7pfxffz opt]# mkdir /usr/local/python3</span><br><span class="line">转到解压文件夹下</span><br><span class="line">[root@izonbuak7pfxffz Python-3.6.5]# cd /usr/local/Python-3.6.5</span><br><span class="line">配置安装目录</span><br><span class="line">[root@izonbuak7pfxffz Python-3.6.5]# ./configure --prefix=/usr/local/python3</span><br><span class="line">编译源码</span><br><span class="line">[root@izonbuak7pfxffz Python-3.6.5]# make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
+
+<p>配置软连接</p>
+<p><code>ln -s /usr/local/python3/bin/python3  /usr/bin/python3</code></p>
+<p>转到根目录</p>
+<p><code>cd /</code></p>
+<p>输入 <code>python3 </code> 看到提示信息表示安装成功</p>
+<h4 id="4、安装pip3"><a href="#4、安装pip3" class="headerlink" title="4、安装pip3"></a>4、安装pip3</h4><ul>
+<li>安装依赖环境</li>
+</ul>
+<figure class="highlight shell"><figcaption><span>\# yum -y install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@izonbuak7pfxffz ~]# yum -y install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>安装setuptools</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@izonbuak7pfxffz ~]# wget --no-check-certificate  https://pypi.python.org/packages/source/s/setuptools/setuptools-19.6.tar.gz#md5=c607dd118eae682c44ed146367a17e26 -O /opt/setuptools-19.6.tar.gz</span><br><span class="line">[root@izonbuak7pfxffz ~]# cd /opt</span><br><span class="line">[root@izonbuak7pfxffz opt]# tar -zxvf setuptools-19.6.tar.gz</span><br><span class="line">[root@izonbuak7pfxffz opt]# cd setuptools-19.6</span><br><span class="line">[root@izonbuak7pfxffz setuptools-19.6]# python3 setup.py build</span><br><span class="line">[root@izonbuak7pfxffz setuptools-19.6]# python3 setup.py install</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>安装pip3</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[root@izonbuak7pfxffz ~]# wget --no-check-certificate https://pypi.python.org/packages/source/p/pip/pip-8.0.2.tar.gz#md5=3a73c4188f8dbad6a1e6f6d44d117eeb -O /opt/pip-8.0.2.tar.gz</span><br><span class="line">[root@izonbuak7pfxffz ~]# cd /opt</span><br><span class="line">[root@izonbuak7pfxffz opt]# tar -zxvf pip-8.0.2.tar.gz</span><br><span class="line">[root@izonbuak7pfxffz opt]# cd pip-8.0.2</span><br><span class="line">[root@izonbuak7pfxffz pip-8.0.2]# python setup.py build</span><br><span class="line">[root@izonbuak7pfxffz pip-8.0.2]# sudo python setup.py install</span><br><span class="line">设置软链接</span><br><span class="line">[root@izonbuak7pfxffz pip-8.0.2]# ln -s /usr/local/python3/bin/pip3 /usr/bin/pip3</span><br></pre></td></tr></table></figure>
+
+<p>注：在整个过程中如遇到错误需要删除软连接可以执行如下命令</p>
+<p><code>rm -rf /usr/bin/pip3</code></p>
+<p><strong>(后面&#x2F;usr&#x2F;bin&#x2F;pip为软链接名称,切记不能加结尾&#x2F;  如:&#x2F;usr&#x2F;bin&#x2F;pip3&#x2F;则表示删除软连接及真实文件)</strong></p>
+<ul>
+<li>回到根目录</li>
+</ul>
+<p><code>cd /</code></p>
+<p>输入 <code>pip3 -V</code> 查看pip版本,安装成功则正确显示版本</p>
+<h4 id="5、解决python3缺少ssl模块的问题"><a href="#5、解决python3缺少ssl模块的问题" class="headerlink" title="5、解决python3缺少ssl模块的问题"></a>5、解决python3缺少ssl模块的问题</h4><p>我发现使用新安装的python3环境时，出现缺少ssl模块的问题。这里提供验证过的解决方案：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">如果你和我的安装路径不同，请自行查找python3的Setup文件（据说此文件只有在python3已成功安装后才有？）</span><br><span class="line">[root@izonbuak7pfxffz ~]# vim /usr/local/Python-3.6.5/Modules/Setup</span><br></pre></td></tr></table></figure>
+
+<p>将下图框选的四行代码取消注释</p>
+<p><img src="https://qiniu.cdn.abina.cn/2021_01_26_13_15_53_1.png" alt="image-20210126131551722"></p>
+<p>然后</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@izonbuak7pfxffz ~]# cd /usr/local/Python-3.6.5</span><br><span class="line">[root@izonbuak7pfxffz Python-3.6.5]# make</span><br><span class="line">[root@izonbuak7pfxffz Python-3.6.5]# make install</span><br></pre></td></tr></table></figure>
+
+<p>问题解决。</p>
+<p>参考资料：</p>
+<p>[1]<a target="_blank" rel="noopener" href="https://www.cnblogs.com/eriwang/p/10161182.html">Centos7下安装python3及pip3</a></p>
+<p>[2]<a target="_blank" rel="noopener" href="https://www.cnblogs.com/mlgjb/p/7976561.html">Python3中无法导入ssl模块的解决办法</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/04/30/CentOS7%E5%AE%89%E8%A3%85python3%E5%92%8Cpip3/" data-id="clsq0ud1j000a2gu8ex4w9bfz" data-title="CentOS7安装python3和pip3" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Typora粘贴图片自动上传到七牛云" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2020/04/20/Typora%E7%B2%98%E8%B4%B4%E5%9B%BE%E7%89%87%E8%87%AA%E5%8A%A8%E4%B8%8A%E4%BC%A0%E5%88%B0%E4%B8%83%E7%89%9B%E4%BA%91/" class="article-date">
+  <time class="dt-published" datetime="2020-04-20T03:58:50.000Z" itemprop="datePublished">2020-04-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E4%BB%A3%E7%A0%81/">代码</a>►<a class="article-category-link" href="/categories/%E4%BB%A3%E7%A0%81/Typora%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0/">Typora图片上传</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2020/04/20/Typora%E7%B2%98%E8%B4%B4%E5%9B%BE%E7%89%87%E8%87%AA%E5%8A%A8%E4%B8%8A%E4%BC%A0%E5%88%B0%E4%B8%83%E7%89%9B%E4%BA%91/">Typora粘贴图片自动上传到七牛云</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>前言：</p>
+<p>最近养成了使用Typora写笔记和博客的习惯，不得不说Typora确实是一个好用的Markdown编辑工具。写完的文章可以直接放到Typecho解析。</p>
+<p>现在遇到这么一个问题，Typora编辑器的图片只提供 “复制图片到当前文件夹” 、”复制图片到.assets文件夹“、”复制图片到指定文件夹“几种选项，这就会导致我每次把Typora编写好的文章放到博客时，需要手动上传文章内的图片，然后引用，十分麻烦。</p>
+<p>好在，Typora提供了自定义上传图片的功能，配合七牛云存储可以<strong>实现所有图片在放到编辑器时自动上传并引用云端链接</strong>，无需再手动上传到博客或做其他更改，十分省心。</p>
+<p>以下操作仅以windows系统为例。</p>
+<h3 id="一、在七牛云创建对象存储空间"><a href="#一、在七牛云创建对象存储空间" class="headerlink" title="一、在七牛云创建对象存储空间"></a>一、在七牛云创建对象存储空间</h3><p>创建过程不在此展开，请自行上网查询。</p>
+<p>创建完成后在七牛云的 个人中心 -&gt; 秘钥管理，记录下你账号的 <code>AccessKey和SecretKey</code> 稍后会用到</p>
+<h3 id="二、使用七牛云开发者工具qshell"><a href="#二、使用七牛云开发者工具qshell" class="headerlink" title="二、使用七牛云开发者工具qshell"></a>二、使用七牛云开发者工具qshell</h3><ul>
+<li><p>下载对应版本的<a target="_blank" rel="noopener" href="https://developer.qiniu.com/kodo/tools/qshell">七牛云开发者命令行工具(qshell)</a></p>
+<p>例如博主下载windows64位</p>
+<p><img src="https://qiniu.cdn.abina.cn/2021_01_26_13_18_09_1.png" alt="image-20210126131806898"></p>
+</li>
+<li><p>为了使用方便，将下载下来的 <code>qshell v2.4.1.exe</code> 重命名为 <code>qshell.exe</code> ，然后将存放此exe的目录的绝对路径放到系统环境变量 <code>Path</code> 中。</p>
+<p><img src="https://qiniu.cdn.abina.cn/2021_01_26_13_19_24_1.png" alt="image-20210126131921917"></p>
+</li>
+<li><p>在cmd中运行如下命令</p>
+</li>
+</ul>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">qshell account ak sk name</span><br></pre></td></tr></table></figure>
+
+<p>其中ak和sk分别是上面记录的<code>AccessKey和SecretKey</code> ，name表示该账号的名称。 <strong>如果ak, sk, name首字符是”-“, 需要使用如下的方式添加账号, 这样避免把该项识别成命令行选项:</strong> </p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">qshell account -- ak sk name</span><br></pre></td></tr></table></figure>
+
+<p>可以使用如下命令查看账号是否添加成功：</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">qshell user ls</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://qiniu.cdn.abina.cn/2021_01_26_13_19_53_1.png" alt="image-20210126131951538"></p>
+<h3 id="三、下载python脚本"><a href="#三、下载python脚本" class="headerlink" title="三、下载python脚本"></a>三、下载python脚本</h3><ul>
+<li><p>从<a target="_blank" rel="noopener" href="https://hollower.lanzous.com/iS7Hjny0eri">下载链接</a>下载脚本</p>
+</li>
+<li><p>修改spaceName为你的七牛云对象存储空间的名称</p>
+</li>
+<li><p>修改spaceUrl为上面存储空间所绑定的域名<strong>（最后必须加 ‘&#x2F;‘ ）</strong></p>
+</li>
+<li><p>修改storageDir为图片的拷贝目录，所有使用过的图片都会在此生成一份拷贝。</p>
+</li>
+</ul>
+<p><img src="https://qiniu.cdn.abina.cn/2021_01_26_13_22_00_1.png" alt="image-20210126132158786"></p>
+<h3 id="四、设置Typora上传方式"><a href="#四、设置Typora上传方式" class="headerlink" title="四、设置Typora上传方式"></a>四、设置Typora上传方式</h3><p>在Typora的 文件-&gt;偏好设置-&gt;图像 中进行如下设置：</p>
+<p>自定义命令里python后面是刚才下载的python脚本的绝对路径。</p>
+<p><img src="https://qiniu.cdn.abina.cn/2021_01_26_13_23_04_1.png" alt="image-20210126132302414"></p>
+<p>点击”验证图片上传选项“，若提示”验证成功“就说明完成了。</p>
+<p><img src="https://qiniu.cdn.abina.cn/2021_01_26_13_24_26_1.png" alt="image-20210126132423109"></p>
+<h3 id="五、完成"><a href="#五、完成" class="headerlink" title="五、完成"></a>五、完成</h3><ul>
+<li><p>现在从网上或本地复制图片到Typora里，会自动上传图片到你的七牛云对象存储空间，并自动引用七牛云的链接。</p>
+</li>
+<li><p>所有图片将会在Typora安装目录下的 <code>Typora_ImgStorage</code> 文件夹（可以在脚本里自定义文件夹名称）存在一份拷贝</p>
+</li>
+<li><p>目前测试使用腾讯的 ctrl + alt + A 截图后粘贴不会自动上传，可以点击出现的 “上传图片” 选项手动上传一次。原因不明</p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/04/20/Typora%E7%B2%98%E8%B4%B4%E5%9B%BE%E7%89%87%E8%87%AA%E5%8A%A8%E4%B8%8A%E4%BC%A0%E5%88%B0%E4%B8%83%E7%89%9B%E4%BA%91/" data-id="clsq0ud1o000n2gu8cuz8auwk" data-title="Typora粘贴图片自动上传到七牛云" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Typora/" rel="tag">Typora</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Windows/" rel="tag">Windows</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%B8%83%E7%89%9B%E4%BA%91/" rel="tag">七牛云</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BB%A3%E7%A0%81/" rel="tag">代码</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-解决Typecho上传文件失败的问题" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2020/04/11/%E8%A7%A3%E5%86%B3Typecho%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E5%A4%B1%E8%B4%A5%E7%9A%84%E9%97%AE%E9%A2%98/" class="article-date">
+  <time class="dt-published" datetime="2020-04-11T02:53:30.000Z" itemprop="datePublished">2020-04-11</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a>►<a class="article-category-link" href="/categories/%E6%95%99%E7%A8%8B/Typecho/">Typecho</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2020/04/11/%E8%A7%A3%E5%86%B3Typecho%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E5%A4%B1%E8%B4%A5%E7%9A%84%E9%97%AE%E9%A2%98/">解决Typecho上传文件失败的问题</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>新安装的typecho上传文件的时候提示：上传失败！，怀疑是没有权限的问题。</p>
+<p>检测typecho网站目录中的&#x2F;usr&#x2F;uploads文件夹的权限和所有者，发现没有可写权限，且是root权限管理。但是我设置的访问typecho的用户为nginx用户。</p>
+<p>故做如下修改：(根据你的具体目录进行修改)</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chmod 777 /usr/share/nginx/html/usr/uploads</span><br><span class="line">chown nginx.nginx /usr/share/nginx/html/usr/uploads</span><br></pre></td></tr></table></figure>
+
+<p>重新上传，测试成功。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/04/11/%E8%A7%A3%E5%86%B3Typecho%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E5%A4%B1%E8%B4%A5%E7%9A%84%E9%97%AE%E9%A2%98/" data-id="clsq0ud1u001b2gu8bdum76ad" data-title="解决Typecho上传文件失败的问题" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Typecho/" rel="tag">Typecho</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%BB%A3%E7%A0%81/">代码</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%BB%A3%E7%A0%81/Typora%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0/">Typora图片上传</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Certbot/">Certbot</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Hexo/">Hexo</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Hexo/Node-js/">Node.js</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/LNMP/">LNMP</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Maven/">Maven</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Seafile/">Seafile</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Typecho/">Typecho</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/acme-sh/">acme.sh</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/python/">python</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AC%94%E8%AE%B0/Docker/">Docker</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Certbot/" rel="tag">Certbot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Docker/" rel="tag">Docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LNMP/" rel="tag">LNMP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Maven/" rel="tag">Maven</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/" rel="tag">Node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Seafile/" rel="tag">Seafile</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Typecho/" rel="tag">Typecho</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Typora/" rel="tag">Typora</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Windows/" rel="tag">Windows</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/acme-sh/" rel="tag">acme.sh</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%83%E7%89%9B%E4%BA%91/" rel="tag">七牛云</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BB%A3%E7%A0%81/" rel="tag">代码</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag">笔记</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Certbot/" style="font-size: 10px;">Certbot</a> <a href="/tags/Docker/" style="font-size: 10px;">Docker</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/LNMP/" style="font-size: 14px;">LNMP</a> <a href="/tags/Linux/" style="font-size: 18px;">Linux</a> <a href="/tags/Maven/" style="font-size: 10px;">Maven</a> <a href="/tags/Node-js/" style="font-size: 10px;">Node.js</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Seafile/" style="font-size: 10px;">Seafile</a> <a href="/tags/Typecho/" style="font-size: 12px;">Typecho</a> <a href="/tags/Typora/" style="font-size: 10px;">Typora</a> <a href="/tags/Windows/" style="font-size: 16px;">Windows</a> <a href="/tags/acme-sh/" style="font-size: 10px;">acme.sh</a> <a href="/tags/python/" style="font-size: 12px;">python</a> <a href="/tags/%E4%B8%83%E7%89%9B%E4%BA%91/" style="font-size: 10px;">七牛云</a> <a href="/tags/%E4%BB%A3%E7%A0%81/" style="font-size: 10px;">代码</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 20px;">教程</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 10px;">笔记</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">February 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">October 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/02/17/Hexo%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/">Hexo博客引擎的安装与使用</a>
+          </li>
+        
+          <li>
+            <a href="/2021/10/21/%E4%BD%BF%E7%94%A8acme.sh%E7%94%B3%E8%AF%B7%E5%B9%B6%E7%BB%B4%E6%8A%A4Let's%20Encrypt%E8%AF%81%E4%B9%A6/">使用acme.sh申请并维护Let&#39;s Encrypt证书</a>
+          </li>
+        
+          <li>
+            <a href="/2021/04/11/Windows10%E4%B8%8B%E5%90%8C%E6%97%B6%E5%AE%89%E8%A3%85python2%E5%92%8Cpython3/">Windows10下同时安装python2和python3</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/14/Docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Docker学习笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2021/02/17/pip%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90/">pip更换国内源</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

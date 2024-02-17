@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>CentOS7修改主机名 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="一、主机名的定义在CentOS7中，有三种定义的主机名:  静态的（Static hostname） “静态”主机名也称为内核主机名，是系统在启动时从&#x2F;etc&#x2F;hostname自动初始化的主机名。  瞬态的（Tansient hostname） “瞬态”主机名是在系统运行时临时分配的主机名，例如，通过DHCP或mDNS服务器分配。  灵活的（Pretty hostname） “">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CentOS7修改主机名">
+<meta property="og:url" content="http://example.com/2020/04/09/CentOS7%E4%BF%AE%E6%94%B9%E4%B8%BB%E6%9C%BA%E5%90%8D/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="一、主机名的定义在CentOS7中，有三种定义的主机名:  静态的（Static hostname） “静态”主机名也称为内核主机名，是系统在启动时从&#x2F;etc&#x2F;hostname自动初始化的主机名。  瞬态的（Tansient hostname） “瞬态”主机名是在系统运行时临时分配的主机名，例如，通过DHCP或mDNS服务器分配。  灵活的（Pretty hostname） “">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-04-09T03:08:17.000Z">
+<meta property="article:modified_time" content="2023-03-19T02:42:55.028Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="教程">
+<meta property="article:tag" content="Linux">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-CentOS7修改主机名" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2020/04/09/CentOS7%E4%BF%AE%E6%94%B9%E4%B8%BB%E6%9C%BA%E5%90%8D/" class="article-date">
+  <time class="dt-published" datetime="2020-04-09T03:08:17.000Z" itemprop="datePublished">2020-04-09</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a>►<a class="article-category-link" href="/categories/%E6%95%99%E7%A8%8B/Linux/">Linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      CentOS7修改主机名
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h3 id="一、主机名的定义"><a href="#一、主机名的定义" class="headerlink" title="一、主机名的定义"></a>一、主机名的定义</h3><p>在CentOS7中，有三种定义的主机名:</p>
+<ul>
+<li><p>静态的（Static hostname）</p>
+<p>“静态”主机名也称为内核主机名，是系统在启动时从&#x2F;etc&#x2F;hostname自动初始化的主机名。</p>
+</li>
+<li><p>瞬态的（Tansient hostname）</p>
+<p>“瞬态”主机名是在系统运行时临时分配的主机名，例如，通过DHCP或mDNS服务器分配。</p>
+</li>
+<li><p>灵活的（Pretty hostname）</p>
+<p>“灵活”主机名也有人叫做“别名”主机名。<br>“灵活”主机名则允许使用自由形式（包括特殊&#x2F;空白字符）的主机名，以展示给终端用户（如xh01@f5）。<br>“静态”主机名和“瞬态”主机名都遵从作为互联网域名同样的字符限制规则。</p>
+</li>
+</ul>
+<h3 id="二、hostname工具"><a href="#二、hostname工具" class="headerlink" title="二、hostname工具"></a>二、hostname工具</h3><p>在CentOS 7中，有个叫hostnamectl的命令行工具，它允许你查看或修改与主机名相关的配置。</p>
+<ul>
+<li>查看主机名</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">/查看一下当前主机名的情况，查看全部三种主机名</span><br><span class="line">hostnamectl</span><br><span class="line"></span><br><span class="line">//或者，查看全部三种主机名</span><br><span class="line">hostnamectl status</span><br><span class="line"> </span><br><span class="line">//只查看静态、瞬态或灵活主机名，分别使用--static，--transient或--pretty选项</span><br><span class="line">[root@xh00 ~]# hostnamectl --static</span><br><span class="line">[root@xh00 ~]# hostnamectl --transient</span><br><span class="line">[root@xh00 ~]# hostnamectl --pretty</span><br><span class="line"></span><br><span class="line">//或者查看主机名配置文件，查看到的是静态的（Static hostname）</span><br><span class="line">cat /etc/hostname</span><br><span class="line"></span><br><span class="line">//查看当前Linux操作系统相关信息（内核版本号、硬件架构、主机名称和操作系统类型等）:</span><br><span class="line">uname -a    //查看到的是瞬态的（Tansient hostname）</span><br><span class="line">cat /etc/redhat-release    //查看操作系统环境</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>修改主机名</p>
+<p>修改临时主机名（重启失效）</p>
+</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hostname xxx</span><br></pre></td></tr></table></figure>
+
+<p>​		永久修改主机名</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hostnamectl set-hostname xxx</span><br></pre></td></tr></table></figure>
+
+<p>​		如果你只想修改特定的主机名（静态，瞬态或灵活），你可以使用–static，–transient或–pretty选项。 </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hostnamectl --static set-hostname xxx</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>修改hosts文件</li>
+</ul>
+<p><strong>注意： 一旦修改了静态主机名，&#x2F;etc&#x2F;hostname 将被自动更新。然而，&#x2F;etc&#x2F;hosts 不会自动更新，所以你每次在修改主机名后一定要手动更新&#x2F;etc&#x2F;hosts，之后再重启CentOS 7。否则系统再启动时会很慢。</strong></p>
+<p>手动修改hosts文件：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/hosts</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">::1     localhost       localhost.localdomain   localhost6      localhost6.localdomain6</span><br><span class="line"></span><br><span class="line">127.0.0.1       localhost       localhost.localdomain   localhost4      localhost4.localdomain4</span><br><span class="line">127.0.0.1       localhost       localhost</span><br><span class="line">127.0.0.1       wizard  wizard</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>重启系统</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reboot</span><br></pre></td></tr></table></figure>
+
+
+
+<p>参考资料：</p>
+<p>[1]<a target="_blank" rel="noopener" href="https://www.cnblogs.com/isme-zjh/p/11552928.html">CentOS7修改主机名的三种方法</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/04/09/CentOS7%E4%BF%AE%E6%94%B9%E4%B8%BB%E6%9C%BA%E5%90%8D/" data-id="clsq0ud1700002gu810b8gtri" data-title="CentOS7修改主机名" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/04/09/CentOS7%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85nginx-1.16.1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          CentOS7编译安装nginx-1.16.1
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/04/09/CentOS7%E4%BF%AE%E6%94%B9%E6%BA%90/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">CentOS7修改源</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%BB%A3%E7%A0%81/">代码</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%BB%A3%E7%A0%81/Typora%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0/">Typora图片上传</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Certbot/">Certbot</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Hexo/">Hexo</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Hexo/Node-js/">Node.js</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/LNMP/">LNMP</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Maven/">Maven</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Seafile/">Seafile</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Typecho/">Typecho</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/acme-sh/">acme.sh</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/python/">python</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AC%94%E8%AE%B0/Docker/">Docker</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Certbot/" rel="tag">Certbot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Docker/" rel="tag">Docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LNMP/" rel="tag">LNMP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Maven/" rel="tag">Maven</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/" rel="tag">Node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Seafile/" rel="tag">Seafile</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Typecho/" rel="tag">Typecho</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Typora/" rel="tag">Typora</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Windows/" rel="tag">Windows</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/acme-sh/" rel="tag">acme.sh</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%83%E7%89%9B%E4%BA%91/" rel="tag">七牛云</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BB%A3%E7%A0%81/" rel="tag">代码</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag">笔记</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Certbot/" style="font-size: 10px;">Certbot</a> <a href="/tags/Docker/" style="font-size: 10px;">Docker</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/LNMP/" style="font-size: 14px;">LNMP</a> <a href="/tags/Linux/" style="font-size: 18px;">Linux</a> <a href="/tags/Maven/" style="font-size: 10px;">Maven</a> <a href="/tags/Node-js/" style="font-size: 10px;">Node.js</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Seafile/" style="font-size: 10px;">Seafile</a> <a href="/tags/Typecho/" style="font-size: 12px;">Typecho</a> <a href="/tags/Typora/" style="font-size: 10px;">Typora</a> <a href="/tags/Windows/" style="font-size: 16px;">Windows</a> <a href="/tags/acme-sh/" style="font-size: 10px;">acme.sh</a> <a href="/tags/python/" style="font-size: 12px;">python</a> <a href="/tags/%E4%B8%83%E7%89%9B%E4%BA%91/" style="font-size: 10px;">七牛云</a> <a href="/tags/%E4%BB%A3%E7%A0%81/" style="font-size: 10px;">代码</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 20px;">教程</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 10px;">笔记</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">February 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">October 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/02/17/Hexo%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/">Hexo博客引擎的安装与使用</a>
+          </li>
+        
+          <li>
+            <a href="/2021/10/21/%E4%BD%BF%E7%94%A8acme.sh%E7%94%B3%E8%AF%B7%E5%B9%B6%E7%BB%B4%E6%8A%A4Let's%20Encrypt%E8%AF%81%E4%B9%A6/">使用acme.sh申请并维护Let&#39;s Encrypt证书</a>
+          </li>
+        
+          <li>
+            <a href="/2021/04/11/Windows10%E4%B8%8B%E5%90%8C%E6%97%B6%E5%AE%89%E8%A3%85python2%E5%92%8Cpython3/">Windows10下同时安装python2和python3</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/14/Docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Docker学习笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2021/02/17/pip%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90/">pip更换国内源</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

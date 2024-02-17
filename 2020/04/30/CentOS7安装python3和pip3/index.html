@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>CentOS7安装python3和pip3 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="1、下载python3.6.5安装包wget https:&#x2F;&#x2F;www.python.org&#x2F;ftp&#x2F;python&#x2F;3.6.5&#x2F;Python-3.6.5.tgz -O &#x2F;opt&#x2F;Python-3.6.5.tgz 2、安装zlib-devel包(后面安装pip需要用到,这里先下载，后面就不用重复编译)(这步不理解，原博客：https:&#x2F;&#x2F;www.cnblogs.com&#x2F;eriwang&#x2F;p&#x2F;101611">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CentOS7安装python3和pip3">
+<meta property="og:url" content="http://example.com/2020/04/30/CentOS7%E5%AE%89%E8%A3%85python3%E5%92%8Cpip3/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1、下载python3.6.5安装包wget https:&#x2F;&#x2F;www.python.org&#x2F;ftp&#x2F;python&#x2F;3.6.5&#x2F;Python-3.6.5.tgz -O &#x2F;opt&#x2F;Python-3.6.5.tgz 2、安装zlib-devel包(后面安装pip需要用到,这里先下载，后面就不用重复编译)(这步不理解，原博客：https:&#x2F;&#x2F;www.cnblogs.com&#x2F;eriwang&#x2F;p&#x2F;101611">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://qiniu.cdn.abina.cn/2021_01_26_13_15_53_1.png">
+<meta property="article:published_time" content="2020-04-30T08:17:36.000Z">
+<meta property="article:modified_time" content="2021-01-26T05:15:59.000Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="教程">
+<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="Python">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://qiniu.cdn.abina.cn/2021_01_26_13_15_53_1.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-CentOS7安装python3和pip3" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2020/04/30/CentOS7%E5%AE%89%E8%A3%85python3%E5%92%8Cpip3/" class="article-date">
+  <time class="dt-published" datetime="2020-04-30T08:17:36.000Z" itemprop="datePublished">2020-04-30</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a>►<a class="article-category-link" href="/categories/%E6%95%99%E7%A8%8B/python/">python</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      CentOS7安装python3和pip3
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h4 id="1、下载python3-6-5安装包"><a href="#1、下载python3-6-5安装包" class="headerlink" title="1、下载python3.6.5安装包"></a>1、下载python3.6.5安装包</h4><p><code>wget https://www.python.org/ftp/python/3.6.5/Python-3.6.5.tgz -O /opt/Python-3.6.5.tgz</code></p>
+<h4 id="2、安装zlib-devel包-后面安装pip需要用到-这里先下载，后面就不用重复编译"><a href="#2、安装zlib-devel包-后面安装pip需要用到-这里先下载，后面就不用重复编译" class="headerlink" title="2、安装zlib-devel包(后面安装pip需要用到,这里先下载，后面就不用重复编译)"></a>2、安装zlib-devel包(后面安装pip需要用到,这里先下载，后面就不用重复编译)</h4><p>(这步不理解，原博客：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/eriwang/p/10161182.html">https://www.cnblogs.com/eriwang/p/10161182.html</a>)</p>
+<p><code>yum install zlib-devel</code></p>
+<h4 id="3、编译安装python3-6-5"><a href="#3、编译安装python3-6-5" class="headerlink" title="3、编译安装python3.6.5"></a>3、编译安装python3.6.5</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[root@izonbuak7pfxffz ~]# cd /opt</span><br><span class="line">[root@izonbuak7pfxffz opt]# tar -xvf Python-3.6.5.tgz</span><br><span class="line">将解压文件移动到 usr/local目录下</span><br><span class="line">[root@izonbuak7pfxffz opt]# mv Python-3.6.5 /usr/local</span><br><span class="line">在local目录下创建python3目录</span><br><span class="line">[root@izonbuak7pfxffz opt]# mkdir /usr/local/python3</span><br><span class="line">转到解压文件夹下</span><br><span class="line">[root@izonbuak7pfxffz Python-3.6.5]# cd /usr/local/Python-3.6.5</span><br><span class="line">配置安装目录</span><br><span class="line">[root@izonbuak7pfxffz Python-3.6.5]# ./configure --prefix=/usr/local/python3</span><br><span class="line">编译源码</span><br><span class="line">[root@izonbuak7pfxffz Python-3.6.5]# make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
+
+<p>配置软连接</p>
+<p><code>ln -s /usr/local/python3/bin/python3  /usr/bin/python3</code></p>
+<p>转到根目录</p>
+<p><code>cd /</code></p>
+<p>输入 <code>python3 </code> 看到提示信息表示安装成功</p>
+<h4 id="4、安装pip3"><a href="#4、安装pip3" class="headerlink" title="4、安装pip3"></a>4、安装pip3</h4><ul>
+<li>安装依赖环境</li>
+</ul>
+<figure class="highlight shell"><figcaption><span>\# yum -y install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@izonbuak7pfxffz ~]# yum -y install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>安装setuptools</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@izonbuak7pfxffz ~]# wget --no-check-certificate  https://pypi.python.org/packages/source/s/setuptools/setuptools-19.6.tar.gz#md5=c607dd118eae682c44ed146367a17e26 -O /opt/setuptools-19.6.tar.gz</span><br><span class="line">[root@izonbuak7pfxffz ~]# cd /opt</span><br><span class="line">[root@izonbuak7pfxffz opt]# tar -zxvf setuptools-19.6.tar.gz</span><br><span class="line">[root@izonbuak7pfxffz opt]# cd setuptools-19.6</span><br><span class="line">[root@izonbuak7pfxffz setuptools-19.6]# python3 setup.py build</span><br><span class="line">[root@izonbuak7pfxffz setuptools-19.6]# python3 setup.py install</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>安装pip3</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[root@izonbuak7pfxffz ~]# wget --no-check-certificate https://pypi.python.org/packages/source/p/pip/pip-8.0.2.tar.gz#md5=3a73c4188f8dbad6a1e6f6d44d117eeb -O /opt/pip-8.0.2.tar.gz</span><br><span class="line">[root@izonbuak7pfxffz ~]# cd /opt</span><br><span class="line">[root@izonbuak7pfxffz opt]# tar -zxvf pip-8.0.2.tar.gz</span><br><span class="line">[root@izonbuak7pfxffz opt]# cd pip-8.0.2</span><br><span class="line">[root@izonbuak7pfxffz pip-8.0.2]# python setup.py build</span><br><span class="line">[root@izonbuak7pfxffz pip-8.0.2]# sudo python setup.py install</span><br><span class="line">设置软链接</span><br><span class="line">[root@izonbuak7pfxffz pip-8.0.2]# ln -s /usr/local/python3/bin/pip3 /usr/bin/pip3</span><br></pre></td></tr></table></figure>
+
+<p>注：在整个过程中如遇到错误需要删除软连接可以执行如下命令</p>
+<p><code>rm -rf /usr/bin/pip3</code></p>
+<p><strong>(后面&#x2F;usr&#x2F;bin&#x2F;pip为软链接名称,切记不能加结尾&#x2F;  如:&#x2F;usr&#x2F;bin&#x2F;pip3&#x2F;则表示删除软连接及真实文件)</strong></p>
+<ul>
+<li>回到根目录</li>
+</ul>
+<p><code>cd /</code></p>
+<p>输入 <code>pip3 -V</code> 查看pip版本,安装成功则正确显示版本</p>
+<h4 id="5、解决python3缺少ssl模块的问题"><a href="#5、解决python3缺少ssl模块的问题" class="headerlink" title="5、解决python3缺少ssl模块的问题"></a>5、解决python3缺少ssl模块的问题</h4><p>我发现使用新安装的python3环境时，出现缺少ssl模块的问题。这里提供验证过的解决方案：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">如果你和我的安装路径不同，请自行查找python3的Setup文件（据说此文件只有在python3已成功安装后才有？）</span><br><span class="line">[root@izonbuak7pfxffz ~]# vim /usr/local/Python-3.6.5/Modules/Setup</span><br></pre></td></tr></table></figure>
+
+<p>将下图框选的四行代码取消注释</p>
+<p><img src="https://qiniu.cdn.abina.cn/2021_01_26_13_15_53_1.png" alt="image-20210126131551722"></p>
+<p>然后</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@izonbuak7pfxffz ~]# cd /usr/local/Python-3.6.5</span><br><span class="line">[root@izonbuak7pfxffz Python-3.6.5]# make</span><br><span class="line">[root@izonbuak7pfxffz Python-3.6.5]# make install</span><br></pre></td></tr></table></figure>
+
+<p>问题解决。</p>
+<p>参考资料：</p>
+<p>[1]<a target="_blank" rel="noopener" href="https://www.cnblogs.com/eriwang/p/10161182.html">Centos7下安装python3及pip3</a></p>
+<p>[2]<a target="_blank" rel="noopener" href="https://www.cnblogs.com/mlgjb/p/7976561.html">Python3中无法导入ssl模块的解决办法</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/04/30/CentOS7%E5%AE%89%E8%A3%85python3%E5%92%8Cpip3/" data-id="clsq0ud1j000a2gu8ex4w9bfz" data-title="CentOS7安装python3和pip3" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/04/30/CentOS7%E5%AE%89%E8%A3%85Seafile%E7%A7%81%E6%9C%89%E4%BA%91/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          CentOS7安装Seafile私有云
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/04/20/Typora%E7%B2%98%E8%B4%B4%E5%9B%BE%E7%89%87%E8%87%AA%E5%8A%A8%E4%B8%8A%E4%BC%A0%E5%88%B0%E4%B8%83%E7%89%9B%E4%BA%91/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Typora粘贴图片自动上传到七牛云</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%BB%A3%E7%A0%81/">代码</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%BB%A3%E7%A0%81/Typora%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0/">Typora图片上传</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Certbot/">Certbot</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Hexo/">Hexo</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Hexo/Node-js/">Node.js</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/LNMP/">LNMP</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Maven/">Maven</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Seafile/">Seafile</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Typecho/">Typecho</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/acme-sh/">acme.sh</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/python/">python</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AC%94%E8%AE%B0/Docker/">Docker</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Certbot/" rel="tag">Certbot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Docker/" rel="tag">Docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LNMP/" rel="tag">LNMP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Maven/" rel="tag">Maven</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/" rel="tag">Node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Seafile/" rel="tag">Seafile</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Typecho/" rel="tag">Typecho</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Typora/" rel="tag">Typora</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Windows/" rel="tag">Windows</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/acme-sh/" rel="tag">acme.sh</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%83%E7%89%9B%E4%BA%91/" rel="tag">七牛云</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BB%A3%E7%A0%81/" rel="tag">代码</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag">笔记</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Certbot/" style="font-size: 10px;">Certbot</a> <a href="/tags/Docker/" style="font-size: 10px;">Docker</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/LNMP/" style="font-size: 14px;">LNMP</a> <a href="/tags/Linux/" style="font-size: 18px;">Linux</a> <a href="/tags/Maven/" style="font-size: 10px;">Maven</a> <a href="/tags/Node-js/" style="font-size: 10px;">Node.js</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Seafile/" style="font-size: 10px;">Seafile</a> <a href="/tags/Typecho/" style="font-size: 12px;">Typecho</a> <a href="/tags/Typora/" style="font-size: 10px;">Typora</a> <a href="/tags/Windows/" style="font-size: 16px;">Windows</a> <a href="/tags/acme-sh/" style="font-size: 10px;">acme.sh</a> <a href="/tags/python/" style="font-size: 12px;">python</a> <a href="/tags/%E4%B8%83%E7%89%9B%E4%BA%91/" style="font-size: 10px;">七牛云</a> <a href="/tags/%E4%BB%A3%E7%A0%81/" style="font-size: 10px;">代码</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 20px;">教程</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 10px;">笔记</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">February 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">October 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/02/17/Hexo%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/">Hexo博客引擎的安装与使用</a>
+          </li>
+        
+          <li>
+            <a href="/2021/10/21/%E4%BD%BF%E7%94%A8acme.sh%E7%94%B3%E8%AF%B7%E5%B9%B6%E7%BB%B4%E6%8A%A4Let's%20Encrypt%E8%AF%81%E4%B9%A6/">使用acme.sh申请并维护Let&#39;s Encrypt证书</a>
+          </li>
+        
+          <li>
+            <a href="/2021/04/11/Windows10%E4%B8%8B%E5%90%8C%E6%97%B6%E5%AE%89%E8%A3%85python2%E5%92%8Cpython3/">Windows10下同时安装python2和python3</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/14/Docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Docker学习笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2021/02/17/pip%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90/">pip更换国内源</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

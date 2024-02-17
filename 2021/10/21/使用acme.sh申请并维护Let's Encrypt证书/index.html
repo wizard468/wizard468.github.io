@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>使用acme.sh申请并维护Let&#39;s Encrypt证书 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="acme.sh是一个知名的用于申请Let’s Encrypt证书的开源项目，项目地址：https:&#x2F;&#x2F;github.com&#x2F;acmesh-official&#x2F;acme.sh，属于脚本类型，有比较详细的文档，支持自动化更新和自动化部署。唯一缺点，如果有更新后自动部署至多个节点的需求的话，acme.sh无法满足。（描述转自：免费申请HTTPS证书六大方法 侵删） 一、安装 acme.sh安装很简单, 一">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用acme.sh申请并维护Let&#39;s Encrypt证书">
+<meta property="og:url" content="http://example.com/2021/10/21/%E4%BD%BF%E7%94%A8acme.sh%E7%94%B3%E8%AF%B7%E5%B9%B6%E7%BB%B4%E6%8A%A4Let's%20Encrypt%E8%AF%81%E4%B9%A6/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="acme.sh是一个知名的用于申请Let’s Encrypt证书的开源项目，项目地址：https:&#x2F;&#x2F;github.com&#x2F;acmesh-official&#x2F;acme.sh，属于脚本类型，有比较详细的文档，支持自动化更新和自动化部署。唯一缺点，如果有更新后自动部署至多个节点的需求的话，acme.sh无法满足。（描述转自：免费申请HTTPS证书六大方法 侵删） 一、安装 acme.sh安装很简单, 一">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-10-21T08:55:15.000Z">
+<meta property="article:modified_time" content="2021-10-21T08:55:15.000Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="acme.sh">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-使用acme.sh申请并维护Let&#39;s Encrypt证书" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/10/21/%E4%BD%BF%E7%94%A8acme.sh%E7%94%B3%E8%AF%B7%E5%B9%B6%E7%BB%B4%E6%8A%A4Let's%20Encrypt%E8%AF%81%E4%B9%A6/" class="article-date">
+  <time class="dt-published" datetime="2021-10-21T08:55:15.000Z" itemprop="datePublished">2021-10-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a>►<a class="article-category-link" href="/categories/%E6%95%99%E7%A8%8B/acme-sh/">acme.sh</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      使用acme.sh申请并维护Let&#39;s Encrypt证书
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>acme.sh是一个知名的用于申请Let’s Encrypt证书的开源项目，项目地址：<a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://github.com/acmesh-official/acme.sh">https://github.com/acmesh-official/acme.sh</a>，属于脚本类型，有比较详细的文档，支持自动化更新和自动化部署。唯一缺点，如果有更新后自动部署至多个节点的需求的话，acme.sh无法满足。（描述转自：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/4f36bf75bc96">免费申请HTTPS证书六大方法</a> 侵删）</p>
+<h3 id="一、安装-acme-sh"><a href="#一、安装-acme-sh" class="headerlink" title="一、安装 acme.sh"></a>一、安装 acme.sh</h3><p>安装很简单, 一个命令:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl  https://get.acme.sh | sh -s email=my@example.com</span><br></pre></td></tr></table></figure>
+
+<p>这时acme.sh会安装到你的用户目录下(<code>~/.acme.sh/</code>)</p>
+<p>据说，还会创建一个alias，以方便使用：<code>alias acme.sh=~/.acme.sh/acme.sh</code>但是我的服务器并没有成功创建这个alias。可以执行上述命令手动创建一下。（临时创建，重启后失效）或者将alias命令加入<code> /etc/.bashrc</code>或者<code> ~/.bashrc</code>文件，以永久性生效。<code>/etc/.bashrc</code>针对所有用户生效，<code>~/.bashrc</code>是针对当前用户生效。</p>
+<h3 id="二、生成证书"><a href="#二、生成证书" class="headerlink" title="二、生成证书"></a>二、生成证书</h3><p><strong>acme.sh</strong> 实现了 <strong>acme</strong> 协议支持的所有验证协议. 一般有两种方式验证: http 和 dns 验证。</p>
+<p>遗憾的是，我试用http方式时报错，提示我要用dns方式验证。不知道是我自己的原因还是acme.sh的原因。</p>
+<p>以下是华为云dns方式验证获取证书的方法，<strong>其他域名解析商的方法请查看这个网站</strong>：<a target="_blank" rel="noopener" href="https://github.com/acmesh-official/acme.sh/wiki/dnsapi">https://github.com/acmesh-official/acme.sh/wiki/dnsapi</a></p>
+<h4 id="1、设置环境变量"><a href="#1、设置环境变量" class="headerlink" title="1、设置环境变量"></a>1、设置环境变量</h4><p>因为我使用的华为云，故调用华为云提供的API自动添加 txt 记录完成验证：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export HUAWEICLOUD_Username=&lt;Your Username&gt;</span><br><span class="line">export HUAWEICLOUD_Password=&lt;Your Password&gt;</span><br><span class="line">export HUAWEICLOUD_ProjectID=&lt;A Project ID&gt;</span><br></pre></td></tr></table></figure>
+
+<p>&lt;Your Username&gt;为华为账户登陆名</p>
+<p>&lt;Your Password&gt;为华为账户登陆密码</p>
+<p>&lt;A Project ID&gt; 为服务器所属区域的项目ID（登录华为云官网，进入“控制台”，鼠标移动到自己的用户名处，在下拉列表选择“我的凭证”，在打开的项目列表处可以查看到。）</p>
+<h4 id="2、申请证书"><a href="#2、申请证书" class="headerlink" title="2、申请证书"></a>2、申请证书</h4><p>申请单个域名证书：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./acme.sh --issue --dns dns_huaweicloud -d www.example.com</span><br></pre></td></tr></table></figure>
+
+<p>申请通配域名证书：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./acme.sh --issue --dns dns_huaweicloud -d *.example.com</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="三、安装证书"><a href="#三、安装证书" class="headerlink" title="三、安装证书"></a>三、安装证书</h3><p>不要直接使用acme.sh申请下来的证书，而是调用命令将证书重新整理到相应的目录再使用。</p>
+<p>原文档描述为：<em>注意, 默认生成的证书都放在安装目录下: <code>~/.acme.sh/</code>, 请不要直接使用此目录下的文件, 例如: 不要直接让 nginx&#x2F;apache 的配置文件使用这下面的文件. 这里面的文件都是内部使用, 而且目录结构可能会变化。正确的使用方法是使用 <code>--install-cert</code> 命令,并指定目标位置, 然后证书文件会被copy到相应的位置</em></p>
+<h4 id="·Apache-example"><a href="#·Apache-example" class="headerlink" title="·Apache example:"></a>·Apache example:</h4><p>–cert-file为自定义证书要存放的目录</p>
+<p>–key-file 为自定义私钥要存放的目录</p>
+<p>–fullchain-file为自定义证书链要存放的目录</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">acme.sh --install-cert -d example.com \</span><br><span class="line">--cert-file      /path/to/certfile/in/apache/cert.pem  \</span><br><span class="line">--key-file       /path/to/keyfile/in/apache/key.pem  \</span><br><span class="line">--fullchain-file /path/to/fullchain/certfile/apache/fullchain.pem \</span><br><span class="line">--reloadcmd     &quot;service apache2 force-reload&quot;</span><br></pre></td></tr></table></figure>
+
+<h4 id="·Nginx-example"><a href="#·Nginx-example" class="headerlink" title="·Nginx example:"></a>·Nginx example:</h4><p>–key-file 为自定义私钥要存放的目录</p>
+<p>–fullchain-file为自定义证书链要存放的目录</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">acme.sh --install-cert -d example.com \</span><br><span class="line">--key-file       /path/to/keyfile/in/nginx/key.pem  \</span><br><span class="line">--fullchain-file /path/to/fullchain/nginx/cert.pem \</span><br><span class="line">--reloadcmd     &quot;service nginx force-reload&quot;</span><br></pre></td></tr></table></figure>
+
+<p>(一个小提醒, 这里用的是 <code>service nginx force-reload</code>, 不是 <code>service nginx reload</code>, 据测试, <code>reload</code> 并不会重新加载证书, 所以用的 <code>force-reload</code>)</p>
+<h3 id="四、更新证书"><a href="#四、更新证书" class="headerlink" title="四、更新证书"></a>四、更新证书</h3><p>目前证书在 60 天以后会自动更新, 你无需任何操作. 今后有可能会缩短这个时间, 不过都是自动的, 你不用关心.</p>
+<h3 id="五、更新-acme-sh"><a href="#五、更新-acme-sh" class="headerlink" title="五、更新 acme.sh"></a>五、更新 acme.sh</h3><p>目前由于 acme 协议和 letsencrypt CA 都在频繁的更新, 因此 acme.sh 也经常更新以保持同步.</p>
+<p>升级 acme.sh 到最新版 :</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">acme.sh --upgrade</span><br></pre></td></tr></table></figure>
+
+<p>如果你不想手动升级, 可以开启自动升级:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">acme.sh  --upgrade  --auto-upgrade</span><br></pre></td></tr></table></figure>
+
+<p>之后, acme.sh 就会自动保持更新了.</p>
+<p>你也可以随时关闭自动更新:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">acme.sh --upgrade  --auto-upgrade  0</span><br></pre></td></tr></table></figure>
+
+<h3 id="六、其他免费申请HTTPS证书的方法"><a href="#六、其他免费申请HTTPS证书的方法" class="headerlink" title="六、其他免费申请HTTPS证书的方法"></a>六、其他免费申请HTTPS证书的方法</h3><p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/4f36bf75bc96%EF%BC%88%E4%BE%B5%E5%88%A0%EF%BC%89">https://www.jianshu.com/p/4f36bf75bc96（侵删）</a></p>
+<p>参考资料（侵删）：</p>
+<p>[1]<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/4f36bf75bc96">免费申请HTTPS证书六大方法</a></p>
+<p>[2]<a target="_blank" rel="noopener" href="https://github.com/acmesh-official/acme.sh/wiki/%E8%AF%B4%E6%98%8E">acme.sh开源项目说明文档</a></p>
+<p>[3]<a target="_blank" rel="noopener" href="https://bugxia.com/33.html">使用acme.sh脚本申请Let’s Encrypt免费泛域名证书</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/10/21/%E4%BD%BF%E7%94%A8acme.sh%E7%94%B3%E8%AF%B7%E5%B9%B6%E7%BB%B4%E6%8A%A4Let's%20Encrypt%E8%AF%81%E4%B9%A6/" data-id="clsq0ud1u00172gu87h7s58ym" data-title="使用acme.sh申请并维护Let&#39;s Encrypt证书" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/acme-sh/" rel="tag">acme.sh</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2024/02/17/Hexo%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Hexo博客引擎的安装与使用
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/04/11/Windows10%E4%B8%8B%E5%90%8C%E6%97%B6%E5%AE%89%E8%A3%85python2%E5%92%8Cpython3/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Windows10下同时安装python2和python3</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%BB%A3%E7%A0%81/">代码</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%BB%A3%E7%A0%81/Typora%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0/">Typora图片上传</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Certbot/">Certbot</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Hexo/">Hexo</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Hexo/Node-js/">Node.js</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/LNMP/">LNMP</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Maven/">Maven</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Seafile/">Seafile</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Typecho/">Typecho</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/acme-sh/">acme.sh</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/python/">python</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AC%94%E8%AE%B0/Docker/">Docker</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Certbot/" rel="tag">Certbot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Docker/" rel="tag">Docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LNMP/" rel="tag">LNMP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Maven/" rel="tag">Maven</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/" rel="tag">Node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Seafile/" rel="tag">Seafile</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Typecho/" rel="tag">Typecho</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Typora/" rel="tag">Typora</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Windows/" rel="tag">Windows</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/acme-sh/" rel="tag">acme.sh</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%83%E7%89%9B%E4%BA%91/" rel="tag">七牛云</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BB%A3%E7%A0%81/" rel="tag">代码</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag">笔记</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Certbot/" style="font-size: 10px;">Certbot</a> <a href="/tags/Docker/" style="font-size: 10px;">Docker</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/LNMP/" style="font-size: 14px;">LNMP</a> <a href="/tags/Linux/" style="font-size: 18px;">Linux</a> <a href="/tags/Maven/" style="font-size: 10px;">Maven</a> <a href="/tags/Node-js/" style="font-size: 10px;">Node.js</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Seafile/" style="font-size: 10px;">Seafile</a> <a href="/tags/Typecho/" style="font-size: 12px;">Typecho</a> <a href="/tags/Typora/" style="font-size: 10px;">Typora</a> <a href="/tags/Windows/" style="font-size: 16px;">Windows</a> <a href="/tags/acme-sh/" style="font-size: 10px;">acme.sh</a> <a href="/tags/python/" style="font-size: 12px;">python</a> <a href="/tags/%E4%B8%83%E7%89%9B%E4%BA%91/" style="font-size: 10px;">七牛云</a> <a href="/tags/%E4%BB%A3%E7%A0%81/" style="font-size: 10px;">代码</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 20px;">教程</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 10px;">笔记</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">February 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">October 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/02/17/Hexo%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/">Hexo博客引擎的安装与使用</a>
+          </li>
+        
+          <li>
+            <a href="/2021/10/21/%E4%BD%BF%E7%94%A8acme.sh%E7%94%B3%E8%AF%B7%E5%B9%B6%E7%BB%B4%E6%8A%A4Let's%20Encrypt%E8%AF%81%E4%B9%A6/">使用acme.sh申请并维护Let&#39;s Encrypt证书</a>
+          </li>
+        
+          <li>
+            <a href="/2021/04/11/Windows10%E4%B8%8B%E5%90%8C%E6%97%B6%E5%AE%89%E8%A3%85python2%E5%92%8Cpython3/">Windows10下同时安装python2和python3</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/14/Docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Docker学习笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2021/02/17/pip%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90/">pip更换国内源</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

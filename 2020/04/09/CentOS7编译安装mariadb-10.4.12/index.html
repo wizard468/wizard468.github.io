@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>CentOS7编译安装mariadb-10.4.12 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="编译安装mariadb一、安装相关包1234yum -y install readline-develyum -y install zlib-develyum -y install openssl-develyum -y install libaio-devel  安装3.10以上版本的cmake,这里安装最新的3.17版本 123456[root@wizard ~]# wget https:&#x2F;&#x2F;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CentOS7编译安装mariadb-10.4.12">
+<meta property="og:url" content="http://example.com/2020/04/09/CentOS7%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85mariadb-10.4.12/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="编译安装mariadb一、安装相关包1234yum -y install readline-develyum -y install zlib-develyum -y install openssl-develyum -y install libaio-devel  安装3.10以上版本的cmake,这里安装最新的3.17版本 123456[root@wizard ~]# wget https:&#x2F;&#x2F;">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-04-09T15:03:36.000Z">
+<meta property="article:modified_time" content="2021-01-26T11:43:08.000Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="教程">
+<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="LNMP">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-CentOS7编译安装mariadb-10.4.12" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2020/04/09/CentOS7%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85mariadb-10.4.12/" class="article-date">
+  <time class="dt-published" datetime="2020-04-09T15:03:36.000Z" itemprop="datePublished">2020-04-09</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a>►<a class="article-category-link" href="/categories/%E6%95%99%E7%A8%8B/LNMP/">LNMP</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      CentOS7编译安装mariadb-10.4.12
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h3 id="编译安装mariadb"><a href="#编译安装mariadb" class="headerlink" title="编译安装mariadb"></a>编译安装mariadb</h3><h4 id="一、安装相关包"><a href="#一、安装相关包" class="headerlink" title="一、安装相关包"></a>一、安装相关包</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">yum -y install readline-devel</span><br><span class="line">yum -y install zlib-devel</span><br><span class="line">yum -y install openssl-devel</span><br><span class="line">yum -y install libaio-devel</span><br></pre></td></tr></table></figure>
+
+<p>安装3.10以上版本的cmake,这里安装最新的3.17版本</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@wizard ~]# wget https://github.com/Kitware/CMake/releases/download/v3.17.0/cmake-3.17.0.tar.gz -O /opt/cmake-3.17.0.tar.gz</span><br><span class="line">[root@wizard ~]# tar xvzf /opt/cmake-3.17.0.tar.gz -C /opt/</span><br><span class="line">[root@wizard ~]# cd /opt/cmake-3.17.0</span><br><span class="line">[root@wizard ~]# ./configure </span><br><span class="line">[root@wizard ~]# gmake &amp;&amp; gmake install</span><br><span class="line">[root@wizard ~]# cmake --version</span><br></pre></td></tr></table></figure>
+
+<p>安装libevent-2.1.11</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[root@wizard mysql]# wget https://github.com/libevent/libevent/releases/download/release-2.1.11-stable/libevent-2.1.11-stable.tar.gz -O /opt/libevent-2.1.11-stable.tar.gz</span><br><span class="line"></span><br><span class="line">[root@wizard mysql]# tar xvzf /opt/libevent-2.1.11-stable.tar.gz -C /opt/</span><br><span class="line"></span><br><span class="line">[root@wizard mysql]# /opt/libevent-2.1.11-stable/configure --prefix=/usr/ --disable-static &amp;&amp; make</span><br><span class="line"></span><br><span class="line">[root@wizard mysql]# make install</span><br></pre></td></tr></table></figure>
+
+<p>安装devtoolset-7</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[root@wizard mysql]# yum install centos-release-scl devtoolset-7</span><br><span class="line">//临时使用高版本GCC，bash重启后会失效</span><br><span class="line">[root@wizard mysql]# scl enable devtoolset-7 bash</span><br><span class="line">//查询GCC版本</span><br><span class="line">[root@wizard mysql]# gcc --version</span><br><span class="line">gcc (GCC) 7.3.1 20180303 (Red Hat 7.3.1-5)</span><br><span class="line">Copyright (C) 2017 Free Software Foundation, Inc.</span><br><span class="line">This is free software; see the source for copying conditions.  There is NO</span><br><span class="line">warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</span><br></pre></td></tr></table></figure>
+
+<h4 id="二、下载MariaDB官方源码"><a href="#二、下载MariaDB官方源码" class="headerlink" title="二、下载MariaDB官方源码"></a>二、下载MariaDB官方源码</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@wizard ~]# wget http://mirror.marwan.ma/mariadb/mariadb-10.4.12/source/mariadb-10.4.12.tar.gz -O /opt/mariadb-10.4.12.tar.gz</span><br></pre></td></tr></table></figure>
+
+<h4 id="三、解压"><a href="#三、解压" class="headerlink" title="三、解压"></a>三、解压</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@wizard ~]# tar xvzf /opt/mariadb-10.4.12.tar.gz -C /opt/</span><br></pre></td></tr></table></figure>
+
+<h4 id="四、创建MariaDB安装目录、数据库存放目录、建立mysql用户和组"><a href="#四、创建MariaDB安装目录、数据库存放目录、建立mysql用户和组" class="headerlink" title="四、创建MariaDB安装目录、数据库存放目录、建立mysql用户和组"></a>四、创建MariaDB安装目录、数据库存放目录、建立mysql用户和组</h4><blockquote>
+<p>这里提前预定MariaDB的安装目录为&#x2F;usr&#x2F;local&#x2F;mysql并且数据库目录为&#x2F;data&#x2F;mysql，建立mysql用户及组，并将数据库存放目录赋予mysql用户及组权限，操作如下:</p>
+<p><strong>请注意特别说明一下</strong>：这里说的<strong>数据库目录</strong>是指的具体数据库存储文件, 而不是安装文件!</p>
+</blockquote>
+<ul>
+<li>创建mysql系统用户组</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@wizard ~]# groupadd -r mysql</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>创建系统用户mysql并加入到mysql系统用户组</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@wizard ~]# useradd -r -g mysql -s /sbin/nologin -d /usr/local/mysql -M mysql</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>以下是上面创建系统用户mysql的各个参数说明：</strong></p>
+<p>-r: 添加系统用户( 这里指将要被创建的系统用户mysql )</p>
+<p>-g: 指定要创建的用户所属组( 这里指添加到新系统用户mysql到mysql系统用户组 )</p>
+<p>-s: 新系统帐户的登录shell( <code>/sbin/nologin</code> 这里设置为将要被创建系统用户mysql不能用来登录系统 )</p>
+<p>-d: 新帐户的主目录( 这里指定将要被创建的系统用户mysql的家目录为 <code>/usr/local/mysql</code> )</p>
+<p>-M: 不要创建用户的主目录( 也就是说将要被创建的系统用户mysql不会在 <code>/home</code> 目录下创建 <code>mysql</code> 家目录 )</p>
+</blockquote>
+<ul>
+<li>创建maria安装目录</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@wizard ~]# mkdir -p /usr/local/mysql</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>创建数据库存放目录</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@wizard ~]# mkdir -p /data/mysql</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>改变数据库存放目录所属用户及组为 mysql:mysql</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@wizard ~]# chown -R mysql:mysql /data/mysql</span><br></pre></td></tr></table></figure>
+
+<h4 id="五、执行编译安装"><a href="#五、执行编译安装" class="headerlink" title="五、执行编译安装"></a>五、执行编译安装</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash">进入到解压后的源码包文件夹</span></span><br><span class="line"></span><br><span class="line">[root@wizard ~]# cd /opt/mariadb-10.4.12</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash">输入编译参数</span></span><br><span class="line"></span><br><span class="line">cmake . -DCMAKE_INSTALL_PREFIX=/usr/local/mysql -DMYSQL_DATADIR=/data/mysql -DSYSCONFDIR=/etc -DWITHOUT_TOKUDB=1 -DMYSQL_UNIX_ADDR=/tmp/mysql.sock -DDEFAULT_CHARSET=utf8 -DDEFAULT_COLLATION=utf8_general_ci</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash">如果编译失败请删除CMakeCache.txt</span></span><br><span class="line"></span><br><span class="line">[root@wizard mariadb-10.4.12]# rm -f CMakeCache.txt</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash">让指令重新执行，否则每次读取这个文件，命令修改正确也是报错</span></span><br><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash">cmake没问题，可以编译并且安装了： make &amp;&amp; make install 时间会有点长根据个人机器吧，你可以干别的事情去!</span></span><br><span class="line"></span><br><span class="line">- 开始安装 (#这个过程比较久，跟据电脑配制不同可能会有10-30分钟#)</span><br><span class="line">- 你可以去喝杯咖啡了</span><br><span class="line">[root@wizard mariadb-10.4.12]# make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
+
+<h4 id="六、导入mysql系统表"><a href="#六、导入mysql系统表" class="headerlink" title="六、导入mysql系统表"></a>六、导入mysql系统表</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">[root@wizard ~]# cd /usr/local/mysql/</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">先别着急运行这行，先看下面详细说明。大坑！！！博主是小白，查了一晚上才找到解决方案。</span></span><br><span class="line">[root@wizard mysql]# scripts/mysql_install_db --user=mysql --datadir=/data/mysql</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">--------------------------------------------------------------------------</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">经过测试，mariadb-10.4 以上运行以上脚本会报以下错误</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">--------------------------------------------------------------------------</span></span><br><span class="line">chown: 无法访问&quot;./lib/plugin/auth_pam_tool_dir&quot;: 没有那个文件或目录</span><br><span class="line">Cannot change ownership of the &#x27;./lib/plugin/auth_pam_tool_dir&#x27; directory</span><br><span class="line"> to the &#x27;mysql&#x27; user. Check that you have the necessary permissions and try again.</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">--------------------------------------------------------------------------</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">解决方法：</span></span><br><span class="line">[root@wizard mysql]# vim scripts/mysql_install_db</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">找到483,484,493,494行 并注释掉代码即可(代码顺序可能不同，按照代码具体对照)</span></span><br><span class="line">483   #chown $user &quot;$pamtooldir/auth_pam_tool_dir&quot; &amp;&amp; \</span><br><span class="line">484   #chmod 0700 &quot;$pamtooldir/auth_pam_tool_dir&quot;</span><br><span class="line">.......</span><br><span class="line">493     #chown 0 &quot;$pamtooldir/auth_pam_tool_dir/auth_pam_tool&quot; &amp;&amp; \</span><br><span class="line">494     #chmod 04755 &quot;$pamtooldir/auth_pam_tool_dir/auth_pam_tool&quot;</span><br></pre></td></tr></table></figure>
+
+<h4 id="七、复制配置文件"><a href="#七、复制配置文件" class="headerlink" title="七、复制配置文件"></a>七、复制配置文件</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[root@wizard ~]# cp /usr/local/mysql/support-files/wsrep.cnf /etc/my.cnf</span><br><span class="line">[root@wizard ~]# vim /etc/my.cnf</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">添加以下内容</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">在[mysqld]下面添加</span></span><br><span class="line">socket=/var/lib/mysql/mysql.sock</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">在首行添加</span></span><br><span class="line">[client]</span><br><span class="line">port=3306</span><br><span class="line">socket=/var/lib/mysql/mysql.sock</span><br></pre></td></tr></table></figure>
+
+<h4 id="八、编写服务脚本并设置服务"><a href="#八、编写服务脚本并设置服务" class="headerlink" title="八、编写服务脚本并设置服务"></a>八、编写服务脚本并设置服务</h4><p>编写服务脚本</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">[root@wizard ~]# hostname</span><br><span class="line">xxxxxxxxxxxxxxxxxxxxxxx(此处会显示电脑名称，将此名称填写在下方PIDFile=/data/mysql/xxxxx.pid中)</span><br><span class="line">[root@wizard ~]# vi /lib/systemd/system/mysql.service</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">--------------------------------------------------------------------------</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">输入以下代码</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">--------------------------------------------------------------------------</span></span><br><span class="line">[Unit]</span><br><span class="line">Description=MySQL Community Server</span><br><span class="line">After=network.target</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">User=mysql</span><br><span class="line">Group=mysql</span><br><span class="line">Type=forking</span><br><span class="line">PermissionsStartOnly=true</span><br><span class="line">PIDFile=/data/mysql/************* YOU HOST NAME *************.pid</span><br><span class="line">ExecStart=/usr/local/mysql/support-files/mysql.server start</span><br><span class="line">ExecReload=/usr/local/mysql/support-files/mysql.server restart</span><br><span class="line">ExecStop=/usr/local/mysql/support-files/mysql.server stop</span><br><span class="line">PrivateTmp=true</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">建立日志目录</span></span><br><span class="line">[root@wizard ~]# mkdir /var/log/mariadb</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">建立软连接到/usr/bin，以便于在任何位置使用mysql命令</span></span><br><span class="line">[root@wizard ~]# ln -s /usr/local/mysql/bin/mysql /usr/bin/mysql</span><br></pre></td></tr></table></figure>
+
+<p>设置服务</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">开机启动</span></span><br><span class="line">[root@wizard ~]# systemctl enable mysql.service</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">启动服务</span></span><br><span class="line">[root@wizard ~]# systemctl start mysql.service</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">停止服务</span></span><br><span class="line">[root@wizard ~]# systemctl stop mysql.service</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">重启服务</span></span><br><span class="line">[root@wizard ~]# systemctl restart mysql.service</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">强制杀死进程</span></span><br><span class="line">[root@wizard ~]# pkill -9 mysql</span><br></pre></td></tr></table></figure>
+
+<h4 id="九、初始化MariaDB"><a href="#九、初始化MariaDB" class="headerlink" title="九、初始化MariaDB"></a>九、初始化MariaDB</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">运行MariaDB初始化脚本</span></span><br><span class="line">[root@wizard ~]# ./bin/mysql_secure_installation</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">--------------------------------------------------------------------------</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">根据相关提示进行操作</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">以下提示：</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">--------------------------------------------------------------------------</span></span><br><span class="line">Enter current password for root (enter for none):    输入当前root密码(回车)</span><br><span class="line">Switch to unix_socket authentication [Y/n]           是否启用socket授权(n)</span><br><span class="line">Change the root password? [Y/n]                      是否修改root用户密码?(Y)</span><br><span class="line">New password:                                        输入新root密码(a123456)</span><br><span class="line">Re-enter new password:                               确认输入root密码(a123456)</span><br><span class="line">Remove anonymous users? [Y/n] Y                      删除匿名用户?(Y)</span><br><span class="line">Disallow root login remotely? [Y/n] Y                不允许root登录远程?(Y)</span><br><span class="line">Reload privilege tables now? [Y/n] Y                 现在重新加载权限表(Y)</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">全部完成!如果你已经完成了以上步骤,MariaDB安装现在应该安装完成。</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>创建外网可访问的管理员帐号(根据需要，请尽量保证密码的复杂性避免数据库外泄)</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@wizard ~]# mysql -uroot -p</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">根据提示输入密码</span></span><br><span class="line">MariaDB [(none)]&gt; GRANT ALL PRIVILEGES ON *.* TO &#x27;admin&#x27;@&#x27;%&#x27; IDENTIFIED BY &#x27;your password&#x27; WITH GRANT OPTION;</span><br></pre></td></tr></table></figure>
+
+<h4 id="十、遇到的一些问题"><a href="#十、遇到的一些问题" class="headerlink" title="十、遇到的一些问题"></a>十、遇到的一些问题</h4><p>发现mysql在没有密码的情况下可以直接登录，10.4版本的mariadb使用了什么黑科技，保证不使用密码的情况下的数据库安全？本小白也不是很明白。总之，官方解释不需要密码也能保证安全性，但是，如果想恢复使用密码：（这里详细可以参考资料[8]<a target="_blank" rel="noopener" href="https://mariadb.org/authentication-in-mariadb-10-4/">Authentication in MariaDB 10.4 — Understanding the Changes</a>）</p>
+<p>解决：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[root@wizard ~]# mysql</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">查看已有用户</span></span><br><span class="line">[root@wizard ~]# SELECT DISTINCT CONCAT(&#x27;User: &#x27;&#x27;&#x27;,user,&#x27;&#x27;&#x27;@&#x27;&#x27;&#x27;,host,&#x27;&#x27;&#x27;;&#x27;) AS query FROM mysql.user;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">把下面mysql换成你需要使用的账户名，newPassword换成你想使用的密码，然后执行。</span></span><br><span class="line">[root@wizard ~]# ALTER USER mysql@localhost IDENTIFIED VIA mysql_native_password USING PASSWORD(&quot;newPassword&quot;);</span><br></pre></td></tr></table></figure>
+
+
+
+<p>参考资料：</p>
+<p>[1]<a target="_blank" rel="noopener" href="https://www.cnblogs.com/cm920/p/12619113.html">centos7下YUM安装mariadb-10.4.12</a></p>
+<p>[2]<a target="_blank" rel="noopener" href="https://github.com/libevent/libevent/releases/download/release-2.1.10-stable/libevent-2.1.10-stable.tar.gz">centos7编译安装mariadb-10.4.6</a></p>
+<p>[3]<a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000009909776">CentOS7.3编译安装MariaDB10.2.6</a></p>
+<p>[4]<a target="_blank" rel="noopener" href="https://blog.51cto.com/lixin752299/2056736">CentOS7.3编译安装MariaDB10.2.6</a></p>
+<p>[5]<a target="_blank" rel="noopener" href="https://blog.csdn.net/wangjie72270/article/details/81124680">常用的&#x2F;etc&#x2F;my.cnf配置，可以修改后直接替换</a></p>
+<p>[6]<a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000011344106">啊里云centos7.6编译安装NGINX+PHP7+MariaDB+MEMCACHED</a></p>
+<p>[7]<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_35663625/article/details/97920936">Centos7.4安装mariadb10</a></p>
+<p>[8]<a target="_blank" rel="noopener" href="https://mariadb.org/authentication-in-mariadb-10-4/">Authentication in MariaDB 10.4 — Understanding the Changes</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/04/09/CentOS7%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85mariadb-10.4.12/" data-id="clsq0ud1i00092gu82cxv10yr" data-title="CentOS7编译安装mariadb-10.4.12" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LNMP/" rel="tag">LNMP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/04/10/CentOS7%E5%AE%89%E8%A3%85Typecho/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          CentOS7安装Typecho
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/04/09/Linux%E7%B3%BB%E7%BB%9F%E6%B7%BB%E5%8A%A0swap%E4%BA%A4%E6%8D%A2%E7%A9%BA%E9%97%B4/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Linux系统添加swap交换空间</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%BB%A3%E7%A0%81/">代码</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%BB%A3%E7%A0%81/Typora%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0/">Typora图片上传</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Certbot/">Certbot</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Hexo/">Hexo</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Hexo/Node-js/">Node.js</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/LNMP/">LNMP</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Maven/">Maven</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Seafile/">Seafile</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Typecho/">Typecho</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/acme-sh/">acme.sh</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/python/">python</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AC%94%E8%AE%B0/Docker/">Docker</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Certbot/" rel="tag">Certbot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Docker/" rel="tag">Docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LNMP/" rel="tag">LNMP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Maven/" rel="tag">Maven</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/" rel="tag">Node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Seafile/" rel="tag">Seafile</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Typecho/" rel="tag">Typecho</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Typora/" rel="tag">Typora</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Windows/" rel="tag">Windows</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/acme-sh/" rel="tag">acme.sh</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%83%E7%89%9B%E4%BA%91/" rel="tag">七牛云</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BB%A3%E7%A0%81/" rel="tag">代码</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag">笔记</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Certbot/" style="font-size: 10px;">Certbot</a> <a href="/tags/Docker/" style="font-size: 10px;">Docker</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/LNMP/" style="font-size: 14px;">LNMP</a> <a href="/tags/Linux/" style="font-size: 18px;">Linux</a> <a href="/tags/Maven/" style="font-size: 10px;">Maven</a> <a href="/tags/Node-js/" style="font-size: 10px;">Node.js</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Seafile/" style="font-size: 10px;">Seafile</a> <a href="/tags/Typecho/" style="font-size: 12px;">Typecho</a> <a href="/tags/Typora/" style="font-size: 10px;">Typora</a> <a href="/tags/Windows/" style="font-size: 16px;">Windows</a> <a href="/tags/acme-sh/" style="font-size: 10px;">acme.sh</a> <a href="/tags/python/" style="font-size: 12px;">python</a> <a href="/tags/%E4%B8%83%E7%89%9B%E4%BA%91/" style="font-size: 10px;">七牛云</a> <a href="/tags/%E4%BB%A3%E7%A0%81/" style="font-size: 10px;">代码</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 20px;">教程</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 10px;">笔记</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">February 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">October 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/02/17/Hexo%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/">Hexo博客引擎的安装与使用</a>
+          </li>
+        
+          <li>
+            <a href="/2021/10/21/%E4%BD%BF%E7%94%A8acme.sh%E7%94%B3%E8%AF%B7%E5%B9%B6%E7%BB%B4%E6%8A%A4Let's%20Encrypt%E8%AF%81%E4%B9%A6/">使用acme.sh申请并维护Let&#39;s Encrypt证书</a>
+          </li>
+        
+          <li>
+            <a href="/2021/04/11/Windows10%E4%B8%8B%E5%90%8C%E6%97%B6%E5%AE%89%E8%A3%85python2%E5%92%8Cpython3/">Windows10下同时安装python2和python3</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/14/Docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Docker学习笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2021/02/17/pip%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90/">pip更换国内源</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
