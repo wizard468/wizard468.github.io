@@ -1,1075 +1,233 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-  
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Hexo</title><meta name="author" content="John Doe"><meta name="copyright" content="John Doe"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://example.com/page/2/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
-  
-<link rel="stylesheet" href="/css/style.css">
-
-  
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/page/2/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Error',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Hexo',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2024-02-23 12:17:31'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
     
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
 
-  
-  
-<meta name="generator" content="Hexo 7.1.1"></head>
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-        
-          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
-        
-        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-使用Certbot使网站免费启用Https" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2020/04/10/%E4%BD%BF%E7%94%A8Certbot%E4%BD%BF%E7%BD%91%E7%AB%99%E5%85%8D%E8%B4%B9%E5%90%AF%E7%94%A8Https/" class="article-date">
-  <time class="dt-published" datetime="2020-04-10T13:50:03.000Z" itemprop="datePublished">2020-04-10</time>
-</a>
+        document.head.appendChild(script)
+      })
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a>►<a class="article-category-link" href="/categories/%E6%95%99%E7%A8%8B/Certbot/">Certbot</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
     
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2020/04/10/%E4%BD%BF%E7%94%A8Certbot%E4%BD%BF%E7%BD%91%E7%AB%99%E5%85%8D%E8%B4%B9%E5%90%AF%E7%94%A8Https/">使用Certbot使网站免费启用Https</a>
-    </h1>
-  
-
-      </header>
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
     
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>2021年10月21日更新：</p>
-<p>提示：以下部分教程可能不再有效，且certbot安装变成了一件比较麻烦的事情。最近学习了新的申请维护证书的方法，请点击跳转：<a target="_blank" rel="noopener" href="https://blog.abina.cn/posts/%E4%BD%BF%E7%94%A8acme.sh%E7%94%B3%E8%AF%B7%E5%B9%B6%E7%BB%B4%E6%8A%A4Let's%20Encrypt%E8%AF%81%E4%B9%A6/">使用acme.sh申请并维护Let’s Encrypt证书</a></p>
-<p>如果你仍要坚持使用certbot，并在安装和使用的过程中遇到问题，这篇文章有可能可以帮助到你：<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_50512016/article/details/112629605">Let’s Encrypt 使用 certbot 命令生成通配免费证书？</a></p>
-<p><a target="_blank" rel="noopener" href="https://letsencrypt.org/">Let’s Encrypt</a>这个免费的解决方案。Let’s Encrypt 是一个于2015年推出的数字证书认证机构，将通过旨在消除当前手动创建和安装证书的复杂过程的自动化流程，为安全网站提供免费的SSL&#x2F;TLS证书。</p>
-<p>为你的网站来安装一个证书十分简单，只需要使用电子子前哨基金会EFF的 <a target="_blank" rel="noopener" href="https://certbot.eff.org/">Certbot</a>，就可以完成。</p>
-<h3 id="一、环境配置及安装certbot"><a href="#一、环境配置及安装certbot" class="headerlink" title="一、环境配置及安装certbot"></a>一、环境配置及安装certbot</h3><ul>
-<li>打开 <a target="_blank" rel="noopener" href="https://certbot.eff.org/">https://certbot.eff.org</a> ，在下图位置选择你的web服务器和操作系统</li>
-</ul>
-<img src="https://qiniu.cdn.abina.cn/2021_01_26_12_08_50_1.png" alt="image-20200410215454011" style="zoom: 50%;" />
-
-<ul>
-<li>然后就会跳转到一个安装教程网页，跟着命令做就可以。</li>
-</ul>
-<h3 id="二、使用certbot"><a href="#二、使用certbot" class="headerlink" title="二、使用certbot"></a>二、使用certbot</h3><ul>
-<li><p>这里有个天坑！！当执行到<code>sudo  certbot --nginx</code>这句命令，发现出现错误：</p>
-<blockquote>
-<p> ImportError: ‘pyOpenSSL’ module missing required functionality. Try upgrading to v0.14 or newer.</p>
-</blockquote>
-<p>网上的方法都太老旧了，不生效。找了很久才找到解决方案：</p>
-<p>执行：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">yum erase pyOpenSSL -y</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">在你看到这篇文章时，若发现下面地址已经找不到了，可以自行去http://ftp.ksu.edu.tw/FTP/CentOS/7/cloud/x86_64下面尝试找pyOpenSSL包</span></span><br><span class="line">wget http://ftp.ksu.edu.tw/FTP/CentOS/7/cloud/x86_64/openstack-queens/Packages/p/pyOpenSSL-doc-17.3.0-3.el7.noarch.rpm</span><br><span class="line"></span><br><span class="line">rpm -Uvh pyOpenSSL-doc-17.3.0-3.el7.noarch.rpm</span><br></pre></td></tr></table></figure>
-
-<p>然后再执行<code>sudo  certbot --nginx</code>可以解决问题。</p>
-</li>
-<li><p>若提示nginx -t检测不成功，根据提示的位置注释掉相应代码。</p>
-<blockquote>
-<p>我执行时，这里的certbot对nginx配置的检测不成功，提示了两个include配置项检测有问题。（可能是我一开始对nginx配置文件配置不规范导致的certbot检测出错）。</p>
-<p>包括下面的certbot给我自动添加的配置，多多少少是有问题的。所以最后还是能懂一些nginx的配置，能看懂配置就容易修改了。</p>
-<p>我的最终解决方案如下：</p>
-<p>①先注释掉报错的两个include配置，执行 sudo  certbot –nginx 命令，先让certbot能跑起来。</p>
-<p>②执行成功后，去nginx配置文件手动修改配置。将上述两个include配置项取消注释。调整certbot自动生成代码的位置等等。（具体可以参考下面我贴的配置）</p>
-</blockquote>
-</li>
-<li><p>你打开你的 <code>nginx.conf</code> 文件 ，你可以发现你的文件中的 <code>server</code> 配置中可能被做了如下的修改：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">listen 443 ssl; # managed by Certbot</span><br><span class="line">ssl_certificate /etc/letsencrypt/live/xxx/fullchain.pem; # managed by Certbot</span><br><span class="line">ssl_certificate_key /etc/letsencrypt/live/xxx/privkey.pem; # managed by Certbot</span><br><span class="line">include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot</span><br></pre></td></tr></table></figure>
-
-<p>和</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Redirect non-https traffic to https</span><br><span class="line">if($scheme != &quot;https&quot;) &#123;</span><br><span class="line">	return 301 https://$host$request_uri;</span><br><span class="line">&#125; # managed by Certbot</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>然后，就 <code>nginx -s reload</code> 就好了。</p>
-</li>
-</ul>
-<h3 id="三、附nginx配置文件"><a href="#三、附nginx配置文件" class="headerlink" title="三、附nginx配置文件"></a>三、附nginx配置文件</h3><p>这里贴上我的nginx基本配置，完全复制不保证正确，仅供你参考。本小白对这些配置并不理解，有问题勿喷。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">#user  nobody;</span><br><span class="line">worker_processes  1;</span><br><span class="line"></span><br><span class="line">events &#123;</span><br><span class="line">    worker_connections  1024;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">http &#123;</span><br><span class="line">    include       mime.types;</span><br><span class="line">    default_type  application/octet-stream;</span><br><span class="line">    sendfile        on;</span><br><span class="line">    keepalive_timeout  65;</span><br><span class="line"></span><br><span class="line">    server &#123;</span><br><span class="line">    	listen 80;</span><br><span class="line">        server_name  blog.heywizard.cn;</span><br><span class="line">        location / &#123;</span><br><span class="line">            rewrite ^(.*) https://blog.heywizard.cn$1 permanent;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">	 </span><br><span class="line">    server &#123;</span><br><span class="line">        listen 443 ssl; # managed by Certbot</span><br><span class="line">        ssl_certificate /etc/letsencrypt/live/blog.heywizard.cn/fullchain.pem; # managed by Certbot</span><br><span class="line">        ssl_certificate_key /etc/letsencrypt/live/blog.heywizard.cn/privkey.pem; # managed by Certbot</span><br><span class="line">        include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot</span><br><span class="line">        ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot</span><br><span class="line"></span><br><span class="line">        location / &#123;</span><br><span class="line">            root   /usr/share/nginx/html;</span><br><span class="line">            index  index.html index.php index.htm;</span><br><span class="line"></span><br><span class="line">            if (-f $request_filename/index.html) &#123;</span><br><span class="line">                rewrite (.*) $1/index.html break;</span><br><span class="line">            &#125;</span><br><span class="line">            if (-f $request_filename/index.php) &#123;</span><br><span class="line">                rewrite (.*) $1/index.php;</span><br><span class="line">            &#125;</span><br><span class="line">            if (!-f $request_filename) &#123;</span><br><span class="line">                rewrite (.*) /index.php;</span><br><span class="line">            &#125;</span><br><span class="line">         &#125;</span><br><span class="line">        location ~ .*\.php(\/.*)*$ &#123;</span><br><span class="line">            root           /usr/share/nginx/html;</span><br><span class="line">            fastcgi_pass   127.0.0.1:9000;</span><br><span class="line">            fastcgi_index  index.php;</span><br><span class="line">            fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;</span><br><span class="line">            include        fastcgi_params;</span><br><span class="line">        &#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="四、自动更新证书"><a href="#四、自动更新证书" class="headerlink" title="四、自动更新证书"></a>四、自动更新证书</h3><p>但是，<strong>Let’s Encrypt 的证书90天就过期了</strong>，所以，你还要设置上自动化的更新脚本，最容易的莫过于使用 <code>crontab</code> 了。使用 <code>crontab -e</code> 命令加入如下的定时作业（每个月都强制更新一下）：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">0 0 1 * * /usr/bin/certbot renew --force-renewal</span><br><span class="line">5 0 1 * * /usr/sbin/service nginx restart</span><br></pre></td></tr></table></figure>
-
-<p>当然，你也可以每天凌晨1点检查一下：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0 1 * * * certbot renew</span><br></pre></td></tr></table></figure>
-
-<p>注：crontab 中有六个字段，其含义如下：</p>
-<ul>
-<li>第1个字段：分钟 (0-59)</li>
-<li>第2个字段：小时 (0-23)</li>
-<li>第3个字段：日期 (1-31)</li>
-<li>第4个字段：月份 (1-12 [12 代表 December])</li>
-<li>第5个字段：一周当中的某天 (0-7 [7 或 0 代表星期天])</li>
-<li>&#x2F;path&#x2F;to&#x2F;command – 计划执行的脚本或命令的名称</li>
-</ul>
-<p>参考资料：</p>
-<p>[1]<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_34252090/article/details/93555163">如何免费的让网站启用https</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/04/10/%E4%BD%BF%E7%94%A8Certbot%E4%BD%BF%E7%BD%91%E7%AB%99%E5%85%8D%E8%B4%B9%E5%90%AF%E7%94%A8Https/" data-id="clsq120yu00146wu8hjpwhoyz" data-title="使用Certbot使网站免费启用Https" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Certbot/" rel="tag">Certbot</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-CentOS7安装Typecho" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2020/04/10/CentOS7%E5%AE%89%E8%A3%85Typecho/" class="article-date">
-  <time class="dt-published" datetime="2020-04-10T04:36:38.000Z" itemprop="datePublished">2020-04-10</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a>►<a class="article-category-link" href="/categories/%E6%95%99%E7%A8%8B/Typecho/">Typecho</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2020/04/10/CentOS7%E5%AE%89%E8%A3%85Typecho/">CentOS7安装Typecho</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h3 id="一、环境配置"><a href="#一、环境配置" class="headerlink" title="一、环境配置"></a>一、环境配置</h3><p>先确保系统正确安装LNMP或LAMP环境，以下以Nginx服务器为例。</p>
-<p>参考：CentOS7安装LNMP环境</p>
-<h3 id="二、安装typecho"><a href="#二、安装typecho" class="headerlink" title="二、安装typecho"></a>二、安装typecho</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[root@wizard ~]# wget https://github.com/typecho/typecho/releases/download/v1.1-17.10.30-release/1.1.17.10.30.-release.tar.gz -O /opt/Typecho-1.1.17.10.30.tar.gz</span><br><span class="line"></span><br><span class="line">[root@wizard ~]# tar xvzf /opt/Typecho-1.1.17.10.30.tar.gz -C /opt/</span><br><span class="line"></span><br><span class="line">[root@wizard ~]# cp -r /opt/build/* /usr/share/nginx/html/</span><br><span class="line"></span><br><span class="line">[root@wizard ~]# mysql -umysql -p</span><br><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash">create database typecho;              <span class="comment">#新建数据库</span></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">下面xxx处填你的密码</span></span><br><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash">grant all privileges on typecho.* to typecho_user@localhost identified by <span class="string">&#x27;xxx&#x27;</span>;    <span class="comment">#新建数据库连接用户</span></span></span><br></pre></td></tr></table></figure>
-
-<p>在浏览器输入<code>http://服务器IP地址</code>，开始配置typecho博客：</p>
-<p><img src="https://qiniu.cdn.abina.cn/2021_01_26_13_17_02_1.jpg" alt="ScreenShot3541.jpg"></p>
-<p>一个新的Typecho博客就创建好了，可以开始使用了。</p>
-<h3 id="三、关于Typecho其他一些设置（选做）"><a href="#三、关于Typecho其他一些设置（选做）" class="headerlink" title="三、关于Typecho其他一些设置（选做）"></a>三、关于Typecho其他一些设置（选做）</h3><h4 id="3-1-开启地址重写功能"><a href="#3-1-开启地址重写功能" class="headerlink" title="3.1 开启地址重写功能"></a>3.1 开启地址重写功能</h4><ul>
-<li>在nginx配置文件这样写：</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">        listen       80;</span><br><span class="line">        server_name  localhost;</span><br><span class="line"></span><br><span class="line">        location / &#123;</span><br><span class="line">            root   /usr/share/nginx/html;</span><br><span class="line">            index  index.html index.php index.htm;</span><br><span class="line">            if (-f $request_filename/index.html) &#123;</span><br><span class="line">                rewrite (.*) $1/index.html break;</span><br><span class="line">            &#125;</span><br><span class="line">            if (-f $request_filename/index.php) &#123;</span><br><span class="line">                rewrite (.*) $1/index.php;</span><br><span class="line">            &#125;</span><br><span class="line">            if (!-f $request_filename) &#123;</span><br><span class="line">                rewrite (.*) /index.php;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>进入typecho后台，在 设置 &#x3D;&gt; 永久连接 &#x3D;&gt; 是否使用地址重写功能，勾选启用。若检测不通过可以强制启用。</li>
-</ul>
-<p>参考资料：</p>
-<p>[1]<a target="_blank" rel="noopener" href="https://www.iorisun.com/archives/7/">CentOS7 LNMP+typecho环境搭建个人博客</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/04/10/CentOS7%E5%AE%89%E8%A3%85Typecho/" data-id="clsq120yg00056wu8g0q2hwxi" data-title="CentOS7安装Typecho" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Typecho/" rel="tag">Typecho</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-CentOS7编译安装mariadb-10.4.12" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2020/04/09/CentOS7%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85mariadb-10.4.12/" class="article-date">
-  <time class="dt-published" datetime="2020-04-09T15:03:36.000Z" itemprop="datePublished">2020-04-09</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a>►<a class="article-category-link" href="/categories/%E6%95%99%E7%A8%8B/LNMP/">LNMP</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2020/04/09/CentOS7%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85mariadb-10.4.12/">CentOS7编译安装mariadb-10.4.12</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h3 id="编译安装mariadb"><a href="#编译安装mariadb" class="headerlink" title="编译安装mariadb"></a>编译安装mariadb</h3><h4 id="一、安装相关包"><a href="#一、安装相关包" class="headerlink" title="一、安装相关包"></a>一、安装相关包</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">yum -y install readline-devel</span><br><span class="line">yum -y install zlib-devel</span><br><span class="line">yum -y install openssl-devel</span><br><span class="line">yum -y install libaio-devel</span><br></pre></td></tr></table></figure>
-
-<p>安装3.10以上版本的cmake,这里安装最新的3.17版本</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@wizard ~]# wget https://github.com/Kitware/CMake/releases/download/v3.17.0/cmake-3.17.0.tar.gz -O /opt/cmake-3.17.0.tar.gz</span><br><span class="line">[root@wizard ~]# tar xvzf /opt/cmake-3.17.0.tar.gz -C /opt/</span><br><span class="line">[root@wizard ~]# cd /opt/cmake-3.17.0</span><br><span class="line">[root@wizard ~]# ./configure </span><br><span class="line">[root@wizard ~]# gmake &amp;&amp; gmake install</span><br><span class="line">[root@wizard ~]# cmake --version</span><br></pre></td></tr></table></figure>
-
-<p>安装libevent-2.1.11</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[root@wizard mysql]# wget https://github.com/libevent/libevent/releases/download/release-2.1.11-stable/libevent-2.1.11-stable.tar.gz -O /opt/libevent-2.1.11-stable.tar.gz</span><br><span class="line"></span><br><span class="line">[root@wizard mysql]# tar xvzf /opt/libevent-2.1.11-stable.tar.gz -C /opt/</span><br><span class="line"></span><br><span class="line">[root@wizard mysql]# /opt/libevent-2.1.11-stable/configure --prefix=/usr/ --disable-static &amp;&amp; make</span><br><span class="line"></span><br><span class="line">[root@wizard mysql]# make install</span><br></pre></td></tr></table></figure>
-
-<p>安装devtoolset-7</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[root@wizard mysql]# yum install centos-release-scl devtoolset-7</span><br><span class="line">//临时使用高版本GCC，bash重启后会失效</span><br><span class="line">[root@wizard mysql]# scl enable devtoolset-7 bash</span><br><span class="line">//查询GCC版本</span><br><span class="line">[root@wizard mysql]# gcc --version</span><br><span class="line">gcc (GCC) 7.3.1 20180303 (Red Hat 7.3.1-5)</span><br><span class="line">Copyright (C) 2017 Free Software Foundation, Inc.</span><br><span class="line">This is free software; see the source for copying conditions.  There is NO</span><br><span class="line">warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</span><br></pre></td></tr></table></figure>
-
-<h4 id="二、下载MariaDB官方源码"><a href="#二、下载MariaDB官方源码" class="headerlink" title="二、下载MariaDB官方源码"></a>二、下载MariaDB官方源码</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@wizard ~]# wget http://mirror.marwan.ma/mariadb/mariadb-10.4.12/source/mariadb-10.4.12.tar.gz -O /opt/mariadb-10.4.12.tar.gz</span><br></pre></td></tr></table></figure>
-
-<h4 id="三、解压"><a href="#三、解压" class="headerlink" title="三、解压"></a>三、解压</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@wizard ~]# tar xvzf /opt/mariadb-10.4.12.tar.gz -C /opt/</span><br></pre></td></tr></table></figure>
-
-<h4 id="四、创建MariaDB安装目录、数据库存放目录、建立mysql用户和组"><a href="#四、创建MariaDB安装目录、数据库存放目录、建立mysql用户和组" class="headerlink" title="四、创建MariaDB安装目录、数据库存放目录、建立mysql用户和组"></a>四、创建MariaDB安装目录、数据库存放目录、建立mysql用户和组</h4><blockquote>
-<p>这里提前预定MariaDB的安装目录为&#x2F;usr&#x2F;local&#x2F;mysql并且数据库目录为&#x2F;data&#x2F;mysql，建立mysql用户及组，并将数据库存放目录赋予mysql用户及组权限，操作如下:</p>
-<p><strong>请注意特别说明一下</strong>：这里说的<strong>数据库目录</strong>是指的具体数据库存储文件, 而不是安装文件!</p>
-</blockquote>
-<ul>
-<li>创建mysql系统用户组</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@wizard ~]# groupadd -r mysql</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>创建系统用户mysql并加入到mysql系统用户组</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@wizard ~]# useradd -r -g mysql -s /sbin/nologin -d /usr/local/mysql -M mysql</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p><strong>以下是上面创建系统用户mysql的各个参数说明：</strong></p>
-<p>-r: 添加系统用户( 这里指将要被创建的系统用户mysql )</p>
-<p>-g: 指定要创建的用户所属组( 这里指添加到新系统用户mysql到mysql系统用户组 )</p>
-<p>-s: 新系统帐户的登录shell( <code>/sbin/nologin</code> 这里设置为将要被创建系统用户mysql不能用来登录系统 )</p>
-<p>-d: 新帐户的主目录( 这里指定将要被创建的系统用户mysql的家目录为 <code>/usr/local/mysql</code> )</p>
-<p>-M: 不要创建用户的主目录( 也就是说将要被创建的系统用户mysql不会在 <code>/home</code> 目录下创建 <code>mysql</code> 家目录 )</p>
-</blockquote>
-<ul>
-<li>创建maria安装目录</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@wizard ~]# mkdir -p /usr/local/mysql</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>创建数据库存放目录</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@wizard ~]# mkdir -p /data/mysql</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>改变数据库存放目录所属用户及组为 mysql:mysql</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@wizard ~]# chown -R mysql:mysql /data/mysql</span><br></pre></td></tr></table></figure>
-
-<h4 id="五、执行编译安装"><a href="#五、执行编译安装" class="headerlink" title="五、执行编译安装"></a>五、执行编译安装</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash">进入到解压后的源码包文件夹</span></span><br><span class="line"></span><br><span class="line">[root@wizard ~]# cd /opt/mariadb-10.4.12</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash">输入编译参数</span></span><br><span class="line"></span><br><span class="line">cmake . -DCMAKE_INSTALL_PREFIX=/usr/local/mysql -DMYSQL_DATADIR=/data/mysql -DSYSCONFDIR=/etc -DWITHOUT_TOKUDB=1 -DMYSQL_UNIX_ADDR=/tmp/mysql.sock -DDEFAULT_CHARSET=utf8 -DDEFAULT_COLLATION=utf8_general_ci</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash">如果编译失败请删除CMakeCache.txt</span></span><br><span class="line"></span><br><span class="line">[root@wizard mariadb-10.4.12]# rm -f CMakeCache.txt</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash">让指令重新执行，否则每次读取这个文件，命令修改正确也是报错</span></span><br><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash">cmake没问题，可以编译并且安装了： make &amp;&amp; make install 时间会有点长根据个人机器吧，你可以干别的事情去!</span></span><br><span class="line"></span><br><span class="line">- 开始安装 (#这个过程比较久，跟据电脑配制不同可能会有10-30分钟#)</span><br><span class="line">- 你可以去喝杯咖啡了</span><br><span class="line">[root@wizard mariadb-10.4.12]# make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
-
-<h4 id="六、导入mysql系统表"><a href="#六、导入mysql系统表" class="headerlink" title="六、导入mysql系统表"></a>六、导入mysql系统表</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">[root@wizard ~]# cd /usr/local/mysql/</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">先别着急运行这行，先看下面详细说明。大坑！！！博主是小白，查了一晚上才找到解决方案。</span></span><br><span class="line">[root@wizard mysql]# scripts/mysql_install_db --user=mysql --datadir=/data/mysql</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">--------------------------------------------------------------------------</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">经过测试，mariadb-10.4 以上运行以上脚本会报以下错误</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">--------------------------------------------------------------------------</span></span><br><span class="line">chown: 无法访问&quot;./lib/plugin/auth_pam_tool_dir&quot;: 没有那个文件或目录</span><br><span class="line">Cannot change ownership of the &#x27;./lib/plugin/auth_pam_tool_dir&#x27; directory</span><br><span class="line"> to the &#x27;mysql&#x27; user. Check that you have the necessary permissions and try again.</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">--------------------------------------------------------------------------</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">解决方法：</span></span><br><span class="line">[root@wizard mysql]# vim scripts/mysql_install_db</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">找到483,484,493,494行 并注释掉代码即可(代码顺序可能不同，按照代码具体对照)</span></span><br><span class="line">483   #chown $user &quot;$pamtooldir/auth_pam_tool_dir&quot; &amp;&amp; \</span><br><span class="line">484   #chmod 0700 &quot;$pamtooldir/auth_pam_tool_dir&quot;</span><br><span class="line">.......</span><br><span class="line">493     #chown 0 &quot;$pamtooldir/auth_pam_tool_dir/auth_pam_tool&quot; &amp;&amp; \</span><br><span class="line">494     #chmod 04755 &quot;$pamtooldir/auth_pam_tool_dir/auth_pam_tool&quot;</span><br></pre></td></tr></table></figure>
-
-<h4 id="七、复制配置文件"><a href="#七、复制配置文件" class="headerlink" title="七、复制配置文件"></a>七、复制配置文件</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[root@wizard ~]# cp /usr/local/mysql/support-files/wsrep.cnf /etc/my.cnf</span><br><span class="line">[root@wizard ~]# vim /etc/my.cnf</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">添加以下内容</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">在[mysqld]下面添加</span></span><br><span class="line">socket=/var/lib/mysql/mysql.sock</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">在首行添加</span></span><br><span class="line">[client]</span><br><span class="line">port=3306</span><br><span class="line">socket=/var/lib/mysql/mysql.sock</span><br></pre></td></tr></table></figure>
-
-<h4 id="八、编写服务脚本并设置服务"><a href="#八、编写服务脚本并设置服务" class="headerlink" title="八、编写服务脚本并设置服务"></a>八、编写服务脚本并设置服务</h4><p>编写服务脚本</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">[root@wizard ~]# hostname</span><br><span class="line">xxxxxxxxxxxxxxxxxxxxxxx(此处会显示电脑名称，将此名称填写在下方PIDFile=/data/mysql/xxxxx.pid中)</span><br><span class="line">[root@wizard ~]# vi /lib/systemd/system/mysql.service</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">--------------------------------------------------------------------------</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">输入以下代码</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">--------------------------------------------------------------------------</span></span><br><span class="line">[Unit]</span><br><span class="line">Description=MySQL Community Server</span><br><span class="line">After=network.target</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">User=mysql</span><br><span class="line">Group=mysql</span><br><span class="line">Type=forking</span><br><span class="line">PermissionsStartOnly=true</span><br><span class="line">PIDFile=/data/mysql/************* YOU HOST NAME *************.pid</span><br><span class="line">ExecStart=/usr/local/mysql/support-files/mysql.server start</span><br><span class="line">ExecReload=/usr/local/mysql/support-files/mysql.server restart</span><br><span class="line">ExecStop=/usr/local/mysql/support-files/mysql.server stop</span><br><span class="line">PrivateTmp=true</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">建立日志目录</span></span><br><span class="line">[root@wizard ~]# mkdir /var/log/mariadb</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">建立软连接到/usr/bin，以便于在任何位置使用mysql命令</span></span><br><span class="line">[root@wizard ~]# ln -s /usr/local/mysql/bin/mysql /usr/bin/mysql</span><br></pre></td></tr></table></figure>
-
-<p>设置服务</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">开机启动</span></span><br><span class="line">[root@wizard ~]# systemctl enable mysql.service</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">启动服务</span></span><br><span class="line">[root@wizard ~]# systemctl start mysql.service</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">停止服务</span></span><br><span class="line">[root@wizard ~]# systemctl stop mysql.service</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">重启服务</span></span><br><span class="line">[root@wizard ~]# systemctl restart mysql.service</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">强制杀死进程</span></span><br><span class="line">[root@wizard ~]# pkill -9 mysql</span><br></pre></td></tr></table></figure>
-
-<h4 id="九、初始化MariaDB"><a href="#九、初始化MariaDB" class="headerlink" title="九、初始化MariaDB"></a>九、初始化MariaDB</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">运行MariaDB初始化脚本</span></span><br><span class="line">[root@wizard ~]# ./bin/mysql_secure_installation</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">--------------------------------------------------------------------------</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">根据相关提示进行操作</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">以下提示：</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">--------------------------------------------------------------------------</span></span><br><span class="line">Enter current password for root (enter for none):    输入当前root密码(回车)</span><br><span class="line">Switch to unix_socket authentication [Y/n]           是否启用socket授权(n)</span><br><span class="line">Change the root password? [Y/n]                      是否修改root用户密码?(Y)</span><br><span class="line">New password:                                        输入新root密码(a123456)</span><br><span class="line">Re-enter new password:                               确认输入root密码(a123456)</span><br><span class="line">Remove anonymous users? [Y/n] Y                      删除匿名用户?(Y)</span><br><span class="line">Disallow root login remotely? [Y/n] Y                不允许root登录远程?(Y)</span><br><span class="line">Reload privilege tables now? [Y/n] Y                 现在重新加载权限表(Y)</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">全部完成!如果你已经完成了以上步骤,MariaDB安装现在应该安装完成。</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>创建外网可访问的管理员帐号(根据需要，请尽量保证密码的复杂性避免数据库外泄)</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@wizard ~]# mysql -uroot -p</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">根据提示输入密码</span></span><br><span class="line">MariaDB [(none)]&gt; GRANT ALL PRIVILEGES ON *.* TO &#x27;admin&#x27;@&#x27;%&#x27; IDENTIFIED BY &#x27;your password&#x27; WITH GRANT OPTION;</span><br></pre></td></tr></table></figure>
-
-<h4 id="十、遇到的一些问题"><a href="#十、遇到的一些问题" class="headerlink" title="十、遇到的一些问题"></a>十、遇到的一些问题</h4><p>发现mysql在没有密码的情况下可以直接登录，10.4版本的mariadb使用了什么黑科技，保证不使用密码的情况下的数据库安全？本小白也不是很明白。总之，官方解释不需要密码也能保证安全性，但是，如果想恢复使用密码：（这里详细可以参考资料[8]<a target="_blank" rel="noopener" href="https://mariadb.org/authentication-in-mariadb-10-4/">Authentication in MariaDB 10.4 — Understanding the Changes</a>）</p>
-<p>解决：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[root@wizard ~]# mysql</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">查看已有用户</span></span><br><span class="line">[root@wizard ~]# SELECT DISTINCT CONCAT(&#x27;User: &#x27;&#x27;&#x27;,user,&#x27;&#x27;&#x27;@&#x27;&#x27;&#x27;,host,&#x27;&#x27;&#x27;;&#x27;) AS query FROM mysql.user;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">把下面mysql换成你需要使用的账户名，newPassword换成你想使用的密码，然后执行。</span></span><br><span class="line">[root@wizard ~]# ALTER USER mysql@localhost IDENTIFIED VIA mysql_native_password USING PASSWORD(&quot;newPassword&quot;);</span><br></pre></td></tr></table></figure>
-
-
-
-<p>参考资料：</p>
-<p>[1]<a target="_blank" rel="noopener" href="https://www.cnblogs.com/cm920/p/12619113.html">centos7下YUM安装mariadb-10.4.12</a></p>
-<p>[2]<a target="_blank" rel="noopener" href="https://github.com/libevent/libevent/releases/download/release-2.1.10-stable/libevent-2.1.10-stable.tar.gz">centos7编译安装mariadb-10.4.6</a></p>
-<p>[3]<a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000009909776">CentOS7.3编译安装MariaDB10.2.6</a></p>
-<p>[4]<a target="_blank" rel="noopener" href="https://blog.51cto.com/lixin752299/2056736">CentOS7.3编译安装MariaDB10.2.6</a></p>
-<p>[5]<a target="_blank" rel="noopener" href="https://blog.csdn.net/wangjie72270/article/details/81124680">常用的&#x2F;etc&#x2F;my.cnf配置，可以修改后直接替换</a></p>
-<p>[6]<a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000011344106">啊里云centos7.6编译安装NGINX+PHP7+MariaDB+MEMCACHED</a></p>
-<p>[7]<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_35663625/article/details/97920936">Centos7.4安装mariadb10</a></p>
-<p>[8]<a target="_blank" rel="noopener" href="https://mariadb.org/authentication-in-mariadb-10-4/">Authentication in MariaDB 10.4 — Understanding the Changes</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/04/09/CentOS7%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85mariadb-10.4.12/" data-id="clsq120yl000d6wu82e3n1x94" data-title="CentOS7编译安装mariadb-10.4.12" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LNMP/" rel="tag">LNMP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-Linux系统添加swap交换空间" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2020/04/09/Linux%E7%B3%BB%E7%BB%9F%E6%B7%BB%E5%8A%A0swap%E4%BA%A4%E6%8D%A2%E7%A9%BA%E9%97%B4/" class="article-date">
-  <time class="dt-published" datetime="2020-04-09T12:35:46.000Z" itemprop="datePublished">2020-04-09</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a>►<a class="article-category-link" href="/categories/%E6%95%99%E7%A8%8B/Linux/">Linux</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2020/04/09/Linux%E7%B3%BB%E7%BB%9F%E6%B7%BB%E5%8A%A0swap%E4%BA%A4%E6%8D%A2%E7%A9%BA%E9%97%B4/">Linux系统添加swap交换空间</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>最近入手华为云的服务器，配置比较低。导致我在编译安装mariadb的时候，出现了由于内存较小导致的“cc: internal compiler error: 已杀死 (program cc1)”错误，于是尝试给系统添加swap交换分区解决内存不足导致的问题。</p>
-<p><strong>注意：以下内容几乎都取自CSDN博主<a target="_blank" rel="noopener" href="https://blog.csdn.net/abcdad">flx_bj</a>的<a target="_blank" rel="noopener" href="https://blog.csdn.net/abcdad/article/details/79270646">在CentOS 7上添加Swap交换空间</a>文章，建议跳转到参考原文。原文逻辑条理，语言清晰。（若有侵权，联系博主删除）</strong></p>
-<h4 id="一、检查系统的Swap信息"><a href="#一、检查系统的Swap信息" class="headerlink" title="一、检查系统的Swap信息"></a>一、检查系统的Swap信息</h4><p>首先我们需要检查系统的存储，看看是否已经配置过swap。一个系统可以设置多个swap文件或分区，不过一般来说一个就够了。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">swapon -s</span><br></pre></td></tr></table></figure>
-
-<p>如果该命令没有返回出结果，则代表该系统尚未配置过swap。</p>
-<p>或者，我们也可以使用<code>free</code>命令来查看系统的整体内存使用情况，这里可以看到内存和swap的使用状态（显示单位为MB）</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">free -m</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">             total       used       free     shared    buffers     cached</span><br><span class="line">Mem:          3953        315       3637          8         11        107</span><br><span class="line">-/+ buffers/cache:        196       3756</span><br><span class="line">Swap:            0          0       4095</span><br></pre></td></tr></table></figure>
-
-<p>这里可以看到我们这个系统的total swap空间为0，即没有配置过swap。这与我们在<code>swapon</code>里看到的结果相符合。</p>
-<h4 id="二、检查可用的存储空间"><a href="#二、检查可用的存储空间" class="headerlink" title="二、检查可用的存储空间"></a>二、检查可用的存储空间</h4><p>通常，我们建立一个单独的分区作为swap。然而有时候由于硬件或软件的限制，新建分区的方式无法实现，这种情况下就可以建立一个swap文件来实现同样的功能。</p>
-<p>开始之前，先检查一下磁盘的可用空间。输入如下指令：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">df -h</span><br><span class="line"></span><br><span class="line">文件系统        容量  已用  可用 已用% 挂载点</span><br><span class="line">devtmpfs        909M  909M     0  100% /dev</span><br><span class="line">tmpfs           919M     0  919M    0% /dev/shm</span><br><span class="line">tmpfs           919M  8.6M  911M    1% /run</span><br><span class="line">tmpfs           919M     0  919M    0% /sys/fs/cgroup</span><br><span class="line">/dev/vda1        40G  8.8G   29G   24% /</span><br><span class="line">tmpfs           184M     0  184M    0% /run/user/0</span><br></pre></td></tr></table></figure>
-
-<p>这里的<code>-h</code>标记是为了告诉<code>dh</code>将信息输出为对人类友好的格式，比如以MB或GB为单位输出空间使用和空余情况，而不是直接输出内存块的个数。</p>
-<p>我是用的ECS挂载了一块40G的磁盘，即上面显示的&#x2F;dev&#x2F;vda1，那么我觉得拿出2G的空间作为swap交换空间使用。（一般可以设置交换空间为内存大小的2倍左右，可以根据实际情况进行调整）</p>
-<h4 id="三、创建Swap文件"><a href="#三、创建Swap文件" class="headerlink" title="三、创建Swap文件"></a>三、创建Swap文件</h4><p><strong>注意：建议全程使用root权限进行操作，并将swap文件设定为只有root的读写文件，以确保内存安全性。</strong></p>
-<p>在文件系统上创建swap文件。在根目录（&#x2F;）下创建一个名叫swapfile的文件，当然可以选择自己喜欢的文件名。该文件分配的空间将等于swap空间。</p>
-<p>最快捷的创建方式是fallocate命令，该命令能够创建一个预分配指定大小空间的文件。输入如下指令创建一个2GB的文件：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo fallocate -l 2G /swapfile</span><br></pre></td></tr></table></figure>
-
-<p>该swap文件创建完毕。我们可以用<code>ls</code>命令检查文件大小：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@wizard mariadb-10.4.12]# ls -lh /swapfile </span><br><span class="line">-rw------- 1 root root 2.0G 4月   9 20:30 /swapfile</span><br></pre></td></tr></table></figure>
-
-<p>至此，swap文件就创建完毕了。</p>
-<h4 id="四、启用Swap文件"><a href="#四、启用Swap文件" class="headerlink" title="四、启用Swap文件"></a>四、启用Swap文件</h4><p>现在我们已经有了swap文件，但系统还不知道应该使用该文件作为swap，这就需要我们告知系统将该文件格式化为swap并启用起来。</p>
-<p>首先我们需要更改swap文件的权限，确保只有root才可读，否则会有很大的安全隐患。使用<code>chmod</code>命令进行权限操作：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chmod 600 /swapfile</span><br></pre></td></tr></table></figure>
-
-<p>如此，该文件的读写都只有root才能操作。使用<code>ls -lh</code>命令检查一下：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ls -lh /swapfile</span><br><span class="line"></span><br><span class="line">-rw------- 1 root root 4.0G Oct 30 11:00 /swapfile</span><br></pre></td></tr></table></figure>
-
-<p>然后，使用如下命令告知系统将该文件用于swap：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo mkswap /swapfile</span><br><span class="line"></span><br><span class="line">Setting up swapspace version 1, size = 4194300 KiB</span><br><span class="line">no label, UUID=b99230bb-21af-47bc-8c37-de41129c39bf</span><br></pre></td></tr></table></figure>
-
-<p>现在，这个swap文件就可以作为swap空间使用了。输入如下命令开始使用该swap：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo swapon /swapfile</span><br></pre></td></tr></table></figure>
-
-<p>我们可以输入如下命令来确认一下设置是否已经生效：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@wizard mariadb-10.4.12]# swapon -s</span><br><span class="line">文件名                          类型            大小    已用    权限</span><br><span class="line">/swapfile                               file    2097148 0       -2</span><br></pre></td></tr></table></figure>
-
-<p>可以看到返回的结果中已经有我们刚才设置的swap。再使用<code>free</code>工具确认一下：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@wizard mariadb-10.4.12]# free -h </span><br><span class="line">              total        used        free      shared  buff/cache   available</span><br><span class="line">Mem:           1.8G        186M        625M        917M        1.0G        606M</span><br><span class="line">Swap:          2.0G          0B        2.0G</span><br></pre></td></tr></table></figure>
-
-<p>至此，我们的swap已经设置完毕，操作系统会在需要的时候使用它。</p>
-<h4 id="五、使Swap文件永久生效"><a href="#五、使Swap文件永久生效" class="headerlink" title="五、使Swap文件永久生效"></a>五、使Swap文件永久生效</h4><p>上述操作完成后还不能达到每次开机自动启用swap的效果，需要如下设置：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/fstab</span><br></pre></td></tr></table></figure>
-
-<p>在文件末尾加入下面这行内容，告诉操作系统自动使用刚才创建的swap文件：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/swapfile   swap    swap    sw  0   0</span><br></pre></td></tr></table></figure>
-
-<h4 id="六、更改Swap配置（可选）"><a href="#六、更改Swap配置（可选）" class="headerlink" title="六、更改Swap配置（可选）"></a>六、更改Swap配置（可选）</h4><p>有几个涉及swap的选项可能会影响到系统的性能表现。大部分情况下这些选项是可选的，具体要修改成什么样则取决于你的应用需求以及个人偏好。</p>
-<ul>
-<li>Swappiness</li>
-</ul>
-<p>swappiness参数决定了系统将数据从内存交换到swap空间的频率，数值设置在0到100之间，代表系统将数据从内存交换到swap空间的力度。</p>
-<p>该数值越接近于0，系统越倾向于不进行swap，仅在必要的时候进行swap操作。由于swap要比内存慢很多，因此减少对swap的依赖意味着更高的系统性能。</p>
-<p>该数值越接近于100，系统越倾向于多进行swap。有些应用的内存使用习惯更适合于这种情况，这也于服务器的用途有关。</p>
-<p>输入如下命令查看当前的swappiness数值：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cat /proc/sys/vm/swappiness</span><br><span class="line"></span><br><span class="line">30</span><br></pre></td></tr></table></figure>
-
-
-<p>CentOS 7默认设置了30的swappiness，这对于大部分桌面系统和本地服务器是比较中庸的数值。对于VPS系统而言，可能接近于0的值是更加合适的。</p>
-<p>使用sysctl命令可以修改swappiness。比如将swappiness设为10：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo sysctl vm.swappiness=10</span><br><span class="line"></span><br><span class="line">vm.swappiness = 10</span><br></pre></td></tr></table></figure>
-
-<p>本次修改将一直生效到下次重启前。如果希望永久修改该数值，则需要编辑sysctl配置文件：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/sysctl.conf</span><br><span class="line"></span><br><span class="line">将以下内容粘贴到文件末尾：</span><br><span class="line">vm.swappiness = 10</span><br></pre></td></tr></table></figure>
-
-<p>编辑完成后，保存退出，之后服务器每次重启的时候会将swappiness设置为该值。</p>
-<ul>
-<li>缓存压力（Cache Pressure ）</li>
-</ul>
-<p>另一个可以考虑更改的配置项是vfs_cache_pressure，该配置项涉及特殊文件系统元文件条目的存储。对此类信息的频繁读取是非常消耗性能的，所以延长其在缓存的保存时间可以提升系统的性能。</p>
-<p>通过proc文件系统查看缓存压力的当前设定值：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cat /proc/sys/vm/vfs_cache_pressure</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">100</span><br></pre></td></tr></table></figure>
-
-<p>这个数值是比较高的，意味着系统从缓存中移除inode信息的速度比较快。一个保守一些的数值是50，使用sysctl命令进行设置：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo sysctl vm.vfs_cache_pressure=50</span><br><span class="line"> </span><br><span class="line">vm.vfs_cache_pressure = 50</span><br></pre></td></tr></table></figure>
-
-<p>这条命令仅在重启前有效。要让该设置永久有效，需要编辑sysctl配置文件：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/sysctl.conf</span><br><span class="line"></span><br><span class="line">在文件末尾添加如下内容：</span><br><span class="line">vm.vfs_cache_pressure = 50</span><br></pre></td></tr></table></figure>
-
-
-<p>保存退出，服务器就会在每次重启后都自动将缓存压力设置为50了。</p>
-<p>参考资料：</p>
-<p>[1]<a target="_blank" rel="noopener" href="https://blog.csdn.net/abcdad/article/details/79270646">在CentOS 7上添加Swap交换空间</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/04/09/Linux%E7%B3%BB%E7%BB%9F%E6%B7%BB%E5%8A%A0swap%E4%BA%A4%E6%8D%A2%E7%A9%BA%E9%97%B4/" data-id="clsq120yn000j6wu82u2hbwh1" data-title="Linux系统添加swap交换空间" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-CentOS7安装LNMP环境" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2020/04/09/CentOS7%E5%AE%89%E8%A3%85LNMP%E7%8E%AF%E5%A2%83/" class="article-date">
-  <time class="dt-published" datetime="2020-04-09T06:04:46.000Z" itemprop="datePublished">2020-04-09</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a>►<a class="article-category-link" href="/categories/%E6%95%99%E7%A8%8B/LNMP/">LNMP</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2020/04/09/CentOS7%E5%AE%89%E8%A3%85LNMP%E7%8E%AF%E5%A2%83/">CentOS7安装LNMP环境</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>L：关于CentOS系统的配置和设置，例如源、网络、主机名、IP等就不在此阐述了，直接跳到NMP的安装。</p>
-<h3 id="一、编译安装nginx"><a href="#一、编译安装nginx" class="headerlink" title="一、编译安装nginx"></a>一、编译安装nginx</h3><p>参考： <a target="_blank" rel="noopener" href="https://blog.abina.cn/posts/CentOS%207%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85nginx-1.16.1/">CentOS 7编译安装nginx-1.16.1</a></p>
-<h3 id="二、编译安装mariadb"><a href="#二、编译安装mariadb" class="headerlink" title="二、编译安装mariadb"></a>二、编译安装mariadb</h3><p>参考： <a target="_blank" rel="noopener" href="https://blog.abina.cn/posts/CentOS%207%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85mariadb-10.4.12/">CentOS 7编译安装mariadb-10.4.12</a></p>
-<h3 id="三、安装PHP"><a href="#三、安装PHP" class="headerlink" title="三、安装PHP"></a>三、安装PHP</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@wizard ~]# yum install php php-devel php-fpm php-gd php-mbstring php-mysql</span><br><span class="line">[root@wizard ~]# systemctl start php-fpm</span><br><span class="line">[root@wizard ~]# systemctl enable php-fpm</span><br><span class="line">[root@wizard ~]# netstat -tln|grep 9000       #php-fpm默认使用9000端口，查看端口使用情况：</span><br><span class="line">[root@wizard ~]# yum install net-tools      #如果没有netstat命令则需要安装net-tools工具包</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>安装说明：</p>
-<p>Nginx：提供nginx主程序</p>
-<p>Mariadb：提供MySQL客户端程序</p>
-<p>Mariadb-server：提供MySQL服务器程序</p>
-<p>Php：PHP主程序含给apache使用的模块</p>
-<p>Php-devel：PHP的发展工具，这个与PHP外挂的加速软件有关</p>
-<p>Php-mysql：提供给PHP程序读取mysql数据库的模块</p>
-<p>php-gd：php处理图形的扩展库，使用GD库可以处理图片或生成图片。如验证码</p>
-<p>php-mbstring：扩展库，用于处理多字节字符串</p>
-<p>php-fpm：使用PHP-FPM来控制PHP-CGI的FastCGI进程</p>
-</blockquote>
-<h3 id="四、配置nginx"><a href="#四、配置nginx" class="headerlink" title="四、配置nginx"></a>四、配置nginx</h3><p>以下一部分设置是为使用typecho做准备。一些设置我也没有办法解释的很清楚（毕竟菜鸟），供参考吧。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">修改php-fpm配置文件，把apache改为nginx</span></span><br><span class="line">vim /etc/php-fpm.d/www.conf</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://qiniu.cdn.abina.cn/2021_01_26_13_16_41_1.jpg" alt="ScreenShot3523.jpg"></p>
-<p>配置location，在index中添加index.php。以支持index.php的首页：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/nginx/conf.d/default.conf</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://qiniu.cdn.abina.cn/2021_01_26_13_16_49_1.jpg" alt="ScreenShot3539.jpg"></p>
-<p>配置php请求被传送到后端的php-fpm模块，默认情况下php配置块是被注释的，此时去掉注释并修改为以下内容：</p>
-<p><img src="https://qiniu.cdn.abina.cn/2021_01_26_13_16_53_1.jpg" alt="ScreenShot3540.jpg"></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">把\.php$改为.*\.php(\/.*)*$，</span><br><span class="line">把root中的html改为/usr/share/nginx/html，</span><br><span class="line">把fastcgi_param中的/scripts改为$document_root。root是配置php程序放置的根目录。</span><br></pre></td></tr></table></figure>
-
-<p>保存后，重启nginx服务</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart nginx</span><br></pre></td></tr></table></figure>
-
-<h3 id="五、配置PHP"><a href="#五、配置PHP" class="headerlink" title="五、配置PHP"></a>五、配置PHP</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/php.ini      #修改PHP配置文件</span><br><span class="line"></span><br><span class="line">date.timezone = PRC     #取消前面的;，修改为PRC</span><br><span class="line">expose_php = Off        #禁止显示php版本的信息</span><br><span class="line">short_open_tag = On     #取消前面的;，修改为On。表示支持php短标签</span><br></pre></td></tr></table></figure>
-
-<h3 id="六、测试"><a href="#六、测试" class="headerlink" title="六、测试"></a>六、测试</h3><p>通过<code>http://Url/phpinfo.php</code>查看php模块是否正常，测试后删除</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># vim phpinfo.php       #在首页目录（/usr/share/nginx/html）新增，测试php</span><br><span class="line">&lt;?php</span><br><span class="line"> phpinfo();</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
-
-<p>通过<code>http://Url/test.php</code>查看mysql数据库连接是否正常，测试后删除</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># vim test.php      #新增test.php（名字随意），测试mysql连接</span><br><span class="line">&lt;?php $link=mysql_connect(&#x27;127.0.0.1&#x27;,&#x27;root&#x27;,&#x27;12345678&#x27;);</span><br><span class="line"> if($link) echo &quot;connect successs!&quot;;</span><br><span class="line"> else echo &quot;connect fail!&quot;; ?&gt;</span><br></pre></td></tr></table></figure>
-
-<p>在开启SELinux情况下，php连接mysql测试会失败。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># getsebool -a |grep httpd              #检查httpd进程的许可模式</span><br><span class="line">可以看到httpd_can_network_connect --&gt; off</span><br><span class="line"># setsebool -P httpd_can_network_connect=1          #开启连接后即可测试正常。</span><br></pre></td></tr></table></figure>
-
-
-
-<p>参考资料：</p>
-<p>[1]<a target="_blank" rel="noopener" href="https://www.iorisun.com/archives/7/">CentOS7 LNMP+typecho环境搭建个人博客</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/04/09/CentOS7%E5%AE%89%E8%A3%85LNMP%E7%8E%AF%E5%A2%83/" data-id="clsq120yf00046wu86m86bzcb" data-title="CentOS7安装LNMP环境" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LNMP/" rel="tag">LNMP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-CentOS7编译安装nginx-1.16.1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2020/04/09/CentOS7%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85nginx-1.16.1/" class="article-date">
-  <time class="dt-published" datetime="2020-04-09T04:12:20.000Z" itemprop="datePublished">2020-04-09</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a>►<a class="article-category-link" href="/categories/%E6%95%99%E7%A8%8B/LNMP/">LNMP</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2020/04/09/CentOS7%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85nginx-1.16.1/">CentOS7编译安装nginx-1.16.1</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h3 id="一、安装依赖包"><a href="#一、安装依赖包" class="headerlink" title="一、安装依赖包"></a>一、安装依赖包</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y gcc gcc-c++ pcre pcre-devel zlib zlib-devel openssl openssl-devel</span><br></pre></td></tr></table></figure>
-
-<p>　　依赖包说明：</p>
-<p>1、编译依赖 gcc 环境，所以需要：gcc gcc-c++;</p>
-<p>2、PCRE(Perl Compatible Regular Expressions) 是一个Perl库，包括 perl 兼容的正则表达式库。nginx 的 http 模块使用 pcre 来解析正则表达式，所以需要在 linux 上安装 pcre 库，pcre-devel 是使用 pcre 开发的一个二次开发库，所以需要：pcre pcre-devel ;</p>
-<p>3、zlib 库提供了很多种压缩和解压缩的方式， nginx 使用 zlib 对 http 包的内容进行 gzip ，所以需要在 Centos 上安装 zlib 库，所以需要：zlib zlib-devel ；</p>
-<p>4、OpenSSL 是一个强大的安全套接字层密码库，囊括主要的密码算法、常用的密钥和证书封装管理功能及 SSL 协议，并提供丰富的应用程序供测试或其它目的使用。<em>nginx 不仅支持 http 协议，还支持 https（即在ssl协议上传输http），所以需要在 Centos 安装 OpenSSL 库，所以需要：openssl openssl-devel ；</em></p>
-<h3 id="二、从官网下载安装包"><a href="#二、从官网下载安装包" class="headerlink" title="二、从官网下载安装包"></a>二、从官网下载安装包</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://nginx.org/download/nginx-1.16.1.tar.gz -O /opt/nginx-1.16.1.tar.gz</span><br></pre></td></tr></table></figure>
-
-<h3 id="三、添加nginx用户和组"><a href="#三、添加nginx用户和组" class="headerlink" title="三、添加nginx用户和组"></a>三、添加nginx用户和组</h3><p>添加nginx用户组和nginx用户，以供nginx程序单独使用。保证安全</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@wizard ~]# groupadd nginx</span><br><span class="line">[root@wizard ~]# useradd nginx -g nginx -s /sbin/nologin -M</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>-s&lt;shell&gt;　 　指定用户登入后所使用的shell。此处参数nologin表示不登录</li>
-<li>-M 　不要自动建立用户的登入目录。</li>
-</ul>
-<h3 id="四、解压并安装"><a href="#四、解压并安装" class="headerlink" title="四、解压并安装"></a>四、解压并安装</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[root@wizard ~]# tar zxvf nginx-1.16.1.tar.gz -C /opt</span><br><span class="line"></span><br><span class="line">[root@wizard ~]# cd /opt/nginx-1.16.1</span><br><span class="line"></span><br><span class="line">[root@wizard ~]# ./configure --user=nginx --group=nginx --prefix=/usr/local/nginx --with-http_stub_status_module --with-http_ssl_module --with-http_realip_module --with-http_gzip_static_module</span><br><span class="line"></span><br><span class="line">[root@wizard ~]# make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
-
-<p>期间，执行完configure和make命令时，可以用<code>echo $?</code>指令查询执行的命令是否出错。返回0表示没错误，其他表示有错误。</p>
-<h3 id="五、systemctl管理nginx服务"><a href="#五、systemctl管理nginx服务" class="headerlink" title="五、systemctl管理nginx服务"></a>五、systemctl管理nginx服务</h3><ul>
-<li>编写启动脚本</li>
-</ul>
-<p>[root@wizard ~]# vim  &#x2F;usr&#x2F;lib&#x2F;systemd&#x2F;system&#x2F;nginx.service</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=nginx</span><br><span class="line">After=network.target remote-fs.target nss-lookup.target</span><br><span class="line"> </span><br><span class="line">[Service]</span><br><span class="line">Type=forking</span><br><span class="line">PIDFile=/usr/local/nginx/logs/nginx.pid</span><br><span class="line">ExecStartPost=/bin/sleep 0.1</span><br><span class="line">ExecStartPre=/usr/local/nginx/sbin/nginx -t -c /usr/local/nginx/conf/nginx.conf</span><br><span class="line">ExecStart=/usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf</span><br><span class="line">ExecReload=/bin/kill -s HUP $MAINPID</span><br><span class="line">ExecStop=/bin/kill -s QUIT $MAINPID</span><br><span class="line">PrivateTmp=true</span><br><span class="line"> </span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>使用</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">systemctl start|stop|reload|restart|status nginx.service</span><br><span class="line">开机自启：</span><br><span class="line">systemctl enable nginx.service</span><br><span class="line">关闭开机自启：</span><br><span class="line">systemctl disable nginx.service</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>建立软连接到&#x2F;usr&#x2F;bin，以便于在任何位置使用nginx命令</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@wizard ~]# ln -s /usr/local/nginx/sbin/nginx /usr/bin/nginx</span><br></pre></td></tr></table></figure>
-
-<p>至此，nginx编译安装就完成了。</p>
-<hr>
-<h3 id="六、nginx基本命令"><a href="#六、nginx基本命令" class="headerlink" title="六、nginx基本命令"></a>六、nginx基本命令</h3><ul>
-<li>查看nginx版本号,成功输出就表示安装成功了。</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@wizard ~]# /usr/local/nginx/sbin/nginx -v</span><br><span class="line">nginx version: nginx/1.16.1</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>检查配置文件语法是否正确，每次修改配置文件后都可以用此命令检查一下</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@wizard ~]# /usr/local/nginx/sbin/nginx -t</span><br><span class="line">nginx: the configuration file /usr/local/nginx/conf/nginx.conf syntax is ok</span><br><span class="line">nginx: configuration file /usr/local/nginx/conf/nginx.conf test is successful</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>启动、重载、停止</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@wizard ~]# /usr/local/nginx/sbin/nginx</span><br><span class="line">[root@wizard ~]# /usr/local/nginx/sbin/nginx -s reload                 重新载入配置文件</span><br><span class="line">[root@wizard ~]# /usr/local/nginx/sbin/nginx -s stop                   快速关闭 Nginx</span><br></pre></td></tr></table></figure>
-
-<h3 id="七、移动nginx配置文件（选做）"><a href="#七、移动nginx配置文件（选做）" class="headerlink" title="七、移动nginx配置文件（选做）"></a>七、移动nginx配置文件（选做）</h3><p>nginx默认配置 安装时 nginx.conf 所在位置为：&#x2F;usr&#x2F;local&#x2F;nginx&#x2F;conf&#x2F;nginx.conf</p>
-<p>本人需要将其移动到  &#x2F;etc&#x2F;nginx 下，以方便管理</p>
-<p>1、将原文件移动到自己需要更改的目录</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv /usr/local/nginx/conf/nginx.conf /etc/nginx/</span><br></pre></td></tr></table></figure>
-
-<p>2、创建软连接到原目录</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s /etc/nginx/nginx.conf /usr/local/nginx/conf/</span><br></pre></td></tr></table></figure>
-
-<p>3、启动&#x2F;重启 nginx</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart nginx.service</span><br></pre></td></tr></table></figure>
-
-
-
-<p>参考资料：</p>
-<p>[1]<a target="_blank" rel="noopener" href="https://blog.csdn.net/yuanfangPOET/article/details/90045001">CentOS7编译安装nginx及添加到系统服务</a></p>
-<p>[2]<a target="_blank" rel="noopener" href="https://www.cnblogs.com/yyxianren/p/10795120.html">centos7 编译安装nginx1.16.0( 完整版 )</a></p>
-<p>[3]<a target="_blank" rel="noopener" href="https://www.baidu.com/link?url=AAPfzrKA8o4dqfVvMEvU9wgySYGIbrvyyj7UQ3xzGz52FbDpS0AzkR_UcuKoz-wQJW5PHpifXhjv2goyI-Sty_&wd=&eqid=d3b694b50015a5ad000000045e8fd5de">更改默认 nginx.conf 配置文件位置</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/04/09/CentOS7%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85nginx-1.16.1/" data-id="clsq120yk000a6wu8bj1f1dr1" data-title="CentOS7编译安装nginx-1.16.1" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LNMP/" rel="tag">LNMP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-CentOS7修改主机名" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2020/04/09/CentOS7%E4%BF%AE%E6%94%B9%E4%B8%BB%E6%9C%BA%E5%90%8D/" class="article-date">
-  <time class="dt-published" datetime="2020-04-09T03:08:17.000Z" itemprop="datePublished">2020-04-09</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a>►<a class="article-category-link" href="/categories/%E6%95%99%E7%A8%8B/Linux/">Linux</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2020/04/09/CentOS7%E4%BF%AE%E6%94%B9%E4%B8%BB%E6%9C%BA%E5%90%8D/">CentOS7修改主机名</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h3 id="一、主机名的定义"><a href="#一、主机名的定义" class="headerlink" title="一、主机名的定义"></a>一、主机名的定义</h3><p>在CentOS7中，有三种定义的主机名:</p>
-<ul>
-<li><p>静态的（Static hostname）</p>
-<p>“静态”主机名也称为内核主机名，是系统在启动时从&#x2F;etc&#x2F;hostname自动初始化的主机名。</p>
-</li>
-<li><p>瞬态的（Tansient hostname）</p>
-<p>“瞬态”主机名是在系统运行时临时分配的主机名，例如，通过DHCP或mDNS服务器分配。</p>
-</li>
-<li><p>灵活的（Pretty hostname）</p>
-<p>“灵活”主机名也有人叫做“别名”主机名。<br>“灵活”主机名则允许使用自由形式（包括特殊&#x2F;空白字符）的主机名，以展示给终端用户（如xh01@f5）。<br>“静态”主机名和“瞬态”主机名都遵从作为互联网域名同样的字符限制规则。</p>
-</li>
-</ul>
-<h3 id="二、hostname工具"><a href="#二、hostname工具" class="headerlink" title="二、hostname工具"></a>二、hostname工具</h3><p>在CentOS 7中，有个叫hostnamectl的命令行工具，它允许你查看或修改与主机名相关的配置。</p>
-<ul>
-<li>查看主机名</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">/查看一下当前主机名的情况，查看全部三种主机名</span><br><span class="line">hostnamectl</span><br><span class="line"></span><br><span class="line">//或者，查看全部三种主机名</span><br><span class="line">hostnamectl status</span><br><span class="line"> </span><br><span class="line">//只查看静态、瞬态或灵活主机名，分别使用--static，--transient或--pretty选项</span><br><span class="line">[root@xh00 ~]# hostnamectl --static</span><br><span class="line">[root@xh00 ~]# hostnamectl --transient</span><br><span class="line">[root@xh00 ~]# hostnamectl --pretty</span><br><span class="line"></span><br><span class="line">//或者查看主机名配置文件，查看到的是静态的（Static hostname）</span><br><span class="line">cat /etc/hostname</span><br><span class="line"></span><br><span class="line">//查看当前Linux操作系统相关信息（内核版本号、硬件架构、主机名称和操作系统类型等）:</span><br><span class="line">uname -a    //查看到的是瞬态的（Tansient hostname）</span><br><span class="line">cat /etc/redhat-release    //查看操作系统环境</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>修改主机名</p>
-<p>修改临时主机名（重启失效）</p>
-</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hostname xxx</span><br></pre></td></tr></table></figure>
-
-<p>​		永久修改主机名</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hostnamectl set-hostname xxx</span><br></pre></td></tr></table></figure>
-
-<p>​		如果你只想修改特定的主机名（静态，瞬态或灵活），你可以使用–static，–transient或–pretty选项。 </p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hostnamectl --static set-hostname xxx</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>修改hosts文件</li>
-</ul>
-<p><strong>注意： 一旦修改了静态主机名，&#x2F;etc&#x2F;hostname 将被自动更新。然而，&#x2F;etc&#x2F;hosts 不会自动更新，所以你每次在修改主机名后一定要手动更新&#x2F;etc&#x2F;hosts，之后再重启CentOS 7。否则系统再启动时会很慢。</strong></p>
-<p>手动修改hosts文件：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/hosts</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">::1     localhost       localhost.localdomain   localhost6      localhost6.localdomain6</span><br><span class="line"></span><br><span class="line">127.0.0.1       localhost       localhost.localdomain   localhost4      localhost4.localdomain4</span><br><span class="line">127.0.0.1       localhost       localhost</span><br><span class="line">127.0.0.1       wizard  wizard</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>重启系统</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reboot</span><br></pre></td></tr></table></figure>
-
-
-
-<p>参考资料：</p>
-<p>[1]<a target="_blank" rel="noopener" href="https://www.cnblogs.com/isme-zjh/p/11552928.html">CentOS7修改主机名的三种方法</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/04/09/CentOS7%E4%BF%AE%E6%94%B9%E4%B8%BB%E6%9C%BA%E5%90%8D/" data-id="clsq120y700006wu8bh4912t9" data-title="CentOS7修改主机名" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-CentOS7修改源" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2020/04/09/CentOS7%E4%BF%AE%E6%94%B9%E6%BA%90/" class="article-date">
-  <time class="dt-published" datetime="2020-04-09T02:09:26.000Z" itemprop="datePublished">2020-04-09</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a>►<a class="article-category-link" href="/categories/%E6%95%99%E7%A8%8B/Linux/">Linux</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2020/04/09/CentOS7%E4%BF%AE%E6%94%B9%E6%BA%90/">CentOS7修改源</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>CentOS官方源的服务器是在国外，连接速度慢，可能不稳定，且去掉了一些与版权有关的软件,因此想要安装这些软件或者手动下载安装,或者使用其他源。一般都建议使用国内服务器的一些源。</p>
-<h3 id="一、确定系统架构及版本"><a href="#一、确定系统架构及版本" class="headerlink" title="一、确定系统架构及版本"></a>一、确定系统架构及版本</h3><p>确定系统架构及版本，便于查询更改相对应的源。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@ecs-x ~]<span class="comment"># cat /etc/redhat-release</span></span><br><span class="line">CentOS Linux release 7.7.1908 (Core)</span><br><span class="line">[root@ecs-x ~]<span class="comment"># uname -r</span></span><br><span class="line">3.10.0-1062.1.1.el7.x86_64</span><br><span class="line">[root@ecs-x ~]<span class="comment"># uname -a</span></span><br><span class="line">Linux ecs-x-medium-2-linux-20200318093011 3.10.0-1062.1.1.el7.x86_64 <span class="comment">#1 SMP Fri Sep 13 22:55:44 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux</span></span><br></pre></td></tr></table></figure>
-
-<p>可以看出，系统版本是CentOS 7.7.1908，架构是x86_64</p>
-<h3 id="二、查看当前CentOS上的源"><a href="#二、查看当前CentOS上的源" class="headerlink" title="二、查看当前CentOS上的源"></a>二、查看当前CentOS上的源</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[root@ecs-x ~]# yum repolist</span><br><span class="line">已加载插件：fastestmirror, langpacks</span><br><span class="line">Loading mirror speeds from cached hostfile</span><br><span class="line"> * base: mirrors.aliyun.com</span><br><span class="line"> * extras: mirror.bit.edu.cn</span><br><span class="line"> * updates: mirrors.sohu.com</span><br><span class="line">源标识                              源名称                                 状态</span><br><span class="line">base/7/x86_64                       CentOS-7 - Base                        9,363</span><br><span class="line">extras/7/x86_64                     CentOS-7 - Extras                        451</span><br><span class="line">updates/7/x86_64                    CentOS-7 - Updates                     2,146</span><br><span class="line">repolist: 11,960</span><br></pre></td></tr></table></figure>
-
-<h3 id="三、安装国内的源"><a href="#三、安装国内的源" class="headerlink" title="三、安装国内的源"></a>三、安装国内的源</h3><h4 id="3-1-国内比较好的源"><a href="#3-1-国内比较好的源" class="headerlink" title="3.1 国内比较好的源"></a>3.1 国内比较好的源</h4><p><a target="_blank" rel="noopener" href="https://opsx.alibaba.com/mirror">https://opsx.alibaba.com/mirror</a>                   #阿里源，有帮助文档</p>
-<p><a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/">https://mirrors.tuna.tsinghua.edu.cn/</a>             #清华大学源，有帮助文档</p>
-<p><a target="_blank" rel="noopener" href="http://mirrors.163.com/">http://mirrors.163.com/</a>                           #网易源，有帮助文档</p>
-<p>下面以安装阿里源为例。</p>
-<h4 id="3-2-替换官方Base源为阿里Base源"><a href="#3-2-替换官方Base源为阿里Base源" class="headerlink" title="3.2 替换官方Base源为阿里Base源"></a>3.2 替换官方Base源为阿里Base源</h4><ul>
-<li>先备份官方Base源</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.bak</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>下载阿里Base源</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo</span><br><span class="line">或者</span><br><span class="line">curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>清除原来的缓存，生成新的缓存</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum clean all     #生成前先清除原来的缓存</span><br><span class="line">yum makecache</span><br></pre></td></tr></table></figure>
-
-<h4 id="3-3-替换官方EPEL源为阿里EPEL源"><a href="#3-3-替换官方EPEL源为阿里EPEL源" class="headerlink" title="3.3 替换官方EPEL源为阿里EPEL源"></a>3.3 替换官方EPEL源为阿里EPEL源</h4><ul>
-<li>先备份官方EPEL源</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mv /etc/yum.repos.d/epel.repo /etc/yum.repos.d/epel.repo.bak</span><br><span class="line">mv /etc/yum.repos.d/epel-testing.repo /etc/yum.repos.d/epel-testing.repo.bak</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>下载阿里EPEL源</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -O /etc/yum.repos.d/epel.repo http://mirrors.aliyun.com/repo/epel-7.repo</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>清除原来的缓存，生成新的缓存</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum clean all     #生成前先清除原来的缓存</span><br><span class="line">yum makecache</span><br></pre></td></tr></table></figure>
-
-<h4 id="3-4-添加第三方Remi源"><a href="#3-4-添加第三方Remi源" class="headerlink" title="3.4 添加第三方Remi源"></a>3.4 添加第三方Remi源</h4><ul>
-<li>下载第三方Remi源</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -O /etc/yum.repos.d/remi.repo http://rpms.remirepo.net/enterprise/remi.repo</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>清除原来的缓存，生成新的缓存</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum clean all     #生成前先清除原来的缓存</span><br><span class="line">yum makecache</span><br></pre></td></tr></table></figure>
-
-
-
-<p>参考资料：</p>
-<p>[1]<a target="_blank" rel="noopener" href="https://www.cnblogs.com/sxdcgaq8080/p/7516186.html">CentOS 7添加常用源</a></p>
-<p>[2]<a target="_blank" rel="noopener" href="https://blog.csdn.net/Pipcie/article/details/80005006">CentOS 源设置_运维</a></p>
-<p>[3]<a target="_blank" rel="noopener" href="https://blog.csdn.net/zhengbin9/article/details/82745758">CentOS7添加epel源和remi源支持PHP7.1</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/04/09/CentOS7%E4%BF%AE%E6%94%B9%E6%BA%90/" data-id="clsq120yb00016wu871i2b0ib" data-title="CentOS7修改源" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2020/04/01/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2020-04-01T06:26:00.000Z" itemprop="datePublished">2020-04-01</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2020/04/01/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/04/01/hello-world/" data-id="clsq120yr000v6wu828ytde3q" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-
-
-  <nav id="page-nav">
-    
-    <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-  </nav>
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%BB%A3%E7%A0%81/">代码</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%BB%A3%E7%A0%81/Typora%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0/">Typora图片上传</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Certbot/">Certbot</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Hexo/">Hexo</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Hexo/Node-js/">Node.js</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/LNMP/">LNMP</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Maven/">Maven</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Seafile/">Seafile</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Typecho/">Typecho</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/acme-sh/">acme.sh</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/python/">python</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AC%94%E8%AE%B0/Docker/">Docker</a></li></ul></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Certbot/" rel="tag">Certbot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Docker/" rel="tag">Docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LNMP/" rel="tag">LNMP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Maven/" rel="tag">Maven</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/" rel="tag">Node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Seafile/" rel="tag">Seafile</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Typecho/" rel="tag">Typecho</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Typora/" rel="tag">Typora</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Windows/" rel="tag">Windows</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/acme-sh/" rel="tag">acme.sh</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%83%E7%89%9B%E4%BA%91/" rel="tag">七牛云</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BB%A3%E7%A0%81/" rel="tag">代码</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag">笔记</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/Certbot/" style="font-size: 10px;">Certbot</a> <a href="/tags/Docker/" style="font-size: 10px;">Docker</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/LNMP/" style="font-size: 14px;">LNMP</a> <a href="/tags/Linux/" style="font-size: 18px;">Linux</a> <a href="/tags/Maven/" style="font-size: 10px;">Maven</a> <a href="/tags/Node-js/" style="font-size: 10px;">Node.js</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Seafile/" style="font-size: 10px;">Seafile</a> <a href="/tags/Typecho/" style="font-size: 12px;">Typecho</a> <a href="/tags/Typora/" style="font-size: 10px;">Typora</a> <a href="/tags/Windows/" style="font-size: 16px;">Windows</a> <a href="/tags/acme-sh/" style="font-size: 10px;">acme.sh</a> <a href="/tags/python/" style="font-size: 12px;">python</a> <a href="/tags/%E4%B8%83%E7%89%9B%E4%BA%91/" style="font-size: 10px;">七牛云</a> <a href="/tags/%E4%BB%A3%E7%A0%81/" style="font-size: 10px;">代码</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 20px;">教程</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 10px;">笔记</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">February 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">October 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2024/02/17/Hexo%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/">Hexo博客引擎的安装与使用</a>
-          </li>
-        
-          <li>
-            <a href="/2021/10/21/%E4%BD%BF%E7%94%A8acme.sh%E7%94%B3%E8%AF%B7%E5%B9%B6%E7%BB%B4%E6%8A%A4Let's%20Encrypt%E8%AF%81%E4%B9%A6/">使用acme.sh申请并维护Let&#39;s Encrypt证书</a>
-          </li>
-        
-          <li>
-            <a href="/2021/04/11/Windows10%E4%B8%8B%E5%90%8C%E6%97%B6%E5%AE%89%E8%A3%85python2%E5%92%8Cpython3/">Windows10下同时安装python2和python3</a>
-          </li>
-        
-          <li>
-            <a href="/2021/03/14/Docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Docker学习笔记</a>
-          </li>
-        
-          <li>
-            <a href="/2021/02/17/pip%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90/">pip更换国内源</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2024 John Doe<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-
-<script src="/js/jquery-3.6.4.min.js"></script>
-
-
-
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-
-  </div>
-</body>
-</html>
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.1.1"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">19</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">18</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">15</div></a></div><hr class="custom-hr"/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Hexo"><span class="site-name">Hexo</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Hexo</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2020/04/10/%E4%BD%BF%E7%94%A8Certbot%E4%BD%BF%E7%BD%91%E7%AB%99%E5%85%8D%E8%B4%B9%E5%90%AF%E7%94%A8Https/" title="使用Certbot使网站免费启用Https">使用Certbot使网站免费启用Https</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2020-04-10T13:50:03.000Z" title="Created 2020-04-10 21:50:03">2020-04-10</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B/Certbot/">Certbot</a></span></div><div class="content">2021年10月21日更新：
+提示：以下部分教程可能不再有效，且certbot安装变成了一件比较麻烦的事情。最近学习了新的申请维护证书的方法，请点击跳转：使用acme.sh申请并维护Let’s Encrypt证书
+如果你仍要坚持使用certbot，并在安装和使用的过程中遇到问题，这篇文章有可能可以帮助到你：Let’s Encrypt 使用 certbot 命令生成通配免费证书？
+Let’s Encrypt这个免费的解决方案。Let’s Encrypt 是一个于2015年推出的数字证书认证机构，将通过旨在消除当前手动创建和安装证书的复杂过程的自动化流程，为安全网站提供免费的SSL&#x2F;TLS证书。
+为你的网站来安装一个证书十分简单，只需要使用电子子前哨基金会EFF的 Certbot，就可以完成。
+一、环境配置及安装certbot
+打开 https://certbot.eff.org ，在下图位置选择你的web服务器和操作系统
+
+
+
+
+然后就会跳转到一个安装教程网页，跟着命令做就可以。
+
+二、使用certbot
+这里有个天坑！！当执行到sudo  certbot --nginx这句命 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2020/04/10/CentOS7%E5%AE%89%E8%A3%85Typecho/" title="CentOS7安装Typecho">CentOS7安装Typecho</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2020-04-10T04:36:38.000Z" title="Created 2020-04-10 12:36:38">2020-04-10</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B/Typecho/">Typecho</a></span></div><div class="content">一、环境配置先确保系统正确安装LNMP或LAMP环境，以下以Nginx服务器为例。
+参考：CentOS7安装LNMP环境
+二、安装typecho12345678910[root@wizard ~]# wget https://github.com/typecho/typecho/releases/download/v1.1-17.10.30-release/1.1.17.10.30.-release.tar.gz -O /opt/Typecho-1.1.17.10.30.tar.gz[root@wizard ~]# tar xvzf /opt/Typecho-1.1.17.10.30.tar.gz -C /opt/[root@wizard ~]# cp -r /opt/build/* /usr/share/nginx/html/[root@wizard ~]# mysql -umysql -p&gt; create database typecho;              #新建数据库#下面xxx处填你的密码&gt; grant all privileges on typecho. ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2020/04/09/CentOS7%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85mariadb-10.4.12/" title="CentOS7编译安装mariadb-10.4.12">CentOS7编译安装mariadb-10.4.12</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2020-04-09T15:03:36.000Z" title="Created 2020-04-09 23:03:36">2020-04-09</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B/LNMP/">LNMP</a></span></div><div class="content">编译安装mariadb一、安装相关包1234yum -y install readline-develyum -y install zlib-develyum -y install openssl-develyum -y install libaio-devel
+
+安装3.10以上版本的cmake,这里安装最新的3.17版本
+123456[root@wizard ~]# wget https://github.com/Kitware/CMake/releases/download/v3.17.0/cmake-3.17.0.tar.gz -O /opt/cmake-3.17.0.tar.gz[root@wizard ~]# tar xvzf /opt/cmake-3.17.0.tar.gz -C /opt/[root@wizard ~]# cd /opt/cmake-3.17.0[root@wizard ~]# ./configure [root@wizard ~]# gmake &amp;&amp; gmake install[root@wizard ~]# cmake --versi ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2020/04/09/Linux%E7%B3%BB%E7%BB%9F%E6%B7%BB%E5%8A%A0swap%E4%BA%A4%E6%8D%A2%E7%A9%BA%E9%97%B4/" title="Linux系统添加swap交换空间">Linux系统添加swap交换空间</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2020-04-09T12:35:46.000Z" title="Created 2020-04-09 20:35:46">2020-04-09</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B/Linux/">Linux</a></span></div><div class="content">最近入手华为云的服务器，配置比较低。导致我在编译安装mariadb的时候，出现了由于内存较小导致的“cc: internal compiler error: 已杀死 (program cc1)”错误，于是尝试给系统添加swap交换分区解决内存不足导致的问题。
+注意：以下内容几乎都取自CSDN博主flx_bj的在CentOS 7上添加Swap交换空间文章，建议跳转到参考原文。原文逻辑条理，语言清晰。（若有侵权，联系博主删除）
+一、检查系统的Swap信息首先我们需要检查系统的存储，看看是否已经配置过swap。一个系统可以设置多个swap文件或分区，不过一般来说一个就够了。
+1swapon -s
+
+如果该命令没有返回出结果，则代表该系统尚未配置过swap。
+或者，我们也可以使用free命令来查看系统的整体内存使用情况，这里可以看到内存和swap的使用状态（显示单位为MB）
+1234567free -m               total       used       free     shared    buffers     cachedMem:          3953     ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2020/04/09/CentOS7%E5%AE%89%E8%A3%85LNMP%E7%8E%AF%E5%A2%83/" title="CentOS7安装LNMP环境">CentOS7安装LNMP环境</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2020-04-09T06:04:46.000Z" title="Created 2020-04-09 14:04:46">2020-04-09</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B/LNMP/">LNMP</a></span></div><div class="content">L：关于CentOS系统的配置和设置，例如源、网络、主机名、IP等就不在此阐述了，直接跳到NMP的安装。
+一、编译安装nginx参考： CentOS 7编译安装nginx-1.16.1
+二、编译安装mariadb参考： CentOS 7编译安装mariadb-10.4.12
+三、安装PHP12345[root@wizard ~]# yum install php php-devel php-fpm php-gd php-mbstring php-mysql[root@wizard ~]# systemctl start php-fpm[root@wizard ~]# systemctl enable php-fpm[root@wizard ~]# netstat -tln|grep 9000       #php-fpm默认使用9000端口，查看端口使用情况：[root@wizard ~]# yum install net-tools      #如果没有netstat命令则需要安装net-tools工具包
+
+
+安装说明：
+Nginx：提供nginx主程序
+Mariadb：提供MySQ ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2020/04/09/CentOS7%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85nginx-1.16.1/" title="CentOS7编译安装nginx-1.16.1">CentOS7编译安装nginx-1.16.1</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2020-04-09T04:12:20.000Z" title="Created 2020-04-09 12:12:20">2020-04-09</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B/LNMP/">LNMP</a></span></div><div class="content">一、安装依赖包1yum install -y gcc gcc-c++ pcre pcre-devel zlib zlib-devel openssl openssl-devel
+
+　　依赖包说明：
+1、编译依赖 gcc 环境，所以需要：gcc gcc-c++;
+2、PCRE(Perl Compatible Regular Expressions) 是一个Perl库，包括 perl 兼容的正则表达式库。nginx 的 http 模块使用 pcre 来解析正则表达式，所以需要在 linux 上安装 pcre 库，pcre-devel 是使用 pcre 开发的一个二次开发库，所以需要：pcre pcre-devel ;
+3、zlib 库提供了很多种压缩和解压缩的方式， nginx 使用 zlib 对 http 包的内容进行 gzip ，所以需要在 Centos 上安装 zlib 库，所以需要：zlib zlib-devel ；
+4、OpenSSL 是一个强大的安全套接字层密码库，囊括主要的密码算法、常用的密钥和证书封装管理功能及 SSL 协议，并提供丰富的应用程序供测试或其它目的使用。ngi ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2020/04/09/CentOS7%E4%BF%AE%E6%94%B9%E4%B8%BB%E6%9C%BA%E5%90%8D/" title="CentOS7修改主机名">CentOS7修改主机名</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2020-04-09T03:08:17.000Z" title="Created 2020-04-09 11:08:17">2020-04-09</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B/Linux/">Linux</a></span></div><div class="content">一、主机名的定义在CentOS7中，有三种定义的主机名:
+
+静态的（Static hostname）
+“静态”主机名也称为内核主机名，是系统在启动时从&#x2F;etc&#x2F;hostname自动初始化的主机名。
+
+瞬态的（Tansient hostname）
+“瞬态”主机名是在系统运行时临时分配的主机名，例如，通过DHCP或mDNS服务器分配。
+
+灵活的（Pretty hostname）
+“灵活”主机名也有人叫做“别名”主机名。“灵活”主机名则允许使用自由形式（包括特殊&#x2F;空白字符）的主机名，以展示给终端用户（如xh01@f5）。“静态”主机名和“瞬态”主机名都遵从作为互联网域名同样的字符限制规则。
+
+
+二、hostname工具在CentOS 7中，有个叫hostnamectl的命令行工具，它允许你查看或修改与主机名相关的配置。
+
+查看主机名
+
+1234567891011121314151617/查看一下当前主机名的情况，查看全部三种主机名hostnamectl//或者，查看全部三种主机名hostnamectl status //只查看静态、瞬态或灵活主机名，分别使用-- ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2020/04/09/CentOS7%E4%BF%AE%E6%94%B9%E6%BA%90/" title="CentOS7修改源">CentOS7修改源</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2020-04-09T02:09:26.000Z" title="Created 2020-04-09 10:09:26">2020-04-09</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B/Linux/">Linux</a></span></div><div class="content">CentOS官方源的服务器是在国外，连接速度慢，可能不稳定，且去掉了一些与版权有关的软件,因此想要安装这些软件或者手动下载安装,或者使用其他源。一般都建议使用国内服务器的一些源。
+一、确定系统架构及版本确定系统架构及版本，便于查询更改相对应的源。
+123456[root@ecs-x ~]# cat /etc/redhat-releaseCentOS Linux release 7.7.1908 (Core)[root@ecs-x ~]# uname -r3.10.0-1062.1.1.el7.x86_64[root@ecs-x ~]# uname -aLinux ecs-x-medium-2-linux-20200318093011 3.10.0-1062.1.1.el7.x86_64 #1 SMP Fri Sep 13 22:55:44 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux
+
+可以看出，系统版本是CentOS 7.7.1908，架构是x86_64
+二、查看当前CentOS上的源1234567891011[root@ecs-x ~]# yum  ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2020/04/01/hello-world/" title="Hello World">Hello World</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2020-04-01T06:26:00.000Z" title="Created 2020-04-01 14:26:00">2020-04-01</time></span></div><div class="content">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;
+
+More info: Writing
+Run server1$ hexo server
+
+More info: Server
+Generate static files1$ hexo generate
+
+More info: Generating
+Deploy to remote sites1$ hexo deploy
+
+More info: Deployment
+</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">John Doe</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">19</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">18</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">15</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/02/17/Hexo%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/" title="Hexo博客引擎的安装与使用">Hexo博客引擎的安装与使用</a><time datetime="2024-02-17T10:22:00.000Z" title="Created 2024-02-17 18:22:00">2024-02-17</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/10/21/%E4%BD%BF%E7%94%A8acme.sh%E7%94%B3%E8%AF%B7%E5%B9%B6%E7%BB%B4%E6%8A%A4Let's%20Encrypt%E8%AF%81%E4%B9%A6/" title="使用acme.sh申请并维护Let's Encrypt证书">使用acme.sh申请并维护Let's Encrypt证书</a><time datetime="2021-10-21T08:55:15.000Z" title="Created 2021-10-21 16:55:15">2021-10-21</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/04/11/Windows10%E4%B8%8B%E5%90%8C%E6%97%B6%E5%AE%89%E8%A3%85python2%E5%92%8Cpython3/" title="Windows10下同时安装python2和python3">Windows10下同时安装python2和python3</a><time datetime="2021-04-11T04:33:23.000Z" title="Created 2021-04-11 12:33:23">2021-04-11</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/03/14/Docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="Docker学习笔记">Docker学习笔记</a><time datetime="2021-03-14T15:12:30.000Z" title="Created 2021-03-14 23:12:30">2021-03-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/02/17/pip%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90/" title="pip更换国内源">pip更换国内源</a><time datetime="2021-02-17T01:45:00.000Z" title="Created 2021-02-17 09:45:00">2021-02-17</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>Categories</span>
+            <a class="card-more-btn" href="/categories/" title="View More">
+    <i class="fas fa-angle-right"></i></a>
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E4%BB%A3%E7%A0%81/"><span class="card-category-list-name">代码</span><span class="card-category-list-count">1</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E4%BB%A3%E7%A0%81/Typora%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0/"><span class="card-category-list-name">Typora图片上传</span><span class="card-category-list-count">1</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%95%99%E7%A8%8B/"><span class="card-category-list-name">教程</span><span class="card-category-list-count">16</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Certbot/"><span class="card-category-list-name">Certbot</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Hexo/"><span class="card-category-list-name">Hexo</span><span class="card-category-list-count">1</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Hexo/Node-js/"><span class="card-category-list-name">Node.js</span><span class="card-category-list-count">1</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%95%99%E7%A8%8B/LNMP/"><span class="card-category-list-name">LNMP</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Linux/"><span class="card-category-list-name">Linux</span><span class="card-category-list-count">3</span></a></li></ul></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/Certbot/" style="font-size: 1.1em; color: #999">Certbot</a> <a href="/tags/Seafile/" style="font-size: 1.1em; color: #999">Seafile</a> <a href="/tags/Docker/" style="font-size: 1.1em; color: #999">Docker</a> <a href="/tags/Node-js/" style="font-size: 1.1em; color: #999">Node.js</a> <a href="/tags/Windows/" style="font-size: 1.34em; color: #99a3b0">Windows</a> <a href="/tags/python/" style="font-size: 1.18em; color: #999ca1">python</a> <a href="/tags/Linux/" style="font-size: 1.42em; color: #99a6b7">Linux</a> <a href="/tags/Python/" style="font-size: 1.1em; color: #999">Python</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 1.1em; color: #999">笔记</a> <a href="/tags/Hexo/" style="font-size: 1.1em; color: #999">Hexo</a> <a href="/tags/Maven/" style="font-size: 1.1em; color: #999">Maven</a> <a href="/tags/%E4%B8%83%E7%89%9B%E4%BA%91/" style="font-size: 1.1em; color: #999">七牛云</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 1.5em; color: #99a9bf">教程</a> <a href="/tags/Typecho/" style="font-size: 1.18em; color: #999ca1">Typecho</a> <a href="/tags/Typora/" style="font-size: 1.1em; color: #999">Typora</a> <a href="/tags/%E4%BB%A3%E7%A0%81/" style="font-size: 1.1em; color: #999">代码</a> <a href="/tags/LNMP/" style="font-size: 1.26em; color: #999fa8">LNMP</a> <a href="/tags/acme-sh/" style="font-size: 1.1em; color: #999">acme.sh</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/02/"><span class="card-archive-list-date">February 2024</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/10/"><span class="card-archive-list-date">October 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/04/"><span class="card-archive-list-date">April 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/03/"><span class="card-archive-list-date">March 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/02/"><span class="card-archive-list-date">February 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/05/"><span class="card-archive-list-date">May 2020</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/04/"><span class="card-archive-list-date">April 2020</span><span class="card-archive-list-count">13</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">19</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-02-23T04:17:31.576Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By John Doe</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
